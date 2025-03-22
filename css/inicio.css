@@ -77,7 +77,7 @@ header{
     }
     .nav-links input{
     position: absolute;
-    bottom: 220px;
+    bottom: 260px;
     }
     .avatar{
         position: absolute;
@@ -150,7 +150,6 @@ nav input{
 
 .baja{
     background: #403f3f;
-    background: #403f3f linear-gradient(none);
     height: 94px;
 }
 .slider{
@@ -163,7 +162,7 @@ nav input{
 
 
 .sli {
-    width: 400%;
+    width: 100%;
     height: 920px;
     background-size: 100% 100%;
     overflow: hidden;
@@ -183,12 +182,14 @@ nav input{
     .sli{
         position: relative;
         top: 0;
-        height: 750px;
+        width: 100%;
+        height: 700px;
     }
     .sli img{
         position: relative;
         top: 0;
-        height: 750px;
+        width: 100%;
+        height: 700px;
     }
 }
 @media (max-width: 600px) {
@@ -206,7 +207,9 @@ nav input{
 h1{
     font-family:"Rowdies";
 }
-
+h2{
+    font-family:"Rowdies";
+}
 @keyframes slide{
     0%{margin-left: 0; }
     20%{margin-left: 0;}
@@ -420,14 +423,98 @@ button:hover{
     background: #9daf6d;
     
 }
-footer{
+
+/*FOOTER*/
+.pie-pagina{
+    width: 100%;
+    background-color: #403f3f;
+    overflow-x: hidden;
+
+
+}
+.pie-pagina .parte-1{
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+.pie-pagina .parte-1 .caja figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-footer{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 3px black;
+    position: relative;
+    bottom: 10px;
+}
+.pie-pagina .parte-1 .caja h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #ADC178;
+}
+.pie-pagina .parte-1 .caja p{
+    color: #efefef;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 10px;
+}
+.pie-pagina .parte-1 .imagenes-footer a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #383838;
+    text-align: center;
+    border-radius: 10px;
+    
+    
+}
+.pie-pagina .parte-1 .imagenes-footer {
+    border-radius: 10px;
+}
+.pie-pagina .parte-1 .imagenes-footer a:hover{
+    color: rgb(204, 201, 201);
+}
+.logos{
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+}
+.pie-pagina .parte-2{
+    background-color: #383838;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
     position: fixed;
     bottom: 0;
-    background-color: #403f3f;
-    padding: 10px;
-    text-align: center;
-    color:#fff;
-    width: 100vw;
-    z-index: 9000;
+    width: 100%;
+    z-index: 99999;
 }
 
+@media screen and (max-width: 800px) {
+    .pie-pagina .parte-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    .pie-pagina .parte-1 .imagenes-footer a{
+        margin-bottom: 50px;
+    }
+    
+}

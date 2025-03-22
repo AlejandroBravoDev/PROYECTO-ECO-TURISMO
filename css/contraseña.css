@@ -8,12 +8,17 @@ body {
     align-items: center;
     background-color: #DDE5B6;
     font-family: Arial, sans-serif;
-    background-image: url('/img/naturaleza2.jpg');
+    background-image: url('/PROYECTO-ECO-TURISMO/img/naturaleza2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
-
+h1{
+    font-family:"Rowdies";
+}
+h2{
+    font-family:"Rowdies";
+}
 .password-container {
     width: 90%;
     max-width: 400px;
