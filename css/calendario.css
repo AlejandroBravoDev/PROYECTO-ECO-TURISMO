@@ -104,10 +104,11 @@ h2{
 .search-btn:hover {
     background-color: #5e7027;
 }
+/*FOOTER*/
 .pie-pagina{
     width: 100%;
     background-color: #403f3f;
-    overflow-x: hidden;
+
 
 }
 .pie-pagina .parte-1{
@@ -116,7 +117,7 @@ h2{
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-gap: 100px;
     padding: 45px 0px;
 }
 .pie-pagina .parte-1 .caja figure{
@@ -133,19 +134,22 @@ h2{
     border: none;
     box-shadow: 0 0 3px black;
     position: relative;
-    bottom: 10px;
+    bottom: 18px;
 }
 .pie-pagina .parte-1 .caja h2{
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
     color: #ADC178;
+    position: relative;
+    bottom: 20px;
 }
 .pie-pagina .parte-1 .caja p{
-    color: #efefef;
+    color: white;
     margin-bottom: 10px;
     position: relative;
-    bottom: 10px;
+    bottom: 40px;
+    width: 90%;
 }
 .pie-pagina .parte-1 .imagenes-footer a{
     display: inline-block;
@@ -158,8 +162,13 @@ h2{
     background-color: #383838;
     text-align: center;
     border-radius: 10px;
+    position: relative;
+    bottom: 30px;
     
     
+}
+.pie-pagina .parte-1 .imagenes-footer {
+    border-radius: 10px;
 }
 .pie-pagina .parte-1 .imagenes-footer a:hover{
     color: rgb(204, 201, 201);

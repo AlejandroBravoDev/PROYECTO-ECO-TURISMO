@@ -151,7 +151,7 @@ nav input{
     width: 400%;
     height: 920px;
     display: flex;
-    animation: slide 20s infinite alternate ease-in-out;
+    animation: slide 25s infinite alternate ease-in-out;
 }
 .sli {
     width: 100%;
@@ -635,6 +635,7 @@ hr{
     width: 100%;
     background-color: #403f3f;
 
+
 }
 .pie-pagina .parte-1{
     width: 100%;
@@ -642,7 +643,7 @@ hr{
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-gap: 100px;
     padding: 45px 0px;
 }
 .pie-pagina .parte-1 .caja figure{
@@ -659,19 +660,22 @@ hr{
     border: none;
     box-shadow: 0 0 3px black;
     position: relative;
-    bottom: 20px;
+    bottom: 18px;
 }
 .pie-pagina .parte-1 .caja h2{
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
     color: #ADC178;
-}
-.pie-pagina .parte-1 .caja p{
-    color: #efefef;
-    margin-bottom: 10px;
     position: relative;
     bottom: 20px;
+}
+.pie-pagina .parte-1 .caja p{
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 40px;
+    width: 90%;
 }
 .pie-pagina .parte-1 .imagenes-footer a{
     display: inline-block;
@@ -680,12 +684,17 @@ hr{
     height: 45px;
     line-height: 45px;
     color: white;
-    margin-right: 20px;
+    margin-right: 10px;
     background-color: #383838;
     text-align: center;
     border-radius: 10px;
+    position: relative;
+    bottom: 30px;
     
     
+}
+.pie-pagina .parte-1 .imagenes-footer {
+    border-radius: 10px;
 }
 .pie-pagina .parte-1 .imagenes-footer a:hover{
     color: rgb(204, 201, 201);

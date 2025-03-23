@@ -157,7 +157,7 @@ nav input{
     height: 920px;  
     background-size: 100% 100%;
     display: flex;
-    animation: slide 20s infinite alternate ease-in-out;
+    animation: slide 25s infinite alternate ease-in-out;
 }
 
 
@@ -428,7 +428,6 @@ button:hover{
 .pie-pagina{
     width: 100%;
     background-color: #403f3f;
-    overflow-x: hidden;
 
 
 }
@@ -438,7 +437,7 @@ button:hover{
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-gap: 100px;
     padding: 45px 0px;
 }
 .pie-pagina .parte-1 .caja figure{
@@ -455,19 +454,22 @@ button:hover{
     border: none;
     box-shadow: 0 0 3px black;
     position: relative;
-    bottom: 10px;
+    bottom: 18px;
 }
 .pie-pagina .parte-1 .caja h2{
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
     color: #ADC178;
+    position: relative;
+    bottom: 20px;
 }
 .pie-pagina .parte-1 .caja p{
-    color: #efefef;
+    color: white;
     margin-bottom: 10px;
     position: relative;
-    bottom: 10px;
+    bottom: 40px;
+    width: 90%;
 }
 .pie-pagina .parte-1 .imagenes-footer a{
     display: inline-block;
@@ -480,6 +482,8 @@ button:hover{
     background-color: #383838;
     text-align: center;
     border-radius: 10px;
+    position: relative;
+    bottom: 30px;
     
     
 }
