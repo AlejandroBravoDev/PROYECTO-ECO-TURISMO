@@ -727,10 +727,6 @@ hr{
     overflow: hidden;
     z-index: 9999999;
 }
-.pie-pagina .parte-2 p{
-    position: relative;
-    bottom: 10px;
-}
 @media screen and (max-width: 800px) {
     .pie-pagina .parte-1{
         width: 90%;
