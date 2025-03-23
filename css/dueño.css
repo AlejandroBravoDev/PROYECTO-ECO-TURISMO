@@ -75,8 +75,8 @@ header{
         top: 18px;
     }
     .nav-links input{
-        position: absolute;
-        bottom: 220px;
+        position: relative;
+        top: 100px;
     }
     .avatar{
         position: absolute;
