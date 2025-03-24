@@ -155,6 +155,15 @@ a{
     color: white;
 }
 
+h1{
+    font-family: 'Rowdies';
+    color: #adc178;
+}
+
+p{
+    font-size:15px;
+}
+
 button{
     width: 100%;
     height: 30px;
@@ -266,87 +275,110 @@ main{
 /*comienza el responsive*/
 @media (max-width:500px){
     body{
-        height: 410vh;
+        height: 100vh;
         width: 100%;
     }
 
-    .titulo{
-        margin-left: 60px;
+    h1{
+        font-size: 12px;
     }
-    .content{
-        width:80%;
-        height: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        text-align: center;
+    
+    p{
+        font-size: 10px;
     }
 
+    a{
+        font-size: 8px;
+    }
+
+    .slide{
+        height: 400px;
+    }
     .imgs{
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-    }
-    .content img{
-        height: 100%;
+        height: 20%;
     }
 
-    .texto h3{
-        width: 100%;
-        height: 300px;
-        text-align: center;
+    .arrow{
+        width: 30px;
+        height: 30px;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
     }
 }
 
 @media (min-width:501px) and (max-width:819px){
     body{
-        height: 220vh;
+        height: 100vh;
         width: 100%;
     }
 
-    .titulo{
-        margin-left: 80px;
+    h1{
+        font-size: 16px;
     }
-    .content{
-        width:80%;
-        height: 50%;
-        align-items: center;
-        padding: 10px;
+    
+    p{
+        font-size: 14px;
     }
 
-    .imgs{
-        margin: 0;
-        padding: 0;
+    a{
+        font-size: 10px;
     }
-    .content img{
-        height: 100%;
+
+    .slide{
+        height: 450px;
+    }
+    .imgs{
+        height: 25%;
+    }
+
+    .arrow{
+        width: 30px;
+        height: 30px;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
     }
 }
 
 @media (min-width:820px) and (max-width:1023px){
     body{
-        height: 185vh;
+        height: 100vh;
         width: 100%;
     }
 
-    .titulo{
-        margin-left: 80px;
+    h1{
+        font-size: 16px;
     }
-    .content{
-        width:80%;
-        height: 50%;
-        align-items: center;
-        padding: 10px;
+    
+    p{
+        font-size: 14px;
     }
 
-    .imgs{
-        margin: 0;
-        padding: 0;
+    a{
+        font-size: 10px;
     }
-    .content img{
-        height: 100%;
+
+    .slide{
+        height: 450px;
+    }
+    .imgs{
+        height: 25%;
+    }
+
+    .arrow{
+        width: 35px;
+        height: 35px;
     }
 }
 
