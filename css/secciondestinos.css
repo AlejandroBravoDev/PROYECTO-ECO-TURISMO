@@ -7,6 +7,7 @@ body{
     overflow-x: hidden;
     scrollbar-width: none;
 }
+/*HEADER*/
 header{
     width: 100vw;
     height: 94px;
@@ -14,8 +15,7 @@ header{
     position: fixed;
     top: 0;
 }
-
-/*responsive nav*/
+/*MENU HAMBURGUESA*/
 .nav-links{
     display: flex;
     list-style: none;
@@ -23,10 +23,8 @@ header{
     font-size: 20px;
     font-weight: bold;
 }
-
 .nav-links input{
     height: 20px;
-
 }
 .burger{
     display: none;/*Para que no se muestre en pantalla normal*/
@@ -40,17 +38,16 @@ header{
     margin: 4px 0;
     border-radius: 1px;
 }
-@media screen and (max-width: 1050px){
+/*RESPONSIVE CON EL MENU HAMBURGESA, SE LE PONE DISPLAY NONE AL MENU Y LUEGO DE LOS 1280PX DISPLAY BLOCK PARA QUE SALGA*/
+@media screen and (max-width: 1280px){
     .navbar{
         position: relative;
         background-color: #403f3f;
-    
     }
     .burger{
         display: flex;
         position: absolute;
         right: 20px;
-
     }
     .nav-links{
         display: none;
@@ -100,7 +97,7 @@ header{
         color: #9daf6d;
     }
 }
-
+/*ESTILOS DE EL HEADER*/
 nav{
     width: 100%;
     height: 100px;
@@ -110,7 +107,6 @@ nav{
     align-items: center;
     gap: 8%;
     z-index: 9999;
-
 }
 nav img{
     border-radius: 50%;
@@ -125,17 +121,14 @@ nav img{
     height: 70px;
     box-shadow: 0 0 15px black;
 }
-
 nav a{
     color: white;
     text-decoration: none;
     cursor: pointer;
 }
-
 nav a:hover{
     color: #ADC178;
 }
-
 nav input{
     width: 150px;
     padding: 8px;
@@ -143,14 +136,14 @@ nav input{
     border-radius: 15px;
     box-shadow: 0 0 5px black;
 }
-
+/*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
 .baja{
     background: #403f3f;
     background: #403f3f linear-gradient(none);
     height: 90px;
 }
-
-.slider-container{
+/*ESTILOS SLIDER*/
+.slider-container{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
     width: 100%;
     overflow: hidden;
     margin: auto;
@@ -159,33 +152,17 @@ nav input{
 .slider{
     width: 400%;
     display: flex;
-    animation: slide 25s infinite alternate ease-in-out;
+    animation: slide 25s infinite alternate ease-in-out;/*ANIMACION DEL SLIDER*/
 }
 .sli {
     width: 100%;
-    position: relative;
-    
+    position: relative;   
 }
-.sli img{
+.sli img{/*TAMAÑO DE LAS IMAGENES DE EL SLIDER*/
     width: 100%;
     height: 920px;
 }
-@media screen and (max-width: 820px) {
-    .sectiondestino{
-        height: 650px;
-    }
-    .sli{
-        height: 650px;
-    }
-    .sli img{
-        height: 650px;
-    }
-    
-}
-
-h1{
-    font-family:"Rowdies";
-}
+/*KEYFRAMES PARA EJECUTAR LA ANIMACION DE EL SLIDER*/
 @keyframes slide{
     0%{transform: translateX(0) }
     20%{transform: translateX(0)}
@@ -199,14 +176,31 @@ h1{
     75%{transform: translateX(-75%)}
     100%{transform: translateX(-75%)}
 }
-.sectiondestino .titulo-inicio{
+/*RESPONSIVE SLIDER*/
+@media screen and (max-width: 820px) {
+    .sectiondestino{
+        height: 650px;
+    }
+    .sli{
+        height: 650px;
+    }
+    .sli img{
+        height: 650px;
+    } 
+}
+/*FUENTE PARA TODOS LOS H1, H2*/
+h1{
+    font-family:"Rowdies";
+}
+/*INICIA EL MAIN*/
+.titulo-inicio{/*PRIMER SECTION*/
     display: flex;
     flex-direction: column;
     justify-content: left;
     align-items: left;
 }
-
-.ventana{
+/*VENTANA EMERGENTE PRIMER SECTION*/
+.ventana{/*CONTENEDOR DE LA VENTANA EMERGENTE*/
     width: 100%;
     height: 100%;
     display: flex;
@@ -216,11 +210,11 @@ h1{
     pointer-events: none;
     border-radius: 20px;
 }
-.modal--show{
+.modal--show{/*CAMBIA CON JS, EN EL CONTENEDOR PRINCIPAL LA VENTANA TIENE OPACITY 0, EN JS PONEMOS UN EVENTO CLICK PARA QUE CUANDO ALGUIEN LE DE CLICK A CIERTO BOTON LA OPACIDAD DE ESTA PASE DE 0 A 1 Y APAREZCA LA VENTANA EMERGENTE*/
     opacity: 1;
     pointer-events: unset;
 }
-.ventana-emergente{
+.ventana-emergente{/*VENTANA EMERGENTE*/
     width: 350px;
     height: 350px;
     background-color: white;
@@ -235,99 +229,92 @@ h1{
     box-shadow: 0 0 100vmax rgba(0, 0 , 0 , 0.9), 0 0 100vmax rgba(0, 0 , 0 , 0.9);
     z-index: 99999; 
 }
-
-@media screen and (max-width:820px) {
-    .ventana-emergente{
-        width: 300px;
-        height: 350px;
-        position: absolute;
-        top: 200px;
-    
-    }
-    .parrafo-ventana{
-        width: 300px;
-    }
-    
-}
-.ventana-emergente img{
-   width: 100px;
-   height: 100px;
-   border-radius: 50%;
-   box-shadow: 0 0 2px;
-   position: relative;
-   bottom: -20px;
-
-}
-.title-ventana{
+.ventana-emergente img{/*ESTILOS AL LOGO DE LA VENTANA EMERGENTE*/
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px;
+    position: relative;
+    bottom: -20px;
+ 
+ }
+ .title-ventana{/*TITULO DE LA VENTANA EMERGENTE*/
     font-size: 30px;
     color: #ADC178;
     border: none;
     text-shadow: 0 0 2px black;
     position: relative;
     bottom: 5px;
-
-
-    
-}
-.parrafo-ventana{
-   width: 300px;
-   text-align: center;
-   position: relative;
-   bottom: 40px;
-
-}
-.buttons{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   gap: 20px;
-   position: relative;
-   bottom: 30px;
-
-}
-.registro{
-   background-color: #ADC178;
-   padding: 12px;
-   border-radius: 20px;
-   cursor: pointer;
-   border: none;
-   box-shadow: 0 0 2px black;
-}
-.registro a{
-   text-decoration: none;
-   color: white;
-}
-.continuar{
+ }
+ .parrafo-ventana{/*PARRAFO DE LA VENTANA EMERGENTE*/
+    width: 300px;
+    text-align: center;
+    position: relative;
+    bottom: 40px;
+ }
+ .buttons{/*CONTENEDOR DE LOS BOTONES DE LA VENTANA EMERGENTE*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    bottom: 30px;
+ }
+ .registro{/*BOTON DE REGISTRO*/
+    background-color: #ADC178;
+    padding: 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 2px black;
+ }
+ .registro a{
+    text-decoration: none;
+    color: white;
+ }
+ .continuar{/*BOTON DE CONTINUAR COMO INVITADO*/
     background-color: #403f3f;
     padding: 12px;
     border-radius: 20px;
     cursor: pointer;
     border: none;
     box-shadow: 0 0 2px black;
-}
-.continuar a{
+ }
+ .continuar a{
     text-decoration: none;
     color: white;
-}
-
-.continuar a:hover{
+ }
+ 
+ .continuar a:hover{
     background-color: #4d4c4c;
-}
-.continuar:hover{
+ }
+ .continuar:hover{
     background-color: #4d4c4c;
+ }
+ .volver{/*TEXTO PARA VOLVER A LA SECTION ANTEIOR*/
+     position: relative;
+     bottom: 20px;
+ }
+ .volver a{
+     text-decoration: none;
+     color: gray;
+ }
+ .volver a:hover{
+     color: rgb(119, 119, 119);
+ }
+ /*RESPONSIVE DE LA VENTANA EMERGENTE*/
+@media screen and (max-width:820px) {
+    .ventana-emergente{
+        width: 300px;
+        height: 350px;
+        position: absolute;
+        top: 200px;
+    }
+    .parrafo-ventana{
+        width: 300px;
+    }
 }
-.volver{
-    position: relative;
-    bottom: 20px;
-
-}
-.volver a{
-    text-decoration: none;
-    color: gray;
-}
-.volver a:hover{
-    color: rgb(119, 119, 119);
-}
+/*SEGUIMOS CON LOS ESTILOS DE LA PRIMER SECTION*/
 .titulo-inicio{
     width: 52%;
     height: 53%;
@@ -339,16 +326,6 @@ h1{
     border-radius: 20px;
     z-index: 2;
 }
-@media(max-width: 675px){
-    .titulo-inicio{
-    position: absolute;
-    left: 10px;
-    top: 120px;
-    }
-    .btn-destinos{
-    width: 100px;
-    }
-}
 .titulo-inicio h1{
     font-size: 60px;
     color:  #ADC178;
@@ -356,74 +333,13 @@ h1{
     position: relative;
     bottom: 40px;
 }
-.titulo-inicio .lugar{
+.titulo-inicio .lugar{/*ESTILOS AL PARRAFO DE LA PRIMERA SECTION*/
     font-size: 25px;
     color: white;
     text-shadow: black 0 0 4px;
     font-weight: bold;
     position: relative;
     bottom: 60px;
-}
-
-
-
-
-@media(max-width:1000px){
-    .titulo-inicio{
-    width: 61%;
-    height: 40%;
-
-    }
-    .titulo-inicio h1{
-    font-size: 30px;
-    }
-    .titulo-inicio .lugar{
-        font-size: 13px;
-        position: relative;
-        top: -60px;
-    }
-    #btn-destinos {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        top: -60px;
-        left: 0;
-
-    }
-}
-.btn-destinos2{
-    display: none;
-    padding: 8px;
-    border-radius: 20px;
-    border: none;
-    width: 120px;
-    color: white;
-    background-color: #ADC178;
-    text-shadow: 0 0 2px black;
-    box-shadow: 0 0 4px black;
-    cursor: pointer;
-
-
-}
-@media screen and (max-width: 376px){
-    .titulo-inicio{
-        height: 45%;
-    }
-    #btn-destinos{
-        position: absolute;
-        left: -35px;
-        display: none;
-    }
-    .btn-destinos2{
-        display: block;
-        position: relative;
-        right: 0;
-        bottom: 50px;
-    }
-    .bono{
-    width: 200px;
-    }
 }
 #btn-destinos{
     padding: 15px;
@@ -452,20 +368,46 @@ h1{
 button:hover{
     background: #9daf6d;
 }
-.bono{
-    font-size: 12px;
-    color: white;
-    position: relative;
-    bottom: 60px;
+/*RESPONSIVE DE LA PRIMERA SECTION*/
+@media(max-width:1000px){
+    .titulo-inicio{
+        width: 61%;
+        height: 40%;
+    }
+    .titulo-inicio h1{
+        font-size: 30px;
+    }
+    .titulo-inicio .lugar{
+        font-size: 13px;
+        position: relative;
+        top: -60px;
+    }
+    #btn-destinos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: -60px;
+        left: 0;
+    }
 }
-.bono a{
-    text-decoration: none;
-    color:white;
+@media screen and (max-width: 376px){
+    .titulo-inicio{
+        height: 45%;
+    }
 }
-.bono a:hover{
-    color: #ADC178;
+@media(max-width: 675px){
+    .titulo-inicio{
+        position: absolute;
+        left: 10px;
+        top: 120px;
+    }
+    .btn-destinos{
+        width: 100px;
+    }
 }
-.rating{
+/*INICIA LA SEGUNDA SECTION, SECCION DE COMENTARIOS*/
+.rating{/*CONTENEDOR PRINCIPAL DE LA SEGUNDA SECCION*/
     width: 100%;
     height: 100%;
     background-color: white;
@@ -473,53 +415,44 @@ button:hover{
     justify-content: center;
     align-items: center;
 }
-.sectionrating{
+.sectionrating{/*SEGUNDO CONTENEDOR*/
     background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
-
-@media (max-height: 1000px){
+@media (max-height: 1000px){/*RESPONSIVE AL PRIMER CONTENDOR*/
     .rating{
         height: 1500px;
-
     }
 }
-
-.sectionrating h1{
+.sectionrating h1{/*TITULO SEGUNDA SECTION*/
     font-size: 56px;
     color: #ADC178;
     text-shadow: 0 0 2px black;
     position: relative;
     top: -150px;
 }
-
+/*RESPONSIVE DEL TITULO*/
 @media (max-width: 456px){
     .sectionrating h1{
     font-size: 30px;}
 }
-
-hr{
-    position: relative;
-    bottom: 10px;
-}
-.comentarios{
+.comentarios{/*CONTENDOR DONDE SE UBICA EL INPUT Y EL BOTON SUBMIT DE LOS COMENTARIOS*/
     display: flex;
     flex-direction: column;
     position: relative;
     top: -150px;
 }
-.sectioncomentarios{
+.input-comentarios{/*INPUT*/
     padding: 10px;
     width: 250px;
     height: 30px;
     border-radius: 10px;
     border: 1px solid black;
 }
-.btn-comentarios{
+.btn-comentarios{/*BUTTON SUBMIT*/
     padding: 8px;
     width: 100px;
     border-radius: 20px;
@@ -535,7 +468,7 @@ hr{
 .btn-comentarios:hover{
     background-color: #9daf6d;
 }
-.responsive-personas{
+.responsive-personas{/*CONTENEDOR COMPLETO DE LOS COMENTARIOS DE LAS PERSONAS*/
     width: 100%; 
     display: flex;
     justify-content: center;
@@ -543,7 +476,7 @@ hr{
     flex-wrap: wrap;
     gap: 50px;
 }
-.persona{
+.persona{/*CONTENEDOR DEL COMENTARIO DE LA PRIMERA PERSONA*/
     width: 300px;
     height: 300px;
     background-color: white;
@@ -552,46 +485,38 @@ hr{
     position: relative;
     top: -100px;
 }
-@media screen and (max-width: 320px) {
-    .persona{
-        width: 250px;
-    }
-    
-}
-.persona h2{
+.persona h2{/*TITULO DE CADA COMENTARIO*/
     font-size: 20px;
     position: relative;
     top: 70px;
     left: 100px;
 }
-.persona p{
+.persona p{/*PARRAFO DE CADA COMENTARIO*/
     width: 200px;
     position: relative;
     left: 55px;
     top: 80px;
 }
-.avatarcomentarios{
+.avatarcomentarios{/*AVATAR O FOTO DE CADA PERSONA*/
     width: 50px;
     height: 50px;
     position: relative;
     bottom: 160px;
     left: 120px;
-
 }
-.rating-img{
+.rating-img{/*ESTRELLAS PARA VALUAR*/
     width: 120px;
     height: 120px;
     position: relative;
     top: 100px;
     left: 60px;
-
 }
-.img-comentarios .coments{
+.img-comentarios .rating-p{
     font-weight: bold;
     position: relative;
     top: 10px;
 }
-
+/*COMENTARIO DE LA SEGUNDA PERSONA*/
 .persona2{
     width: 300px;
     height: 300px;
@@ -606,7 +531,6 @@ hr{
     position: relative;
     top: 70px;
     left: 100px;
-        
 }
 .persona2 p{
     width: 200px;
@@ -614,7 +538,7 @@ hr{
     left: 55px;
     top: 80px;
 }
-
+/*COMENTARIO DE LA TERCERA PERSONA*/
 .persona3{
     width: 300px;
     height: 300px;
@@ -638,14 +562,12 @@ hr{
     top: 80px;
 }
 /*FOOTER*/
-.pie-pagina{
+.pie-pagina{/*CONTENEDOR PRINCIPAL DE EL FOOTER*/
     width: 100%;
     background-color: #403f3f;
     overflow: hidden;
-
-
 }
-.pie-pagina .parte-1{
+.pie-pagina .parte-1{/*PRIMERA PARTE DE EL FOOTER*/
     width: 100%;
     margin: auto;
     max-width: 1200px;
@@ -657,14 +579,14 @@ hr{
     bottom: 0;
     
 }
-.pie-pagina .parte-1 .caja figure{
+.pie-pagina .parte-1 .caja figure{/*ESTILOS A LAS 3 CAJAS DE LA PRIMER PARTE*/
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo-footer{
+.logo-footer{/*ESTILOS AL LOGO DE LA PAGINA*/
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -673,7 +595,7 @@ hr{
     position: relative;
     bottom: 18px;
 }
-.pie-pagina .parte-1 .caja h2{
+.pie-pagina .parte-1 .caja h2{/*ESTILOS A LOS TITULOS DE LA PAGINA*/
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
@@ -681,14 +603,14 @@ hr{
     position: relative;
     bottom: 20px;
 }
-.pie-pagina .parte-1 .caja p{
+.pie-pagina .parte-1 .caja p{/*ESTILOS A LOS PARRAFOS DE LA PAGINA*/
     color: white;
     margin-bottom: 10px;
     position: relative;
     bottom: 40px;
     width: 90%;
 }
-.pie-pagina .parte-1 .imagenes-footer a{
+.pie-pagina .parte-1 .imagenes-footer a{/*ESTILOS A LOS ICONOS DE LAS REDES SOCIALES*/
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -701,21 +623,19 @@ hr{
     border-radius: 10px;
     position: relative;
     bottom: 30px;
-    
-    
 }
-.pie-pagina .parte-1 .imagenes-footer {
+.pie-pagina .parte-1 .imagenes-footer {/*BORDER-RADIUS A LOS ICONOS*/
     border-radius: 10px;
 }
 .pie-pagina .parte-1 .imagenes-footer a:hover{
     color: rgb(204, 201, 201);
 }
-.logos{
+.logos{/*TAMAÑO DE CADA ICONO*/
     width: 30px;
     height: 30px;
     margin-top: 7px;
 }
-.pie-pagina .parte-2{
+.pie-pagina .parte-2{/*SEGUNDA PARTE DE EL FOOTER*/
     background-color: #383838;
     text-align: center;
     color: white;
@@ -727,6 +647,7 @@ hr{
     overflow: hidden;
     z-index: 9999999;
 }
+/*RESPONSIVE DEL FOOTER*/
 @media screen and (max-width: 800px) {
     .pie-pagina .parte-1{
         width: 90%;
