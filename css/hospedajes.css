@@ -191,6 +191,7 @@ main{
 
 .hospedaje-card:hover {
     transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
+    
 }
 
 .hospedaje-card img {
