@@ -8,9 +8,10 @@ body{
     padding: 0;
     overflow-x: hidden;
     font-family: sans-serif;
+    background-image: url(/PROYECTO-ECO-TURISMO/img/slider4.jpg);/*fondo de la section*/
+    background-size: cover;
+    background-repeat: no-repeat;
 }
-
-
 /*HEADER*/
 header{
     width: 100%;
@@ -18,7 +19,6 @@ header{
     position: fixed;
     z-index: 9999;
 }
-
 /* menu hamburguesa*/
 .nav-links{
     display: flex;
@@ -27,10 +27,8 @@ header{
     font-size: 20px;
     font-weight: bold;
 }
-
 .nav-links input{
     height: 20px;/*Tamaño de el input tipo texto*/
-
 }
 .burger{
     display: none;/*Para que no se muestre en pantalla normal*/
@@ -148,283 +146,206 @@ nav input{
     background: #403f3f;
     height: 94px;
 }
-/*Estilos slider*/
-.slider-container{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
-    width: 100%;
-    overflow: hidden;
-    margin: auto;
-    position: relative;
-}
-.slider{
-    width: 400%;
-    display: flex;
-    animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
-}
-.sli {
-    width: 100%;
-    position: relative;   
-}
-.sli img{
-    width: 100%;
-    height: 920px;
-}
-h1{
-    font-family:"Rowdies";
-}
-/*Keyframes para que se ejecute la animaciòn*/
-@keyframes slide{
-    0%{transform: translateX(0) }
-    20%{transform: translateX(0)}
-
-    25%{transform: translateX(-25%)}
-    45%{transform: translateX(-25%)}
-
-    50%{transform: translateX(-50%)}
-    70%{transform: translateX(-50%)}
-
-    75%{transform: translateX(-75%)}
-    100%{transform: translateX(-75%)}
-}
-/*Responsive del slider*/
-@media (max-width: 1023px) {
-    .slider{
-        position: relative;
-        top: 100px;
-        height: 600px;
-        background-color: white;
-    }
-    .sli{
-        position: relative;
-        top: 0;
-        width: 100%;
-        height: 550px;
-    }
-    .sli img{
-        position: relative;
-        top: 0;
-        width: 100%;
-        height: 550px;
-    }
-}
-/*Fuente declarada para los h1,h2*/
 h1{
     font-family:"Rowdies";
 }
 h2{
     font-family:"Rowdies";
 }
-/*SECTION DEL MAIN*/
-.titulo-inicio{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    align-items: left;
-}
-/*Recuadro encima del slider*/
-.titulo-inicio{
-    background-color: rgba(0, 0 , 0 , 0.7);
-    padding: 20px;
-    width: 45%;
-    height: 420px;
-    position: absolute;
-    left: 100px;
-    top: 230px;
-    flex-wrap: wrap;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0 0 1vmax black;
-}
-.titulo-inicio h1{
-    font-size: 50px;
-    color: #ADC178;
-    text-shadow: black 0 0 2px;
-    position: absolute;
-    top: 10px;
-}
-.titulo-inicio p{
-    font-size: 25px;
-    color: white;
-    text-shadow: black 0 0 4px;
-    font-weight: bold;
-    position: absolute;
-    top: 240px;
-}
-.btn-inicio{
-    padding: 15px;
-    width: 160px;
-    border-radius: 30px;
-    border: none;
-    background: #ADC178;
-    cursor: pointer;
-    box-shadow: black 0 0 15px;
-    border:  none;
-    position: absolute;
-    top: 400px;
 
-
-}
-/*Responsive del recuadro que esta encima del slider*/
-@media (max-width: 1023px){
-    .titulo-inicio{
-        width: 60%;
-        position: absolute;
-        top: 120px;
-        left: 10px;
-    }
-    .titulo-inicio h1{
-        font-size: 32px;
-        position: relative;
-        top: 10px;
-    }
-    .titulo-inicio p{
-        font-size: 20px;
-    }
-}
-
-.btn-inicio a{/*Estilos del boton del inicio*/
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    text-shadow:  0 0 2px black;
-}
-.btn-inicio a:hover{
-    background: #9daf6d;
-}
-button:hover{
-    background: #9daf6d;
-}
-/*SEGUNDA SECTION*/
-.info-risaralda{
-    width: 100%;
-    height: 1200px;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 300px;
-
-}
-/*Imagenes de la segunda section*/
-.img-info{
-    width: 50%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: 320px;
-
-}
-.img-info img{
-    width: 600px;
-    height: 650px;
-    border-radius: 10px;
-
-}
-.img1{
-    position: relative;
-    bottom: 50px;
-    left: 100px;
-    z-index: 1;
-    box-shadow: 0 0 15px black;
-}
-.img2{
-    position: relative;
-    right: 100px;
-    z-index: 2;
-    box-shadow: 0 0 25px black;
-}
-/*Textos sgunda section*/
-.textos-info{
-    width: 60%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ADC178;
-    position: relative;
-    bottom: 380px;
-}
-.textos-info h1{
-    font-size: 54px;
-    text-shadow: 0 0 2px black;
-}
-.textos-info p{
-    width: 75%;
-    font-size: 20px;
-    color: black;
-    text-align: center;
-}
-/*RESPONSIVE DE LA SEGUNDA SECTION*/
-@media (max-width:872px){
-    .textos-info{
-        width: 80%;
-    }
-    .textos-info h1{
-        font-size: 30px;
-    }
-    .textos-info p{
-        width: 100%;
-        font-size: 18px;
-        text-align: left;
-    }
-    .img-info img{
-        width: 400px;
-        height: 400px;
-    }
-    .img-info{
-        position: relative;
-        bottom: 470px;
-    }
-    .btn-info{
-        position: relative;
-        top: -200px;
-    }
-}
-.responsive-info{/*Contenedor de la segunda section para darle responsive*/
+.paquetes-turismo{
     width: 100%;
     height: 900px;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    overflow: hidden;
 }
-/*Boton segunda section*/
-.info-btn{
-    position: relative;
-    top: 100px;
+@media (max-width:999px){
+    .paquetes-turismo{
+        width: 100%;
+        height: 1800px;
+    }
+    .datos-paquetes{
+        position: relative;
+        bottom: 150px;
+    }
+}
+.container{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
 }
-.btn-info{
-    width: 150px;
-    padding: 10px;
+.datos-paquetes{
+    width: 60%;
+    height: 50%;
+    display: flex;
+    
+}
+.img-paquete{
+    width: 50%;
+    height: 600px;
+    background-color: rgba(0,0, 0 , 0.7);
+    box-shadow: 0 0 1vmax black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.img-paquete img{
+    width: 90%;
+    height: 550px;
     border-radius: 20px;
-    border: none;
-    background-color: #ADC178;
-    box-shadow:  0 0 2px black;
-    font-size: 20px;
-    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(255, 255 , 255 , 0.2);
+    
+}
+.textos-paquete{
+    width: 50%;
+    height: 600px;
+    box-shadow: 0 0 1vmax black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(0,0, 0 , 0.7);
+    
+}
+.textos-paquete h2{
+    width: 80%;
+    text-align: center;
+    font-size: 46px;
+    color: #ADC178;
+    text-shadow: 0 0 1px black;
+    position: relative;
+    top: 50px;
+}
+.textos-paquete p{
+    width: 80%;
+    font-size: 18px ;
+    position: relative;
+    top: 50px;
+    color: white;
+}
+.img-rating{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 55px;
+    left: 50px;
+}
+.img-rating img{
+    width: 150px;
+    height: 150px;
+}
+.container-hospedajes{
+    width: 35%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.hospedajes-disponibles{
+    width: 100%;
+    height: 280px;
+    box-shadow: 0 0 1vmax black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+    border-radius: 10px;
+    background-color: rgba(0,0, 0 , 0.7);
+}
+.hospedajes-disponibles h2{
+    width: 80%;
+    text-align: center;
+    font-size: 30px;
+    color: #ADC178;
+    text-shadow: 0 0 1px black;
     position: relative;
     bottom: 10px;
 }
-.btn-info a{
+.hospedajes-disponibles p{
+    width: 80%;
+    font-size: 18px;
+    position: relative;
+    bottom: 30px;
+    text-align: center;
+    color: white;
+}
+.disponibles{
+   width: 120px;
+   padding: 12px;
+   border: none;
+   border-radius: 20px;
+   background-color: #ADC178;
+   cursor: pointer;
+   position: relative;
+   bottom: 30px;
+}
+.disponibles a{
     text-decoration: none;
     color: white;
-    text-shadow:  0 0 2px black;
+    text-shadow: 0 0 2px black;
+}
+.disponibles:hover{
+    background-color: #9daf6d;
+}
+.disponibles a:hover{
+    background-color: #9daf6d;
+}
+.mas-lugares{
+    width: 100%;
+    height: 280px;
+    box-shadow: 0 0 1vmax black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(0,0, 0 , 0.7);
+}
+.mas-lugares h2{
+    width: 80%;
+    text-align: center;
+    font-size: 30px;
+    color: #ADC178;
+    text-shadow: 0 0 1px black;
+    position: relative;
+    bottom: 10px;
+}
+.mas-lugares p{
+    font-size: 18px;
+    position: relative;
+    bottom: 30px;
+    color: white;
+}
+.lugares{
+   width: 120px;
+   padding: 12px;
+   border: none;
+   border-radius: 20px;
+   background-color: #ADC178;
+   cursor: pointer;
+   position: relative;
+   bottom: 30px;
+}
+.lugares a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 2px black;
+}
+.lugares:hover{
+    background-color: #9daf6d;
+}
+.lugares a:hover{
+    background-color: #9daf6d;
+}
 
-}
-.btn-info a:hover{
-    background: #9daf6d;
-    
-}
-.btn-info:hover{
-    background: #9daf6d;   
-}
 /*FOOTER*/
 .pie-pagina{/*Contenedor del footer*/
     width: 100%;
@@ -496,6 +417,7 @@ button:hover{
     margin-top: 7px;
 }
 .pie-pagina .parte-2{/*Estilos a la segunda parte de el footer*/
+    padding: 15px 10px;
     background-color: #383838;
     text-align: center;
     color: white;
