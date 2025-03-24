@@ -26,10 +26,8 @@ header{
     font-size: 20px;
     font-weight: bold;
 }
-
 .nav-links input{
     height: 20px;
-
 }
 .burger{
     display: none;/*Para que no se muestre en pantalla normal*/
@@ -47,13 +45,11 @@ header{
     .navbar{
         position: relative;
         background-color: #403f3f;
-    
     }
     .burger{
         display: flex;
         position: absolute;
         right: 20px;
-
     }
     .nav-links{
         display: none;
@@ -103,7 +99,6 @@ header{
         color: #9daf6d;
     }
 }
-
 nav{
     width: 100%;
     height: 100px;
@@ -127,17 +122,14 @@ nav img{
     height: 70px;
     box-shadow: 0 0 15px black;
 }
-
 nav a{
     color: white;
     text-decoration: none;
     cursor: pointer;
 }
-
 nav a:hover{
     color: #ADC178;
 }
-
 nav input{
     width: 150px;
     padding: 8px;
@@ -145,13 +137,11 @@ nav input{
     border-radius: 15px;
     box-shadow: 0 0 5px black;
 }
-
 .baja{
     background: #403f3f;
     background: #403f3f linear-gradient(none);
     height: 90px;
 }
-
 main {
     max-width: 1200px;
     margin: 2rem auto;
@@ -170,7 +160,6 @@ h2{
     font-family:"Rowdies";
     color: #ADC178;
 }
-
 .disponibilidad-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
