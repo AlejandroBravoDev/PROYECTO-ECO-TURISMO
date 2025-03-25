@@ -326,7 +326,6 @@ h2{
     height: 30px;
     margin-top: 7px;
 }
-
 .pie-pagina .parte-2{/*Estilos a la segunda parte de el footer*/
     background-color: #383838;
     padding: 15px 10px;
@@ -338,9 +337,7 @@ h2{
     width: 100%;
     z-index: 99999;
 }
-
 /*RESPONSIVE DEL FOOTER*/
-
 @media screen and (max-width: 800px) {
     .pie-pagina .parte-1{
         width: 90%;
