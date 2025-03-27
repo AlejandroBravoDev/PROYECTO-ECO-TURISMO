@@ -322,7 +322,7 @@ h1{
     left: 100px;
     top: 150px;
     background-color: rgba(0, 0 , 0 , 0.7);
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     z-index: 2;
     box-shadow: 0 0 1vmax;
@@ -410,7 +410,6 @@ button:hover{
 /*INICIA LA SEGUNDA SECTION, SECCION DE COMENTARIOS*/
 .rating{/*CONTENEDOR PRINCIPAL DE LA SEGUNDA SECCION*/
     width: 100%;
-    height: 100%;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -438,7 +437,8 @@ button:hover{
 /*RESPONSIVE DEL TITULO*/
 @media (max-width: 456px){
     .sectionrating h1{
-    font-size: 30px;}
+    font-size: 30px;
+    }
 }
 .comentarios{/*CONTENDOR DONDE SE UBICA EL INPUT Y EL BOTON SUBMIT DE LOS COMENTARIOS*/
     display: flex;
@@ -563,12 +563,11 @@ button:hover{
     top: 80px;
 }
 /*FOOTER*/
-.pie-pagina{/*CONTENEDOR PRINCIPAL DE EL FOOTER*/
+.pie-pagina{/*Contenedor del footer*/
     width: 100%;
     background-color: #403f3f;
-    overflow: hidden;
 }
-.pie-pagina .parte-1{/*PRIMERA PARTE DE EL FOOTER*/
+.pie-pagina .parte-1{/*Primera parte de el footer*/
     width: 100%;
     margin: auto;
     max-width: 1200px;
@@ -576,18 +575,15 @@ button:hover{
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 100px;
     padding: 45px 0px;
-    position: relative;
-    bottom: 0;
-    
 }
-.pie-pagina .parte-1 .caja figure{/*ESTILOS A LAS 3 CAJAS DE LA PRIMER PARTE*/
+.pie-pagina .parte-1 .caja figure{/*Estilos a las cajas de el footer*/
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo-footer{/*ESTILOS AL LOGO DE LA PAGINA*/
+.logo-footer{/*Estilos al logo de la pagina en el footer*/
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -596,7 +592,7 @@ button:hover{
     position: relative;
     bottom: 18px;
 }
-.pie-pagina .parte-1 .caja h2{/*ESTILOS A LOS TITULOS DE LA PAGINA*/
+.pie-pagina .parte-1 .caja h2{/*Estilos a los h2 de las cajas*/
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
@@ -604,14 +600,14 @@ button:hover{
     position: relative;
     bottom: 20px;
 }
-.pie-pagina .parte-1 .caja p{/*ESTILOS A LOS PARRAFOS DE LA PAGINA*/
+.pie-pagina .parte-1 .caja p{/*Estilos a los parrafos del footer*/
     color: white;
     margin-bottom: 10px;
     position: relative;
     bottom: 40px;
     width: 90%;
 }
-.pie-pagina .parte-1 .imagenes-footer a{/*ESTILOS A LOS ICONOS DE LAS REDES SOCIALES*/
+.pie-pagina .parte-1 .imagenes-footer a{/*Estilos a los iconos de las redes sociales*/
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -623,30 +619,29 @@ button:hover{
     text-align: center;
     border-radius: 10px;
     position: relative;
-    bottom: 30px;
+    bottom: 30px; 
 }
-.pie-pagina .parte-1 .imagenes-footer {/*BORDER-RADIUS A LOS ICONOS*/
+.pie-pagina .parte-1 .imagenes-footer {/*Border-radius al contenedor de los iconos*/
     border-radius: 10px;
 }
 .pie-pagina .parte-1 .imagenes-footer a:hover{
     color: rgb(204, 201, 201);
 }
-.logos{/*TAMAÑO DE CADA ICONO*/
+.logos{/*Tamaño de cada icono*/
     width: 30px;
     height: 30px;
     margin-top: 7px;
 }
-.pie-pagina .parte-2{/*SEGUNDA PARTE DE EL FOOTER*/
+.pie-pagina .parte-2{/*Estilos a la segunda parte de el footer*/
+    padding: 15px 10px;
     background-color: #383838;
     text-align: center;
     color: white;
     font-size: 15px;
     position: fixed;
-    bottom: 0px;
-    width: 100vw;
-    height: 50px;
-    overflow: hidden;
-    z-index: 9999999;
+    bottom: 0;
+    width: 100%;
+    z-index: 99999;
 }
 /*RESPONSIVE DEL FOOTER*/
 @media screen and (max-width: 800px) {
@@ -659,5 +654,4 @@ button:hover{
     .pie-pagina .parte-1 .imagenes-footer a{
         margin-bottom: 50px;
     }
-    
 }
