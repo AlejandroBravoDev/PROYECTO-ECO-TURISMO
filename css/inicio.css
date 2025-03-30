@@ -218,8 +218,7 @@ main{
     justify-content: left;
     align-items: bottom;
     position: relative;
-    bottom: 450px;
-    
+    bottom: 480px;
 }
 /*Recuadro encima del slider*/
 .titulo-inicio{
@@ -234,7 +233,6 @@ main{
     color: #ADC178;
     text-shadow: black 0 0 2px;
     margin-left: 20px;
-    
 }
 .titulo-inicio p{
     font-size: 25px;
@@ -252,8 +250,6 @@ main{
     border:  none;
     position: absolute;
     bottom: 0;
-
-
 }
 /*Responsive del recuadro que esta encima del slider*/
 @media (max-width: 800px){
@@ -275,7 +271,7 @@ main{
 .btn-inicio a{/*Estilos del boton del inicio*/
     text-decoration: none;
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     text-shadow:  0 0 2px black;
     font-weight: bold;
 }
@@ -286,128 +282,137 @@ button:hover{
     background: #9daf6d;
 }
 /*SEGUNDA SECTION*/
+.container-cartas{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    position: relative;
+    bottom: 200px;
+}
+.cartas{
+    flex: 1 1 400px;
+    max-width: 400px;
+    height: 500px;
+}
+.cartas img{
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0 , 0 , 0.3);
+}
+.cartas img:hover {
+    transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
+}
+.cuadro-links{
+    width: 350px;
+    height: 150px;
+    background-color: #ADC178;
+    position: relative;
+    bottom: 100px;
+    cursor: pointer;
+    padding: 15px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 0 , 0 , 0.2);
+}
+.cuadro-links:hover {
+    transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
+}
+.cuadro-links h1{
+    font-size: 40px;
+    
+}
+.cuadro-links h2{
+    font-size: 25px;
+}
+.cuadro-links a{
+    text-decoration: none;
+    color: white;
+}
+.flecha{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    bottom: 170px;
+}
+@media (max-width:450px){
+    .cartas{
+        max-width: 320px;
+    }
+    .cartas img{
+        width: 320px;
+        height: 320px;
+    }
+    .cuadro-links{
+        width: 270px;
+    }
+    .cuadro-links h1{
+        font-size: 35px;
+    }
+}
+/*TERCERA SECTION*/
 .info-risaralda{
     width: 100%;
-    height: 1200px;
+    height: 920px;
     background-color: white;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 300px;
-
+    flex-wrap: wrap;
 }
-/*Imagenes de la segunda section*/
-.img-info{
-    width: 50%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: 320px;
-
-}
-.img-info img{
-    width: 600px;
-    height: 650px;
-    border-radius: 10px;
-
-}
-.img1{
-    position: relative;
-    bottom: 50px;
-    left: 100px;
-    z-index: 1;
-    box-shadow: 0 0 15px black;
-}
-.img2{
-    position: relative;
-    right: 100px;
-    z-index: 2;
-    box-shadow: 0 0 25px black;
+.info-risaralda img{
+    width: 100%;
+    height: 920px;
 }
 /*Textos sgunda section*/
 .textos-info{
-    width: 60%;
-    height: 600px;
+    flex: 1 1 500px;
+    max-width: 760px;
+    height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     color: #ADC178;
-    position: relative;
-    bottom: 380px;
+    background-color: rgba(0, 0 , 0 , 0.6);
+    position: absolute;
+    right: 50px;
 }
 .textos-info h1{
-    font-size: 54px;
+    width: 90%;
+    font-size: 42px;
     text-shadow: 0 0 2px black;
 }
 .textos-info p{
-    width: 75%;
+    width: 90%;
     font-size: 20px;
-    color: black;
-    text-align: center;
-}
-/*RESPONSIVE DE LA SEGUNDA SECTION*/
-@media (max-width:872px){
-    .textos-info{
-        width: 80%;
-    }
-    .textos-info h1{
-        font-size: 30px;
-    }
-    .textos-info p{
-        width: 100%;
-        font-size: 18px;
-        text-align: left;
-    }
-    .img-info img{
-        width: 400px;
-        height: 400px;
-    }
-    .img-info{
-        position: relative;
-        bottom: 470px;
-    }
-    .btn-info{
-        position: relative;
-        top: -200px;
-    }
-}
-.responsive-info{/*Contenedor de la segunda section para darle responsive*/
-    width: 100%;
-    height: 900px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-/*Boton segunda section*/
-.info-btn{
+    color: white;
+    font-weight: bold;
     position: relative;
-    top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    bottom: 40px;
 }
+/*Boton tercera section*/
 .btn-info{
-    width: 150px;
-    padding: 10px;
-    border-radius: 20px;
+    width: 300px;
+    padding: 15px;
     border: none;
     background-color: #ADC178;
-    box-shadow:  0 0 2px black;
     font-size: 20px;
     cursor: pointer;
-    position: relative;
-    bottom: 10px;
 }
 .btn-info a{
     text-decoration: none;
     color: white;
     text-shadow:  0 0 2px black;
+    font-weight: bold;
+    font-size: 20px;
 
 }
 .btn-info a:hover{
@@ -416,6 +421,41 @@ button:hover{
 }
 .btn-info:hover{
     background: #9daf6d;   
+}
+@media (max-width:860px){
+    .info-risaralda{
+        height: 600px;
+    }
+    .info-risaralda img{
+        height: 600px;
+    }
+    .textos-info{
+        max-width: 400px;
+    }
+    .textos-info h1{
+        font-size: 30px;
+    }
+    .textos-info p{
+        font-size: 15px;
+    }
+    .btn-info{
+        width: 200px;
+    }
+    .btn-info a{
+        font-size: 15px;
+    }
+}
+@media (max-width: 490px){
+    .textos-info{
+        max-width: 300px;
+        height: 370px;
+    }
+    .info-risaralda{
+        height: 450px;
+    }
+    .info-risaralda img{
+        height: 450px;
+    }
 }
 /*FOOTER*/
 .pie-pagina{/*Contenedor del footer*/
