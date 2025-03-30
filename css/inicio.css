@@ -422,6 +422,23 @@ button:hover{
 .btn-info:hover{
     background: #9daf6d;   
 }
+.slider-container2{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+}
+.slider2{
+    width: 400%;
+    display: flex;
+    animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
+}
+.sli2 {
+    width: 100%;   
+}
+.sli2 img{
+    width: 100%;
+    height: 920px;
+}
 @media (max-width:860px){
     .info-risaralda{
         height: 600px;
@@ -455,6 +472,12 @@ button:hover{
     }
     .info-risaralda img{
         height: 450px;
+    }
+}
+@media (max-width:400px){
+    .textos-info{
+        position: absolute;
+        right: 20px;
     }
 }
 /*FOOTER*/
