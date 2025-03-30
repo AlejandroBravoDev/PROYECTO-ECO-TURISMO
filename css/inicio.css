@@ -9,8 +9,6 @@ body{
     overflow-x: hidden;
     font-family: sans-serif;
 }
-
-
 /*HEADER*/
 header{
     width: 100%;
@@ -18,7 +16,6 @@ header{
     position: fixed;
     z-index: 9999;
 }
-
 /* menu hamburguesa*/
 .nav-links{
     display: flex;
@@ -27,7 +24,6 @@ header{
     font-size: 20px;
     font-weight: bold;
 }
-
 .nav-links input{
     height: 20px;/*Tamaño de el input tipo texto*/
 
@@ -153,7 +149,6 @@ nav input{
     width: 100%;
     overflow: hidden;
     margin: auto;
-    position: relative;
 }
 .slider{
     width: 400%;
@@ -161,8 +156,7 @@ nav input{
     animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
 }
 .sli {
-    width: 100%;
-    position: relative;   
+    width: 100%;   
 }
 .sli img{
     width: 100%;
@@ -214,78 +208,76 @@ h2{
     font-family:"Rowdies";
 }
 /*SECTION DEL MAIN*/
-.titulo-inicio{
+main{
+   width: 100%;
+   height: auto;
+}
+.recuadro{
+    margin-left: 30px;
     display: flex;
-    flex-direction: column;
     justify-content: left;
-    align-items: left;
+    align-items: bottom;
+    position: relative;
+    bottom: 450px;
+    
 }
 /*Recuadro encima del slider*/
 .titulo-inicio{
-    background-color: rgba(0, 0 , 0 , 0.7);
-    padding: 20px;
-    width: 45%;
-    height: 420px;
-    position: absolute;
-    left: 100px;
-    top: 230px;
+    max-width: 700px;
+    background-color: rgba(0, 0 , 0 , 0.6);
+    flex: 1 1 300px;
+    height: 380px;
     flex-wrap: wrap;
-    border-radius: 20px;
-    border: none;
-    box-shadow: 0 0 1vmax black;
 }
 .titulo-inicio h1{
     font-size: 50px;
     color: #ADC178;
     text-shadow: black 0 0 2px;
-    position: absolute;
-    top: 10px;
+    margin-left: 20px;
+    
 }
 .titulo-inicio p{
     font-size: 25px;
     color: white;
     text-shadow: black 0 0 4px;
     font-weight: bold;
-    position: absolute;
-    top: 240px;
+    margin-left: 20px;
 }
 .btn-inicio{
-    padding: 15px;
+    padding: 10px;
     width: 160px;
-    border-radius: 30px;
     border: none;
     background: #ADC178;
     cursor: pointer;
-    box-shadow: black 0 0 15px;
     border:  none;
     position: absolute;
-    top: 400px;
+    bottom: 0;
 
 
 }
 /*Responsive del recuadro que esta encima del slider*/
-@media (max-width: 1023px){
+@media (max-width: 800px){
     .titulo-inicio{
-        width: 60%;
-        position: absolute;
-        top: 120px;
-        left: 10px;
+        max-width: 400px;
+        height: 350px;
+        margin-left: 10px;
+        position: relative;
+        top: 70px;
+        right: 20px;
     }
     .titulo-inicio h1{
         font-size: 32px;
-        position: relative;
-        top: 10px;
     }
     .titulo-inicio p{
-        font-size: 20px;
+        font-size: 18px;
     }
 }
-
 .btn-inicio a{/*Estilos del boton del inicio*/
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     text-shadow:  0 0 2px black;
+    font-weight: bold;
 }
 .btn-inicio a:hover{
     background: #9daf6d;
