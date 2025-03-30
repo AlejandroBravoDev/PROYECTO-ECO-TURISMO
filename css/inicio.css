@@ -325,10 +325,16 @@ button:hover{
 }
 .cuadro-links h1{
     font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
     
 }
-.cuadro-links h2{
-    font-size: 25px;
+.cuadro-links p{
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 .cuadro-links a{
     text-decoration: none;
@@ -341,6 +347,12 @@ button:hover{
     align-items: center;
     position: relative;
     bottom: 170px;
+}
+.flecha img{
+    transition: transform 0.3s ease;
+}
+.flecha img:hover {
+    transform: translateY(-5px);/*Se agrega cuando quiero que el elemento sobresalga un poco*/
 }
 @media (max-width:450px){
     .cartas{

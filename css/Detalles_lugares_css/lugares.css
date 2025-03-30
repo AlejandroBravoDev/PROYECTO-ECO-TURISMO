@@ -192,6 +192,9 @@ nav input{
 h1{
     font-family:"Rowdies";
 }
+h2{
+    font-family:"Rowdies";
+}
 /*INICIA EL MAIN*/
 .titulo-inicio{/*PRIMER SECTION*/
     display: flex;
@@ -202,21 +205,24 @@ h1{
 /*VENTANA EMERGENTE PRIMER SECTION*/
 .ventana{/*CONTENEDOR DE LA VENTANA EMERGENTE*/
     width: 100%;
-    height: 100%;
+    height:920px;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     pointer-events: none;
-    border-radius: 20px;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0 , 0 , 0.8);
+    overflow: hidden;
 }
 .modal--show{/*CAMBIA CON JS, EN EL CONTENEDOR PRINCIPAL LA VENTANA TIENE OPACITY 0, EN JS PONEMOS UN EVENTO CLICK PARA QUE CUANDO ALGUIEN LE DE CLICK A CIERTO BOTON LA OPACIDAD DE ESTA PASE DE 0 A 1 Y APAREZCA LA VENTANA EMERGENTE*/
     opacity: 1;
     pointer-events: unset;
 }
 .ventana-emergente{/*VENTANA EMERGENTE*/
-    width: 350px;
-    height: 350px;
+    width: 430px;
+    height: 430px;
     background-color: white;
     border-radius: 20px;
     border: 1px solid black;
@@ -235,7 +241,7 @@ h1{
     border-radius: 50%;
     box-shadow: 0 0 2px;
     position: relative;
-    bottom: -20px;
+    bottom: 20px;
  
  }
  .title-ventana{/*TITULO DE LA VENTANA EMERGENTE*/
@@ -244,10 +250,10 @@ h1{
     border: none;
     text-shadow: 0 0 2px black;
     position: relative;
-    bottom: 5px;
+    bottom: 25px;
  }
  .parrafo-ventana{/*PARRAFO DE LA VENTANA EMERGENTE*/
-    width: 300px;
+    width: 405px;
     text-align: center;
     position: relative;
     bottom: 40px;
@@ -293,7 +299,7 @@ h1{
  }
  .volver{/*TEXTO PARA VOLVER A LA SECTION ANTEIOR*/
      position: relative;
-     bottom: 20px;
+     bottom: 0;
  }
  .volver a{
      text-decoration: none;
@@ -310,257 +316,278 @@ h1{
         position: absolute;
         top: 200px;
     }
+    .ventana-emergente img{
+        position: relative;
+        bottom: -20px;
+    }
+    .title-ventana{
+        position: relative;
+        bottom: 5px;
+    }
     .parrafo-ventana{
         width: 300px;
     }
+    .volver{
+        position: relative;
+        bottom: 20px;
+    }
 }
 /*SEGUIMOS CON LOS ESTILOS DE LA PRIMER SECTION*/
-.titulo-inicio{
-    width: 52%;
-    height: 53%;
+main{
+    width: 100%;
+    height: auto;
+ }
+.recuadro{
+    margin-left: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: bottom;
     position: absolute;
-    left: 100px;
-    top: 150px;
-    background-color: rgba(0, 0 , 0 , 0.7);
-    padding: 30px;
-    border-radius: 20px;
-    z-index: 2;
-    box-shadow: 0 0 1vmax;
+    top: 350px;
+}
+.titulo-inicio{
+    max-width: 700px;
+    background-color: rgba(0, 0 , 0 , 0.6);
+    flex: 1 1 300px;
+    height: 480px;
+    flex-wrap: wrap;
 }
 .titulo-inicio h1{
-    font-size: 60px;
-    color:  #ADC178;
-    text-shadow: black 0 0 5px;
-    position: relative;
-    bottom: 40px;
+    font-size: 50px;
+    color: #ADC178;
+    text-shadow: black 0 0 2px;
+    margin-left: 20px;
 }
-.titulo-inicio .lugar{/*ESTILOS AL PARRAFO DE LA PRIMERA SECTION*/
+.titulo-inicio p{
+    width: 90%;
     font-size: 25px;
     color: white;
     text-shadow: black 0 0 4px;
     font-weight: bold;
-    position: relative;
-    bottom: 60px;
+    margin-left: 20px;
 }
-#btn-destinos{
-    padding: 15px;
-    width: 150px;
-    border-radius: 30px;
+.btn-destinos{
+    padding: 10px;
+    width: 220px;
     border: none;
     background: #ADC178;
     cursor: pointer;
-    box-shadow: black 0 0 15px;
     border:  none;
-    position: relative;
-    bottom: 60px;
-    color: white;
+    position: absolute;
+    bottom: 0;
 }
-#btn-destinos {
-    text-decoration: none;
-    color: white;
-    font-size: 15px;
-    text-shadow:  0 0 2px black;
-
-}
-#btn-destinos:hover{
-    background: #9daf6d;
-
-}
-button:hover{
-    background: #9daf6d;
-}
-/*RESPONSIVE DE LA PRIMERA SECTION*/
-@media(max-width:1000px){
+/*Responsive del recuadro que esta encima del slider*/
+@media (max-width: 820px){
+    .recuadro{
+    position: absolute;
+    top: 200px;
+    }
     .titulo-inicio{
-        width: 61%;
-        height: 40%;
+        max-width: 400px;
+        height: 400px;
+        margin-left: 10px;
     }
     .titulo-inicio h1{
         font-size: 30px;
     }
-    .titulo-inicio .lugar{
-        font-size: 13px;
-        position: relative;
-        top: -60px;
+    .titulo-inicio p{
+        font-size: 15px;
     }
-    #btn-destinos {
+}
+@media (max-width:480px){
+    .recuadro{
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        position: relative;
-        top: -60px;
-        left: 0;
+        margin: 0;
     }
-}
-@media screen and (max-width: 376px){
     .titulo-inicio{
-        height: 45%;
+        max-width: 300px;
+        height: 420px;
     }
 }
-@media(max-width: 675px){
-    .titulo-inicio{
-        position: absolute;
-        left: 10px;
-        top: 120px;
-    }
-    .btn-destinos{
-        width: 100px;
-    }
-}
-/*INICIA LA SEGUNDA SECTION, SECCION DE COMENTARIOS*/
-.rating{/*CONTENEDOR PRINCIPAL DE LA SEGUNDA SECCION*/
-    width: 100%;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.sectionrating{/*SEGUNDO CONTENEDOR*/
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-@media (max-height: 1000px){/*RESPONSIVE AL PRIMER CONTENDOR*/
-    .rating{
-        height: 1500px;
-    }
-}
-.sectionrating h1{/*TITULO SEGUNDA SECTION*/
-    font-size: 56px;
-    color: #ADC178;
-    text-shadow: 0 0 2px black;
-    position: relative;
-    top: -150px;
-}
-/*RESPONSIVE DEL TITULO*/
-@media (max-width: 456px){
-    .sectionrating h1{
-    font-size: 30px;
-    }
-}
-.comentarios{/*CONTENDOR DONDE SE UBICA EL INPUT Y EL BOTON SUBMIT DE LOS COMENTARIOS*/
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: -150px;
-}
-.input-comentarios{/*INPUT*/
-    padding: 10px;
-    width: 250px;
-    height: 30px;
-    border-radius: 10px;
-    border: 1px solid black;
-}
-.btn-comentarios{/*BUTTON SUBMIT*/
-    padding: 8px;
-    width: 100px;
-    border-radius: 20px;
-    border: none;
-    background: #ADC178;
-    box-shadow: 0 0 4px black;
-    position: relative;
-    top: 30px;
-    left: 90px;
+.btn-destinos a{/*Estilos del boton del inicio*/
+    text-decoration: none;
     color: white;
-    cursor: pointer;
+    font-size: 20px;
+    text-shadow:  0 0 2px black;
+    font-weight: bold;
 }
-.btn-comentarios:hover{
-    background-color: #9daf6d;
+.btn-destinos a:hover{
+    background: #9daf6d;
 }
-.responsive-personas{/*CONTENEDOR COMPLETO DE LOS COMENTARIOS DE LAS PERSONAS*/
-    width: 100%; 
+button:hover{
+    background: #9daf6d;
+}
+/*segunda section*/
+.comentarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.comentarios-parte1{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comentarios-parte1 h1{
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #ADC178;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+.comentarios-parte1 span{
+    font-size: 1.8rem;
+    color: #ADC178;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.comentarios-container{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 50px;
+    width: 100%;
 }
-.persona{/*CONTENEDOR DEL COMENTARIO DE LA PRIMERA PERSONA*/
-    width: 300px;
-    height: 300px;
-    background-color: white;
-    box-shadow: 0 0 10px gray;
-    border-radius: 10px;
-    position: relative;
-    top: -100px;
+.comentarios-container1{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0 , 0 , 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
 }
-.persona h2{/*TITULO DE CADA COMENTARIO*/
-    font-size: 20px;
-    position: relative;
-    top: 70px;
-    left: 100px;
-}
-.persona p{/*PARRAFO DE CADA COMENTARIO*/
-    width: 200px;
-    position: relative;
-    left: 55px;
-    top: 80px;
-}
-.avatarcomentarios{/*AVATAR O FOTO DE CADA PERSONA*/
+.img-cliente{
     width: 50px;
     height: 50px;
-    position: relative;
-    bottom: 160px;
-    left: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
 }
-.rating-img{/*ESTRELLAS PARA VALUAR*/
-    width: 120px;
-    height: 120px;
-    position: relative;
-    top: 100px;
-    left: 60px;
+.img-cliente img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
-.img-comentarios .rating-p{
-    font-weight: bold;
-    position: relative;
-    top: 10px;
+.perfil-persona{
+    display: flex;
+    align-items: center;
 }
-/*COMENTARIO DE LA SEGUNDA PERSONA*/
-.persona2{
-    width: 300px;
-    height: 300px;
-    background-color: white;
-    box-shadow: 0 0 10px gray;
-    border-radius: 10px;
-    position: relative;
-    top: -100px;
+.username{
+    display: flex;
+    flex-direction: column;
 }
-.persona2 h2{
-    font-size: 20px;
-    position: relative;
-    top: 70px;
-    left: 100px;
+.username strong{
+    color: black;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
 }
-.persona2 p{
+.username span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+.calificacion{
+    color:#f9d71c ;
+}
+.container-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.parrafo p{
+    font-size: 0.9rem;
+    color: #4b4b4b;
+
+}
+.comentarios-container1:hover{
+    transform: translateY(-5px);
+    transition: all ease 0.3s;
+}
+.comentarios-parte2{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comentarios-parte2 H2{
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #ADC178;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+.comentarios-parte2 input{
     width: 200px;
-    position: relative;
-    left: 55px;
-    top: 80px;
+    padding: 10px;
 }
-/*COMENTARIO DE LA TERCERA PERSONA*/
-.persona3{
-    width: 300px;
-    height: 300px;
-    background-color: white;
-    box-shadow: 0 0 10px gray;
-    border-radius: 10px;
-    position: relative;
-    top: -100px;
+.comentar{
+    margin-top: 20px;
 }
-.persona3 h2{
-    font-size: 20px;
-    position: relative;
-    top: 70px;
-    left: 100px;
-            
+.comentar button{
+    font-weight: 500;
+    background-color: #ADC178;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border: 1px solid #979797;
+    cursor: pointer;
+    
 }
-.persona3 p{
-    width: 200px;
-    position: relative;
-    left: 55px;
-    top: 80px;
+.comentar a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+.comentar button:hover{
+    background-color: #9daf6d;
+}
+.comentar a:hover{
+    background-color: #9daf6d;
+}
+@media(max-width:1141px){
+    .comentarios-container1{
+        width: 45%;
+        padding: 10px;
+    }
+
+}
+@media(max-width:999px){
+    .comentarios-container1{
+        width: 100%;
+    }
+    .comentarios-container h1{
+        font-size: 1.4rem;
+
+    }
+}
+@media (max-width:370px){
+    .comentarios-parte2 input{
+        width: 150px;
+    }
+}
+@media (max-width:320px){
+    .container-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .calificacion{
+        margin-top: 10px;
+    }
 }
 /*FOOTER*/
 .pie-pagina{/*Contenedor del footer*/
@@ -633,7 +660,6 @@ button:hover{
     margin-top: 7px;
 }
 .pie-pagina .parte-2{/*Estilos a la segunda parte de el footer*/
-    padding: 15px 10px;
     background-color: #383838;
     text-align: center;
     color: white;
