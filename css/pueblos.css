@@ -169,11 +169,11 @@ button{
     color: white;
     border-radius: 10px;
     border: none;
+    cursor: pointer;
 }
 
 button:hover{
-    transform: scale(1.05);
-    box-shadow: 0 0 15px #adc178;
+    transform: scale(1.01);
     transition: all .3s ease-in-out;
 }
 
@@ -243,7 +243,7 @@ a{
     color: #adc178;
 }
 
-.content h3{
+.content p{
     margin-top: 20px;
     margin-bottom: 30px;
     width: 80%;
