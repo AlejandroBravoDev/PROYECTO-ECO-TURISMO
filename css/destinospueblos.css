@@ -4,6 +4,9 @@ body{
     font-family:sans-serif;
     overflow-x: hidden;
     background:white;
+    background-image: url('../img/slider4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 /*comienza el header*/
 header{
@@ -228,6 +231,14 @@ main{
     align-items: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
+
+#filtro{
+
+    width: 50%;
+    height: 30px;
+    background-color: #9daf6d;
+    margin-top: 160px;
+} 
 
 .texto{
     width: 90%;
