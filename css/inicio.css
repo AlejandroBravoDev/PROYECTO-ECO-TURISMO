@@ -7,22 +7,33 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: sans-serif;
+    font-family: arial;
+    height: auto;
 }
 /*HEADER*/
 header{
     width: 100%;
-    height: 90px;
+    height: 85px;
     position: fixed;
     z-index: 9999;
 }
 /* menu hamburguesa*/
 .nav-links{
+    width: 50%;
     display: flex;
     list-style: none;
-    gap: 100px;
+    gap: 20%;
     font-size: 20px;
     font-weight: bold;
+    position: relative;
+    right: 200px;
+}
+@media (max-width: 1500px){
+    .nav-links{
+        gap: 15%;
+        position: relative;
+        right: 100px;
+    }
 }
 .nav-links input{
     height: 20px;/*Tamaño de el input tipo texto*/
@@ -40,11 +51,27 @@ header{
     margin: 4px 0;
     border-radius: 1px;
 }
+.avatarResponsive{
+    display: none;
+}
 /*Responsive del menu hamburguesa*/
-@media screen and (max-width: 1280px){
+@media (max-width: 1280px){
+    .avatarResponsive{
+        display: block;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+    }
+    .avatar{
+        display: none;
+    }
+    header{
+        height: 65px;
+    }
     .navbar{
         position: relative;
         background-color: #403f3f;
+        height: 65px;
     
     }
     .burger{
@@ -71,9 +98,11 @@ header{
         display: flex;
     }
     .logo{
+        width: 45px;
+        height: 45px;
         position: absolute;
         left: 10px;
-        top: 18px;
+        top: 10px;
     }
     .nav-links input{
         position: relative;
@@ -100,16 +129,19 @@ header{
         background-color: #4d4c4c;
         color: #9daf6d;
     } 
+    .baja{
+        height: 65px;
+    }
 }
 /*Estilos navbar*/
 nav{
     width: 100%;
-    height: 100px;
+    height: 85px;
     background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8%;
+    gap: 12%;
 }
 nav img{
     border-radius: 50%;
@@ -120,8 +152,8 @@ nav .img{
     box-shadow: 0 0 15px black; 
 }
 nav img{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     box-shadow: 0 0 15px black;
 }
 nav a{
@@ -134,7 +166,7 @@ nav a:hover{
 }
 nav input{
     width: 150px;
-    padding: 8px;
+    padding: 6px;
     border: none;
     border-radius: 15px;
     box-shadow: 0 0 5px black;
@@ -142,7 +174,7 @@ nav input{
 /*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
 .baja{
     background: #403f3f;
-    height: 94px;
+    height: auto;
 }
 /*Estilos slider*/
 .slider-container{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
@@ -156,14 +188,12 @@ nav input{
     animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
 }
 .sli {
-    width: 100%;   
+    flex: 1 1 400px;
+    max-width: 100%;  
 }
 .sli img{
     width: 100%;
-    height: 920px;
-}
-h1{
-    font-family:"Rowdies";
+    height: 820px;
 }
 /*Keyframes para que se ejecute la animaciòn*/
 @keyframes slide{
@@ -181,64 +211,57 @@ h1{
 }
 /*Responsive del slider*/
 @media (max-width: 1023px) {
-    .slider{
-        position: relative;
-        top: 100px;
-        height: 600px;
-        background-color: white;
-    }
-    .sli{
-        position: relative;
-        top: 0;
-        width: 100%;
-        height: 550px;
-    }
     .sli img{
-        position: relative;
-        top: 0;
-        width: 100%;
-        height: 550px;
+        margin-top: 65px;
+        height: 620px;
     }
 }
-/*Fuente declarada para los h1,h2*/
-h1{
-    font-family:"Rowdies";
+@media (max-width:600px){
+    .sli img{
+        margin-top: 65px;
+        height: 400px;
+    }
 }
-h2{
-    font-family:"Rowdies";
+@media (max-width:600px){
+    .sli img{
+        height: 300px;
+    }
 }
 /*SECTION DEL MAIN*/
 main{
    width: 100%;
    height: auto;
 }
-.recuadro{
-    margin-left: 30px;
-    display: flex;
-    justify-content: left;
-    align-items: bottom;
-    position: relative;
-    bottom: 480px;
-}
+
 /*Recuadro encima del slider*/
+.recuadro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    left: 30px;
+}
 .titulo-inicio{
     max-width: 700px;
     background-color: rgba(0, 0 , 0 , 0.6);
     flex: 1 1 300px;
     height: 380px;
     flex-wrap: wrap;
+    border-radius: 10px;
 }
 .titulo-inicio h1{
-    font-size: 50px;
+    font-size: 48px;
     color: #ADC178;
     text-shadow: black 0 0 2px;
     margin-left: 20px;
+    font-weight: 800;
 }
 .titulo-inicio p{
     font-size: 25px;
     color: white;
     text-shadow: black 0 0 4px;
-    font-weight: bold;
+    font-weight: 500;
     margin-left: 20px;
 }
 .btn-inicio{
@@ -249,29 +272,58 @@ main{
     cursor: pointer;
     border:  none;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 10px;
 }
 /*Responsive del recuadro que esta encima del slider*/
-@media (max-width: 800px){
+@media (max-width: 1023px){
     .titulo-inicio{
-        max-width: 400px;
-        height: 350px;
-        margin-left: 10px;
-        position: relative;
-        top: 70px;
-        right: 20px;
+        max-width: 420px;
+        height: 250px;
+        
     }
     .titulo-inicio h1{
-        font-size: 32px;
+        font-size: 28px;
     }
     .titulo-inicio p{
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .btn-inicio{
+        width: 120px;
+        padding: 6px;
+    }
+    .btn-inicio a{
+        font-size: 15px;
+    }
+}
+@media (max-width: 600px){
+    .titulo-inicio{
+        position: relative;
+        bottom: 80px;
+        max-width: 240px;
+        height: 130px;
+        right: 10px;
+    }
+    .titulo-inicio p{
+        display: none;
+    }
+    .titulo-inicio h1{
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .btn-inicio{
+        width: 80px;
+        position: relative;
+        left: 10px;
+        top: 20px;
+     
     }
 }
 .btn-inicio a{/*Estilos del boton del inicio*/
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     text-shadow:  0 0 2px black;
     font-weight: bold;
 }
@@ -282,20 +334,30 @@ button:hover{
     background: #9daf6d;
 }
 /*SEGUNDA SECTION*/
-.container-cartas{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 100px;
+/*estilos para las ids*/
+#slider-container2{
     position: relative;
-    bottom: 200px;
+    left: 90px;
+    width: 90%;
+    height: 500px;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.slider1{
+    display: flex;
+    transition: transform .5s ease;
+}
+.slide{
+    min-width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
 }
 .cartas{
-    flex: 1 1 400px;
-    max-width: 400px;
+    width: 23%;
     height: 500px;
 }
 .cartas img{
@@ -340,19 +402,29 @@ button:hover{
     text-decoration: none;
     color: white;
 }
-.flecha{
+/*estilos para las flechas*/
+.arrow{
+    position: absolute;
+    top:40%;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    background-color: #ADC178;
+}
+
+.left{
+    left: 10px;
+}
+
+.right{
+    right: 10px;
+}
+.imgs{
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: 170px;
-}
-.flecha img{
-    transition: transform 0.3s ease;
-}
-.flecha img:hover {
-    transform: translateY(-5px);/*Se agrega cuando quiero que el elemento sobresalga un poco*/
+    height: 50%;
 }
 @media (max-width:450px){
     .cartas{
@@ -364,9 +436,47 @@ button:hover{
     }
     .cuadro-links{
         width: 270px;
+        height: 100px;
+        position: relative;
+        bottom: 80px;
     }
     .cuadro-links h1{
         font-size: 35px;
+    }
+    .flecha img{
+        width: 40px;
+        height: 40px;
+    }
+    .cuadro-links h1{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .cuadro-links p{
+        margin-top: 10px;
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 372px){
+    .cartas{
+        max-width: 280px;
+    }
+    .cartas img{
+        width: 280px;
+        height: 280px;
+    }
+    .cuadro-links{
+        width: 230px;
+        height: 100px;
+        position: relative;
+        bottom: 80px;
+    }
+    .cuadro-links h1{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .cuadro-links p{
+        margin-top: 10px;
+        
     }
 }
 /*TERCERA SECTION*/
@@ -396,35 +506,37 @@ button:hover{
     background-color: rgba(0, 0 , 0 , 0.6);
     position: absolute;
     right: 50px;
+    border-radius: 10px;
 }
 .textos-info h1{
-    width: 90%;
+    width: 92%;
     font-size: 42px;
     text-shadow: 0 0 2px black;
+    font-weight: 800;
 }
 .textos-info p{
     width: 90%;
     font-size: 20px;
     color: white;
-    font-weight: bold;
+    font-weight: 500;
     position: relative;
     bottom: 40px;
 }
 /*Boton tercera section*/
 .btn-info{
-    width: 300px;
-    padding: 15px;
+    width: 310px;
+    padding: 10px;
     border: none;
     background-color: #ADC178;
-    font-size: 20px;
     cursor: pointer;
+    border-radius: 10px;
 }
 .btn-info a{
     text-decoration: none;
     color: white;
     text-shadow:  0 0 2px black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
 
 }
 .btn-info a:hover{
@@ -567,10 +679,14 @@ button:hover{
     text-align: center;
     color: white;
     font-size: 15px;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
     z-index: 99999;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*RESPONSIVE DEL FOOTER*/
 @media screen and (max-width: 800px) {

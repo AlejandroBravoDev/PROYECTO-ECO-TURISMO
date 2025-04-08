@@ -2,10 +2,7 @@ window.addEventListener("scroll", function(){
     let header = document.querySelector("header");
     header.classList.toggle("baja", this.window.scrollY>50);
 } )
-window.addEventListener("scroll", function(){
-    let nav = document.querySelector("nav");
-    header.classList.toggle("navhover", this.window.scrollY>50);
-} )
+
 
 let burguer = document.querySelector(".burger");
 let navLinks = document.querySelector(".nav-links");
@@ -18,6 +15,7 @@ burguer.addEventListener("click", () => {
 //slider de destinos
 document.addEventListener('DOMContentLoaded'/*espera a que todo el html esté cargado al 100%, cuando se carga el html se ejecuta la función */, function(){
     //se seleccionan todos los elementos que vamos a manipular del html
+    const slider1 = document.querySelector(".slider1");//se selecciona el div con clase .slider
     const slider = document.querySelector(".slider");//se selecciona el div con clase .slider
     const slides = document.querySelectorAll(".slide");//se seleccionan TODOS los divs o elementos que hay con la clase slide
     const leftBtn = document.querySelector(".left"); //se selecciona el botón que se va a ubicar del lado izquierdo del slider
@@ -31,6 +29,7 @@ document.addEventListener('DOMContentLoaded'/*espera a que todo el html esté ca
     function uptadeSlider(){
         //esta linea sirve para darle una animación al slider y que no se vea tan brusco el cambio de slides
         slider.style.transform = `translateX(-${currentIndex * 100}%)`;//no entendí porque se usan los ´´
+        slider1.style.transform = `translateX(-${currentIndex * 100}%)`;//no entendí porque se usan los ´´
     };
 
     //este evento click sirve para devolvernos en los sliders
