@@ -249,7 +249,7 @@ a{
    text-decoration: none;
    color: white;
 }
-a:hover{
+.btn2 a:hover{
    background-color: #9daf6d;
 }
 /*responsive */
