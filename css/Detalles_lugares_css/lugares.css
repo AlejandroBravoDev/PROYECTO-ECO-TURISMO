@@ -9,22 +9,34 @@ body{
 }
 /*HEADER*/
 header{
-    width: 100vw;
-    height: 94px;
-    z-index: 99999;
+    width: 100%;
+    height: 85px;
     position: fixed;
-    top: 0;
+    z-index: 9999;
 }
-/*MENU HAMBURGUESA*/
+/* menu hamburguesa*/
 .nav-links{
+    width: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
-    gap: 100px;
+    gap: 20%;
     font-size: 20px;
     font-weight: bold;
+    position: relative;
+    right: 0px;
+}
+@media (max-width: 1500px){
+    .nav-links{
+        gap: 15%;
+        position: relative;
+        right: 0px;
+    }
 }
 .nav-links input{
-    height: 20px;
+    height: 20px;/*Tamaño de el input tipo texto*/
+
 }
 .burger{
     display: none;/*Para que no se muestre en pantalla normal*/
@@ -38,27 +50,45 @@ header{
     margin: 4px 0;
     border-radius: 1px;
 }
-/*RESPONSIVE CON EL MENU HAMBURGESA, SE LE PONE DISPLAY NONE AL MENU Y LUEGO DE LOS 1280PX DISPLAY BLOCK PARA QUE SALGA*/
-@media screen and (max-width: 1280px){
+.avatarResponsive{
+    display: none;
+}
+/*Responsive del menu hamburguesa*/
+@media (max-width: 1280px){
+    .avatarResponsive{
+        display: block;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+    }
+    .avatar{
+        display: none;
+    }
+    header{
+        height: 65px;
+    }
     .navbar{
         position: relative;
-        background-color: #403f3f;
+        background-color: rgba(0, 0 , 0 , 0.6);
+        height: 65px;
+    
     }
     .burger{
         display: flex;
         position: absolute;
         right: 20px;
+
     }
     .nav-links{
+        background-color: rgba(0, 0 , 0 , 0.6);
         display: none;
         flex-direction: column;
         position: absolute;
-        width: 50%;
-        height: 920px;
-        top: 100%;
+        width: 30%;
+        height: 1250px;
+        top: 64px;
         right: 0;
         margin: 0;
-        background-color: #403f3f;
         gap: 50px;
         align-items: center;
     }
@@ -67,9 +97,11 @@ header{
         display: flex;
     }
     .logo{
+        width: 45px;
+        height: 45px;
         position: absolute;
         left: 10px;
-        top: 18px;
+        top: 10px;
     }
     .nav-links input{
         position: relative;
@@ -83,9 +115,8 @@ header{
     .nav-links li{
         width: 100%;
         height: 50px;
-        background-color: #403f3f;
         position: relative;
-        top: 30px;
+        bottom: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -93,20 +124,91 @@ header{
         cursor: pointer;
     }
     .nav-links li:hover{
-        background-color: #4d4c4c;
+        background-color: rgba(0, 0 , 0 , 0.4);
         color: #9daf6d;
+    } 
+    .baja{
+        height: 65px;
+    }
+    .li-avatar{
+        display: block;
+    }
+    .redireccionPerfil{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .ubiAvatar{
+        margin-right: 10px;
+    }
+    .datosUsuario h3{
+        position: relative;
+        top: 5px;
+        color: white;
+        font-size: 20px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 15px;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    .search{
+        position: absolute;
+        right: 80px;
     }
 }
-/*ESTILOS DE EL HEADER*/
+@media (max-width:985px){
+    .ubiAvatar{
+        margin-right: 5px;
+    }
+    .datosUsuario h3{
+        font-size: 12px;
+    }
+    .datosUsuario p{
+        font-size: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+}
+@media (max-width:630px){
+    .ubiAvatar img{
+        width: 30px;
+        height: 30px;
+    }
+    .datosUsuario h3{
+        font-size: 10px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 5px;
+        font-size: 8px;
+    }
+    .nav-links{
+        font-size: 15px;
+    }
+    
+}
+@media (max-width:600px){
+    .nav-links{
+        width: 45%;
+    }
+}
+.li-avatar{
+    display: none;
+}
+/*Estilos navbar*/
 nav{
     width: 100%;
-    height: 100px;
+    height: 85px;
     background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8%;
-    z-index: 9999;
+    
+    
 }
 nav img{
     border-radius: 50%;
@@ -114,11 +216,12 @@ nav img{
 nav .img{
     width: 40px;
     height: 40px;
-    box-shadow: 0 0 15px black; 
+    box-shadow: 0 0 15px black;
+    margin-left: 100px;
 }
 nav img{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     box-shadow: 0 0 15px black;
 }
 nav a{
@@ -131,16 +234,15 @@ nav a:hover{
 }
 nav input{
     width: 150px;
-    padding: 8px;
+    padding: 6px;
     border: none;
     border-radius: 15px;
     box-shadow: 0 0 5px black;
 }
 /*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
 .baja{
-    background: #403f3f;
-    background: #403f3f linear-gradient(none);
-    height: 90px;
+    background-color: rgba(0, 0 , 0 , 0.5);
+    height: auto;
 }
 /*ESTILOS SLIDER*/
 .slider-container{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
