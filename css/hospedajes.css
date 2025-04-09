@@ -4,25 +4,36 @@ body{
     font-family:sans-serif;
     overflow-x: hidden;
     }
+/*HEADER*/
 header{
     width: 100%;
-    height: 90px;
+    height: 85px;
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 9999;
 }
-
-/*responsive nav*/
+/* menu hamburguesa*/
 .nav-links{
+    width: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
-    gap: 100px;
+    gap: 20%;
     font-size: 20px;
     font-weight: bold;
+    position: relative;
+    right: 0px;
 }
-
+@media (max-width: 1500px){
+    .nav-links{
+        gap: 15%;
+        position: relative;
+        right: 0px;
+    }
+}
 .nav-links input{
-    height: 20px;
+    height: 20px;/*Tamaño de el input tipo texto*/
 
 }
 .burger{
@@ -37,10 +48,27 @@ header{
     margin: 4px 0;
     border-radius: 1px;
 }
-@media screen and (max-width: 1280px){
+.avatarResponsive{
+    display: none;
+}
+/*Responsive del menu hamburguesa*/
+@media (max-width: 1280px){
+    .avatarResponsive{
+        display: block;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+    }
+    .avatar{
+        display: none;
+    }
+    header{
+        height: 65px;
+    }
     .navbar{
         position: relative;
-        background-color: #403f3f;
+        background-color: rgba(0, 0 , 0 , 0.6);
+        height: 65px;
     
     }
     .burger{
@@ -50,15 +78,15 @@ header{
 
     }
     .nav-links{
+        background-color: rgba(0, 0 , 0 , 0.6);
         display: none;
         flex-direction: column;
         position: absolute;
-        width: 50%;
-        height: 1000px;
-        top: 100%;
+        width: 30%;
+        height: 1250px;
+        top: 64px;
         right: 0;
         margin: 0;
-        background-color: #403f3f;
         gap: 50px;
         align-items: center;
     }
@@ -67,9 +95,11 @@ header{
         display: flex;
     }
     .logo{
+        width: 45px;
+        height: 45px;
         position: absolute;
         left: 10px;
-        top: 18px;
+        top: 10px;
     }
     .nav-links input{
         position: relative;
@@ -83,9 +113,8 @@ header{
     .nav-links li{
         width: 100%;
         height: 50px;
-        background-color: #403f3f;
         position: relative;
-        top: 30px;
+        bottom: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -93,19 +122,91 @@ header{
         cursor: pointer;
     }
     .nav-links li:hover{
-        background-color: #4d4c4c;
+        background-color: rgba(0, 0 , 0 , 0.4);
         color: #9daf6d;
+    } 
+    .baja{
+        height: 65px;
+    }
+    .li-avatar{
+        display: block;
+    }
+    .redireccionPerfil{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .ubiAvatar{
+        margin-right: 10px;
+    }
+    .datosUsuario h3{
+        position: relative;
+        top: 5px;
+        color: white;
+        font-size: 20px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 15px;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    .search{
+        position: absolute;
+        right: 80px;
     }
 }
-
+@media (max-width:985px){
+    .ubiAvatar{
+        margin-right: 5px;
+    }
+    .datosUsuario h3{
+        font-size: 12px;
+    }
+    .datosUsuario p{
+        font-size: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+}
+@media (max-width:630px){
+    .ubiAvatar img{
+        width: 30px;
+        height: 30px;
+    }
+    .datosUsuario h3{
+        font-size: 10px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 5px;
+        font-size: 8px;
+    }
+    .nav-links{
+        font-size: 15px;
+    }
+    
+}
+@media (max-width:600px){
+    .nav-links{
+        width: 45%;
+    }
+}
+.li-avatar{
+    display: none;
+}
+/*Estilos navbar*/
 nav{
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent) #403f3f;
+    height: 85px;
+    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8%;
+    
+    
 }
 nav img{
     border-radius: 50%;
@@ -113,140 +214,288 @@ nav img{
 nav .img{
     width: 40px;
     height: 40px;
-    box-shadow: 0 0 15px black; 
+    box-shadow: 0 0 15px black;
+    margin-left: 100px;
 }
 nav img{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     box-shadow: 0 0 15px black;
 }
-
 nav a{
     color: white;
     text-decoration: none;
     cursor: pointer;
 }
-
 nav a:hover{
     color: #ADC178;
 }
-
 nav input{
     width: 150px;
-    padding: 8px;
+    padding: 6px;
     border: none;
     border-radius: 15px;
     box-shadow: 0 0 5px black;
 }
-
+/*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
 .baja{
-    background: #403f3f;
-    background: #403f3f linear-gradient(none);
-    height: 90px;
+    background-color: rgba(0, 0 , 0 , 0.5);
+    height: auto;
 }
+/*estilos para las etiquetas*/
 img{
-    height: 79px;
-    width: 79px;
-    border-radius: 40px;
-    
-}
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    width: 80%;
+    height: 90%;
+    border-radius: 20px 20px 0 0;
 }
 
-h1 {
-    text-align: center;
-    color: #ADC178;
-    position: relative;
-    top:30px;
-    margin-bottom: 5rem;
-    font-size: 45px;
-}
-h1{
-    font-family:"Rowdies";
-}
-h2{
-    font-family:"Rowdies";
-}
-main{
-    margin-top: 80px;
-}
-
-.hospedajes-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.hospedaje-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.hospedaje-card:hover {
-    transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
-    
-}
-
-.hospedaje-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-.hospedaje-info {
-    padding: 1.5rem;
-}
-
-.hospedaje-info h2 {
-    color: #ADC178;
-    margin: 0 0 0.5rem 0;
-}
-
-.ubicacion {
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.descripcion {
-    color: #444;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.detalles {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    color: #666;
-}
-
-.reservar-btn {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #ADC178;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.reservar-btn a{
+a{
     text-decoration: none;
     color: white;
 }
 
-.reservar-btn:hover {
-    background-color: #9eb06a;
+h1{
+    font-family: 'Rowdies';
+    color: #adc178;
 }
 
+p{
+    font-size:15px;
+}
+
+button{
+    width: 100%;
+    height: 30px;
+    padding: 20px 40px;
+    margin-top: 10px;
+    background-color: #adc178;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover{
+    box-shadow: 0 0 5px #adc178;
+    transition: all 0.5s ease-in-out;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 920px;
+}
+/*estilos para las ids*/
+#slider-container{
+    position: relative;
+    width: 95%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/*estilos para las clases*/
+.titulo{
+    font-size: 40px;
+    margin-top: 120px;
+}
+
+.slider{
+    display: flex;
+    transition: transform .5s ease;
+}
+
+.slide{
+    min-width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.card{/*estilos para las tarjetas que va a tener el slider y que van a contener la información de los destinos*/
+    width: 25%;
+    height: 90%;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.texto{
+    width: 90%;
+}
+.card h1{
+    font-size: 30px;
+    margin: 10px 0 10px 0;
+}
+.card h3{
+    font-size: 15px;
+    margin: 0;
+}
+
+/*estilos para las flechas*/
+.arrow{
+    position: absolute;
+    top:40%;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left{
+    left: 10px;
+}
+
+.right{
+    right: 10px;
+}
+.imgs{
+    width: 100%;
+    height: 50%;
+}
+
+/*comienza el responsive*/
+@media (max-width:500px){
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 12px;
+    }
+    
+    p{
+        font-size: 10px;
+    }
+
+    a{
+        font-size: 8px;
+    }
+
+    .slide{
+        height: 400px;
+    }
+    .imgs{
+        height: 20%;
+    }
+
+    .arrow{
+        width: 30px;
+        height: 30px;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
+    }
+}
+
+@media (min-width:501px) and (max-width:819px){
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+    
+    p{
+        font-size: 14px;
+    }
+
+    a{
+        font-size: 10px;
+    }
+
+    .slide{
+        height: 450px;
+    }
+    .imgs{
+        height: 25%;
+    }
+
+    .arrow{
+        width: 30px;
+        height: 30px;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
+    }
+}
+
+@media (min-width:820px) and (max-width:1023px){
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+    
+    p{
+        font-size: 14px;
+    }
+
+    a{
+        font-size: 10px;
+    }
+
+    .slide{
+        height: 450px;
+    }
+    .imgs{
+        height: 25%;
+    }
+
+    .arrow{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+@media (min-width:1024px) and (max-width:1250px){
+    body{
+        height: 185vh;
+        width: 100%;
+    }
+
+    .titulo{
+        margin-left: 80px;
+    }
+    .content{
+        width:80%;
+        height: 50%;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .imgs{
+        margin: 0;
+        padding: 0;
+    }
+    .content img{
+        height: 100%;
+    }
+}
 /*FOOTER*/
 .pie-pagina{
     width: 100%;

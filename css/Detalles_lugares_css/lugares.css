@@ -1,14 +1,11 @@
-html{
-    scroll-behavior: smooth;
-}
 body{
     width: 100%;
-    box-sizing: border-box;
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family:arial;
     overflow-x: hidden;
-    font-family: arial;
-    height: auto;
+    scrollbar-width: none;
 }
 /*HEADER*/
 header{
@@ -247,26 +244,27 @@ nav input{
     background-color: rgba(0, 0 , 0 , 0.5);
     height: auto;
 }
-/*Estilos slider*/
+/*ESTILOS SLIDER*/
 .slider-container{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
     width: 100%;
     overflow: hidden;
     margin: auto;
+    position: relative;
 }
 .slider{
     width: 400%;
     display: flex;
-    animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
+    animation: slide 25s infinite alternate ease-in-out;/*ANIMACION DEL SLIDER*/
 }
 .sli {
-    flex: 1 1 400px;
-    max-width: 100%;  
+    width: 100%;
+    position: relative;   
 }
-.sli img{
+.sli img{/*TAMAÑO DE LAS IMAGENES DE EL SLIDER*/
     width: 100%;
     height: 820px;
 }
-/*Keyframes para que se ejecute la animaciòn*/
+/*KEYFRAMES PARA EJECUTAR LA ANIMACION DE EL SLIDER*/
 @keyframes slide{
     0%{transform: translateX(0) }
     20%{transform: translateX(0)}
@@ -280,7 +278,7 @@ nav input{
     75%{transform: translateX(-75%)}
     100%{transform: translateX(-75%)}
 }
-/*Responsive del slider*/
+/*RESPONSIVE SLIDER*/
 @media (max-width: 1023px) {
     .sli img{
         height: 620px;
@@ -288,406 +286,454 @@ nav input{
 }
 @media (max-width:600px){
     .sli img{
-        height: 400px;
-    }
-}
-@media (max-width:600px){
-    .sli img{
         height: 350px;
     }
 }
-/*SECTION DEL MAIN*/
-main{
-   width: 100%;
-   height: auto;
+/*INICIA EL MAIN*/
+.titulo-inicio{/*PRIMER SECTION*/
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
 }
-
-/*Recuadro encima del slider*/
-.recuadro{
+/*VENTANA EMERGENTE PRIMER SECTION*/
+.ventana{/*CONTENEDOR DE LA VENTANA EMERGENTE*/
+    width: 100%;
+    height:1850px;
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0 , 0 , 0.8);
+    overflow: hidden;
+}
+.modal--show{/*CAMBIA CON JS, EN EL CONTENEDOR PRINCIPAL LA VENTANA TIENE OPACITY 0, EN JS PONEMOS UN EVENTO CLICK PARA QUE CUANDO ALGUIEN LE DE CLICK A CIERTO BOTON LA OPACIDAD DE ESTA PASE DE 0 A 1 Y APAREZCA LA VENTANA EMERGENTE*/
+    opacity: 1;
+    pointer-events: unset;
+}
+.flecha{
+    width: 100%;
+}
+.ventana-emergente{/*VENTANA EMERGENTE*/
+    width: 430px;
+    height: 260px;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: absolute;
     top: 300px;
-    left: 30px;
+    z-index: 99999; 
+}
+.ventana-emergente img{/*ESTILOS AL LOGO DE LA VENTANA EMERGENTE*/
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px;
+    position: relative;
+    left: 10px;
+ 
+ }
+ .title-ventana{/*TITULO DE LA VENTANA EMERGENTE*/
+    font-size: 30px;
+    color: #ADC178;
+    border: none;
+    text-shadow: 0 0 2px black;
+    position: relative;
+    bottom: 15px;
+ }
+ .parrafo-ventana{/*PARRAFO DE LA VENTANA EMERGENTE*/
+    width: 82%;
+    text-align: center;
+    position: relative;
+    bottom: 40px;
+    font-weight: 600;
+ }
+ .buttons{/*CONTENEDOR DE LOS BOTONES DE LA VENTANA EMERGENTE*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    bottom: 30px;
+ }
+ .registro{/*BOTON DE REGISTRO*/
+    background-color: #ADC178;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 2px black;
+ }
+ .registro a{
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+ }
+ .continuar{/*BOTON DE CONTINUAR COMO INVITADO*/
+    background-color: #403f3f;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 2px black;
+ }
+ .continuar a{
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+ }
+ 
+ .continuar a:hover{
+    background-color: #4d4c4c;
+ }
+ .continuar:hover{
+    background-color: #4d4c4c;
+ }
+ .volver{/*TEXTO PARA VOLVER A LA SECTION ANTEIOR*/
+     position: relative;
+     bottom: 0;
+ }
+ .volver a{
+     text-decoration: none;
+     color: gray;
+ }
+ .volver a:hover{
+     color: rgb(119, 119, 119);
+ }
+ /*RESPONSIVE DE LA VENTANA EMERGENTE*/
+@media screen and (max-width:600px) {
+    .ventana-emergente{
+        width: 320px;
+        position: absolute;
+        top: 300px;
+        height: 220px;
+    }
+    .ventana-emergente img{
+       position: relative;
+       top: 10px;
+    }
+    .title-ventana{
+        position: relative;
+        bottom: 0;
+        font-size: 20px;
+    }
+    .parrafo-ventana{
+        position: relative;
+        bottom: 20px;
+        font-size: 15px;
+    }
+    .registro a{
+        font-size: 10px;
+    }
+    .continuar a{
+        font-size: 10px;
+    }
+    .registro{
+        position: relative;
+        top: 10px;
+    }
+    .continuar{
+        position: relative;
+        top: 10px;
+    }
+}
+/*SEGUIMOS CON LOS ESTILOS DE LA PRIMER SECTION*/
+main{
+    width: 100%;
+    height: auto;
+ }
+.recuadro{
+    margin-left: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: bottom;
+    position: absolute;
+    top: 370px;
 }
 .titulo-inicio{
     max-width: 700px;
     background-color: rgba(0, 0 , 0 , 0.6);
     flex: 1 1 300px;
-    height: 380px;
+    height: 420px;
     flex-wrap: wrap;
     border-radius: 10px;
 }
 .titulo-inicio h1{
-    font-size: 48px;
+    font-size: 50px;
     color: #ADC178;
     text-shadow: black 0 0 2px;
     margin-left: 20px;
     font-weight: 800;
+    position: relative;
+    bottom: 20px;
 }
 .titulo-inicio p{
+    width: 88%;
     font-size: 25px;
     color: white;
     text-shadow: black 0 0 4px;
     font-weight: 600;
     margin-left: 20px;
+    position: relative;
+    bottom: 70px;
 }
-.btn-inicio{
+.btn-destinos{
     padding: 10px;
-    width: 160px;
+    width: 220px;
     border: none;
     background: #ADC178;
     cursor: pointer;
     border:  none;
+    margin-left: 30px;
+    border-radius: 10px;
     position: absolute;
     bottom: 20px;
-    left: 20px;
-    border-radius: 10px;
 }
 /*Responsive del recuadro que esta encima del slider*/
+
 @media (max-width: 1023px){
+    .recuadro{
+        position: absolute;
+        top: 330px;
+    }
     .titulo-inicio{
-        max-width: 420px;
-        height: 250px;
-        
+        max-width: 400px;
+        height: 270px;
+        margin-left: 10px;
     }
     .titulo-inicio h1{
-        font-size: 28px;
+        font-size: 30px;
     }
     .titulo-inicio p{
-        font-size: 16px;
-    }
-    .btn-inicio{
-        width: 120px;
-        padding: 6px;
-    }
-    .btn-inicio a{
+        position: relative;
+        bottom: 50px;
         font-size: 15px;
     }
+    .btn-destinos{
+        width: 150px;
+        margin-left: 20px;
+        position: absolute;
+    }
+    
 }
-@media (max-width: 600px){
-    .titulo-inicio{
-        position: relative;
-        bottom: 100px;
-        max-width: 240px;
-        height: 130px;
-        right: 10px;
+
+@media (max-width:600px){
+    .recuadro{
+        margin-left: 10px;
+        position: absolute;
+        top: 230px;
+        
     }
     .titulo-inicio p{
         display: none;
+    
+    }
+    .titulo-inicio{
+        height: 100px;
+        width: 220px;
     }
     .titulo-inicio h1{
-        font-size: 16px;
-        margin-left: 10px;
-    }
-    .btn-inicio{
-        width: 80px;
         position: relative;
-        left: 10px;
-        top: 20px;
-     
+        bottom: 5px;
+        font-size: 15px;
+        margin-left: 10px;
+        
+    }
+    .btn-destinos{
+        padding: 6px;
+        margin-left: 10px;
+        width: 150px;
     }
 }
-.btn-inicio a{/*Estilos del boton del inicio*/
+.btn-destinos a{/*Estilos del boton del inicio*/
     text-decoration: none;
     color: white;
-    font-size: 15px;
+    font-size: 12px;
     text-shadow:  0 0 2px black;
     font-weight: 600;
 }
-.btn-inicio a:hover{
+.btn-destinos a:hover{
     background: #9daf6d;
 }
 button:hover{
     background: #9daf6d;
 }
-/*SEGUNDA SECTION*/
-/*estilos para las ids*/
-#slider-container2{
-    position: relative;
-    left: 90px;
-    width: 90%;
-    height: 500px;
-    overflow: hidden;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.slider1{
-    display: flex;
-    transition: transform .5s ease;
-}
-.slide{
-    min-width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    font-size: 2rem;
-}
-.cartas{
-    width: 27%;
-    height: 500px;
-}
-.cartas img{
-    width: 400px;
-    height: 400px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0, 0 , 0 , 0.3);
-}
-.cartas img:hover {
-    transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
-}
-.cuadro-links{
-    width: 350px;
-    height: 150px;
-    background-color: #ADC178;
-    position: relative;
-    bottom: 100px;
-    cursor: pointer;
-    padding: 15px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 3px 10px rgba(0, 0 , 0 , 0.2);
-}
-.cuadro-links:hover {
-    transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
-}
-.cuadro-links h1{
-    font-size: 40px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    
-}
-.cuadro-links p{
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-.cuadro-links a{
-    text-decoration: none;
-    color: white;
-}
-/*estilos para las flechas*/
-.arrow{
-    position: absolute;
-    top:40%;
-    width: 45px;
-    height: 45px;
-    padding: 0;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-    background-color: #ADC178;
-}
-
-.left{
-    left: 10px;
-}
-
-.right{
-    right: 10px;
-}
-.imgs{
-    width: 100%;
-    height: 50%;
-}
-@media (max-width:450px){
-    .cartas{
-        max-width: 320px;
-    }
-    .cartas img{
-        width: 320px;
-        height: 320px;
-    }
-    .cuadro-links{
-        width: 270px;
-        height: 100px;
-        position: relative;
-        bottom: 80px;
-    }
-    .cuadro-links h1{
-        font-size: 35px;
-    }
-    .flecha img{
-        width: 40px;
-        height: 40px;
-    }
-    .cuadro-links h1{
-        font-size: 30px;
-        margin-top: 10px;
-    }
-    .cuadro-links p{
-        margin-top: 10px;
-        font-size: 1.3rem;
-    }
-}
-@media (max-width: 372px){
-    .cartas{
-        max-width: 280px;
-    }
-    .cartas img{
-        width: 280px;
-        height: 280px;
-    }
-    .cuadro-links{
-        width: 230px;
-        height: 100px;
-        position: relative;
-        bottom: 80px;
-    }
-    .cuadro-links h1{
-        font-size: 30px;
-        margin-top: 10px;
-    }
-    .cuadro-links p{
-        margin-top: 10px;
-        
-    }
-}
-/*TERCERA SECTION*/
-.info-risaralda{
-    width: 100%;
-    height: auto;
-    background-color: white;
+/*segunda section*/
+.comentarios{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
 }
-/*Textos sgunda section*/
-.textos-info{
-    flex: 1 1 500px;
-    max-width: 760px;
-    height: 400px;
+.comentarios-parte1{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ADC178;
-    background-color: rgba(0, 0 , 0 , 0.6);
-    position: absolute;
-    right: 30px;
-    border-radius: 10px;
 }
-.textos-info h1{
-    width: 92%;
-    font-size: 42px;
-    text-shadow: 0 0 2px black;
-    font-weight: 800;
-}
-.textos-info p{
-    width: 90%;
-    font-size: 20px;
-    color: white;
-    font-weight: 600;
-    position: relative;
-    bottom: 40px;
-}
-/*Boton tercera section*/
-.btn-info{
-    width: 310px;
-    padding: 10px;
-    border: none;
+.comentarios-parte1 h1{
+    font-size: 2rem;
+    font-weight: 500;
     background-color: #ADC178;
-    cursor: pointer;
-    border-radius: 10px;
+    color: #ffffff;
+    padding: 10px 20px;
 }
-.btn-info a{
-    text-decoration: none;
-    color: white;
-    text-shadow:  0 0 2px black;
-    font-weight: bold;
-    font-size: 15px;
+.comentarios-parte1 span{
+    font-size: 1.8rem;
+    color: #ADC178;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.comentarios-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.comentarios-container1{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0 , 0 , 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.img-cliente{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.img-cliente img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.perfil-persona{
+    display: flex;
+    align-items: center;
+}
+.username{
+    display: flex;
+    flex-direction: column;
+}
+.username strong{
+    color: black;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.username span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+.calificacion{
+    color:#f9d71c ;
+}
+.container-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.parrafo p{
+    font-size: 0.9rem;
+    color: #4b4b4b;
 
 }
-.btn-info a:hover{
-    background: #9daf6d;
+.comentarios-container1:hover{
+    transform: translateY(-5px);
+    transition: all ease 0.3s;
+}
+.comentarios-parte2{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comentarios-parte2 H2{
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #ADC178;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+.comentarios-parte2 input{
+    width: 200px;
+    padding: 10px;
+}
+.comentar{
+    margin-top: 20px;
+}
+.comentar button{
+    font-weight: 500;
+    background-color: #ADC178;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border: 1px solid #979797;
+    cursor: pointer;
     
 }
-.btn-info:hover{
-    background: #9daf6d;   
+.comentar a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
 }
-.slider-container2{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
-    width: 100%;
-    overflow: hidden;
-    margin: auto;
+.comentar button:hover{
+    background-color: #9daf6d;
 }
-.slider2{
-    width: 400%;
-    display: flex;
-    animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
+.comentar a:hover{
+    background-color: #9daf6d;
 }
-.sli2 {
-    width: 100%;   
-}
-.sli2 img{
-    width: 100%;
-    height: 820px;
-    position: relative;
-    top: 10px;
-}
-/*Responsive del slider*/
-@media (max-width: 1023px) {
-    .sli2 img{
-        height: 620px;
+@media(max-width:1141px){
+    .comentarios-container1{
+        width: 45%;
+        padding: 10px;
     }
-    .textos-info{
-        width: 450px;
-        height: 300px;
-    }
-    .textos-info p{
-        font-size: 16px;
-    }
-    .textos-info h1{
-        font-size: 30px;
-        text-align: center;
-        position: relative;
-        bottom: 10px;
-    }
-    .btn-info{
-        position: relative;
-        bottom: 30px;
-    }
-}
-@media (max-width:600px){
-    .sli2 img{
-        margin-top: 65px;
-        height: 400px;
-    }
-}
-@media (max-width:600px){
-    .sli2 img{
-        height: 350px;
-    }
-    .textos-info{
-        width: 250px;
-        height: 150px;
-        margin-top: 150px;
-        position: absolute;
-        right: 10px;
-        
-    }
-    .textos-info p{
-        font-size: 16px;
-        display: none;
-    }
-    .textos-info h1{
-        font-size: 20px;
-        text-align: center;
-        position: relative;
-        bottom: 10px;
-    }
-    .btn-info{
-        width: 180px;
-        position: relative;
-        bottom: 0px;
-    }
-}
 
+}
+@media(max-width:999px){
+    .comentarios-container1{
+        width: 100%;
+    }
+    .comentarios-container h1{
+        font-size: 1.4rem;
+
+    }
+}
+@media (max-width:370px){
+    .comentarios-parte2 input{
+        width: 150px;
+    }
+}
+@media (max-width:320px){
+    .container-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .calificacion{
+        margin-top: 10px;
+    }
+}
 /*FOOTER*/
 .pie-pagina{/*Contenedor del footer*/
     width: 100%;
@@ -763,14 +809,12 @@ button:hover{
     text-align: center;
     color: white;
     font-size: 15px;
-    /* position: fixed;
-    bottom: 0; */
-    width: 100%;
-    z-index: 99999;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    z-index: 99999;
 }
 /*RESPONSIVE DEL FOOTER*/
 @media screen and (max-width: 800px) {

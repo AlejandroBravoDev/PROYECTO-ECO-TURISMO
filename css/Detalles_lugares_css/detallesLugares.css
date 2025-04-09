@@ -2,8 +2,6 @@ html{
     scroll-behavior: smooth;
 }
 body{
-    width: 100%;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -15,20 +13,33 @@ body{
 /*HEADER*/
 header{
     width: 100%;
-    height: 90px;
+    height: 85px;
     position: fixed;
     z-index: 9999;
 }
 /* menu hamburguesa*/
 .nav-links{
+    width: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
-    gap: 100px;
+    gap: 20%;
     font-size: 20px;
     font-weight: bold;
+    position: relative;
+    right: 0px;
+}
+@media (max-width: 1500px){
+    .nav-links{
+        gap: 15%;
+        position: relative;
+        right: 0px;
+    }
 }
 .nav-links input{
     height: 20px;/*Tamaño de el input tipo texto*/
+
 }
 .burger{
     display: none;/*Para que no se muestre en pantalla normal*/
@@ -42,11 +53,27 @@ header{
     margin: 4px 0;
     border-radius: 1px;
 }
+.avatarResponsive{
+    display: none;
+}
 /*Responsive del menu hamburguesa*/
-@media screen and (max-width: 1280px){
+@media (max-width: 1280px){
+    .avatarResponsive{
+        display: block;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+    }
+    .avatar{
+        display: none;
+    }
+    header{
+        height: 65px;
+    }
     .navbar{
         position: relative;
-        background-color: #403f3f;
+        background-color: rgba(0, 0 , 0 , 0.6);
+        height: 65px;
     
     }
     .burger{
@@ -56,15 +83,15 @@ header{
 
     }
     .nav-links{
+        background-color: rgba(0, 0 , 0 , 0.6);
         display: none;
         flex-direction: column;
         position: absolute;
-        width: 50%;
-        height: 1000px;
-        top: 100%;
+        width: 30%;
+        height: 1250px;
+        top: 64px;
         right: 0;
         margin: 0;
-        background-color: #403f3f;
         gap: 50px;
         align-items: center;
     }
@@ -73,9 +100,11 @@ header{
         display: flex;
     }
     .logo{
+        width: 45px;
+        height: 45px;
         position: absolute;
         left: 10px;
-        top: 18px;
+        top: 10px;
     }
     .nav-links input{
         position: relative;
@@ -89,9 +118,8 @@ header{
     .nav-links li{
         width: 100%;
         height: 50px;
-        background-color: #403f3f;
         position: relative;
-        top: 30px;
+        bottom: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -99,19 +127,91 @@ header{
         cursor: pointer;
     }
     .nav-links li:hover{
-        background-color: #4d4c4c;
+        background-color: rgba(0, 0 , 0 , 0.4);
         color: #9daf6d;
     } 
+    .baja{
+        height: 65px;
+    }
+    .li-avatar{
+        display: block;
+    }
+    .redireccionPerfil{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .ubiAvatar{
+        margin-right: 10px;
+    }
+    .datosUsuario h3{
+        position: relative;
+        top: 5px;
+        color: white;
+        font-size: 20px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 15px;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    .search{
+        position: absolute;
+        right: 80px;
+    }
+}
+@media (max-width:985px){
+    .ubiAvatar{
+        margin-right: 5px;
+    }
+    .datosUsuario h3{
+        font-size: 12px;
+    }
+    .datosUsuario p{
+        font-size: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+}
+@media (max-width:630px){
+    .ubiAvatar img{
+        width: 30px;
+        height: 30px;
+    }
+    .datosUsuario h3{
+        font-size: 10px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 5px;
+        font-size: 8px;
+    }
+    .nav-links{
+        font-size: 15px;
+    }
+    
+}
+@media (max-width:600px){
+    .nav-links{
+        width: 45%;
+    }
+}
+.li-avatar{
+    display: none;
 }
 /*Estilos navbar*/
 nav{
     width: 100%;
-    height: 100px;
+    height: 85px;
     background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8%;
+    
+    
 }
 nav img{
     border-radius: 50%;
@@ -119,11 +219,12 @@ nav img{
 nav .img{
     width: 40px;
     height: 40px;
-    box-shadow: 0 0 15px black; 
+    box-shadow: 0 0 15px black;
+    margin-left: 100px;
 }
 nav img{
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
     box-shadow: 0 0 15px black;
 }
 nav a{
@@ -136,15 +237,15 @@ nav a:hover{
 }
 nav input{
     width: 150px;
-    padding: 8px;
+    padding: 6px;
     border: none;
     border-radius: 15px;
     box-shadow: 0 0 5px black;
 }
 /*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
 .baja{
-    background: #403f3f;
-    height: 94px;
+    background-color: rgba(0, 0 , 0 , 0.5);
+    height: auto;
 }
 h1{
     font-family:"Rowdies";
@@ -153,199 +254,147 @@ h2{
     font-family:"Rowdies";
 }
 
-.paquetes-turismo{
+.main-container {
     width: 100%;
     height: 900px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    overflow: hidden;
-}
-@media (max-width:999px){
-    .paquetes-turismo{
-        width: 100%;
-        height: 1800px;
-    }
-    .datos-paquetes{
-        position: relative;
-        bottom: 150px;
-    }
-}
-.container{
-    display: flex;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 50px;
 }
-.datos-paquetes{
-    width: 60%;
-    height: 50%;
-    display: flex;
-    
-}
-.img-paquete{
-    width: 50%;
+.section{
+    width: 70%;
     height: 600px;
-    background-color: rgba(0,0, 0 , 0.7);
-    box-shadow: 0 0 1vmax black;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
-}
-.img-paquete img{
-    width: 90%;
-    height: 550px;
+    background-color: rgba(0, 0 , 0 , 0.7);
     border-radius: 20px;
-    box-shadow: 0 3px 10px rgba(255, 255 , 255 , 0.2);
-    
+    flex-wrap: wrap;
+    gap: 20px;
 }
-.textos-paquete{
-    width: 50%;
-    height: 600px;
-    box-shadow: 0 0 1vmax black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgba(0,0, 0 , 0.7);
-    
+.image-section {
+    flex: 1 1 400px;
+    max-width: 500px;
+    padding: 10px;
 }
-.textos-paquete h2{
-    width: 80%;
-    text-align: center;
-    font-size: 46px;
-    color: #ADC178;
-    text-shadow: 0 0 1px black;
-    position: relative;
-    top: 50px;
-}
-.textos-paquete p{
-    width: 80%;
-    font-size: 18px ;
-    position: relative;
-    top: 50px;
-    color: white;
-}
-.img-rating{
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: 55px;
-    left: 50px;
-}
-.img-rating img{
-    width: 150px;
-    height: 150px;
-}
-.container-hospedajes{
-    width: 35%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-.hospedajes-disponibles{
+
+.image-section img {
     width: 100%;
-    height: 280px;
-    box-shadow: 0 0 1vmax black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;;
+    height: auto;
     border-radius: 10px;
-    background-color: rgba(0,0, 0 , 0.7);
 }
-.hospedajes-disponibles h2{
-    width: 80%;
-    text-align: center;
-    font-size: 30px;
+
+.info-section {
+    flex: 1 1 400px;
+    max-width: 600px;
+    padding: 10px;
+    text-align: left;
+}
+
+.info-section h1 {
     color: #ADC178;
-    text-shadow: 0 0 1px black;
+    text-align: center;
+    font-size: 40px;
     position: relative;
-    bottom: 10px;
+    bottom: 30px;
 }
-.hospedajes-disponibles p{
-    width: 80%;
+
+.info-section p {
+    margin: 10px 0px;
+    color: white;
     font-size: 18px;
     position: relative;
     bottom: 30px;
+}
+
+.btn {
+    width: 90%;
+    display: block;
+    padding: 10px 10px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #ADC178;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     text-align: center;
-    color: white;
-}
-.disponibles{
-   width: 120px;
-   padding: 12px;
-   border: none;
-   border-radius: 20px;
-   background-color: #ADC178;
-   cursor: pointer;
-   position: relative;
-   bottom: 30px;
-}
-.disponibles a{
     text-decoration: none;
-    color: white;
-    text-shadow: 0 0 2px black;
-}
-.disponibles:hover{
-    background-color: #9daf6d;
-}
-.disponibles a:hover{
-    background-color: #9daf6d;
-}
-.mas-lugares{
-    width: 100%;
-    height: 280px;
-    box-shadow: 0 0 1vmax black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    background-color: rgba(0,0, 0 , 0.7);
-}
-.mas-lugares h2{
-    width: 80%;
-    text-align: center;
-    font-size: 30px;
-    color: #ADC178;
-    text-shadow: 0 0 1px black;
     position: relative;
-    bottom: 10px;
-}
-.mas-lugares p{
-    font-size: 18px;
-    position: relative;
+    left: 20px;
     bottom: 30px;
-    color: white;
 }
-.lugares{
-   width: 120px;
-   padding: 12px;
-   border: none;
-   border-radius: 20px;
-   background-color: #ADC178;
-   cursor: pointer;
-   position: relative;
-   bottom: 30px;
-}
-.lugares a{
-    text-decoration: none;
-    color: white;
-    text-shadow: 0 0 2px black;
-}
-.lugares:hover{
-    background-color: #9daf6d;
-}
-.lugares a:hover{
+
+.btn:hover {
     background-color: #9daf6d;
 }
 
+.btn2 {
+    width: 90%;
+    display: block;
+    padding: 10px 10px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #ADC178;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    left: 20px;
+    bottom: 30px;
+}
+
+.btn2:hover {
+    background-color: #9daf6d;
+}
+a{
+   text-decoration: none;
+   color: white;
+}
+.btn2 a:hover{
+   background-color: #9daf6d;
+}
+/*responsive */
+@media (max-width:1228px){
+    .main-container{
+        height: 1300px;
+    }
+    .section{
+        height: 90%;
+        margin-top: 100px;
+
+    }
+    .info-section h1{
+        font-size: 50px;
+        position: relative;
+        bottom: 80px;
+    }
+    .info-section p{
+        position: relative;
+        bottom: 90px;
+        padding: 10px;
+    }
+    .btn{
+        position: relative;
+        bottom: 90px;
+        
+    }
+    .btn2{
+        position: relative;
+        bottom: 90px;
+        
+    }
+}
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .section{
+        width: 90%;
+    }
+}
 /*FOOTER*/
 .pie-pagina{/*Contenedor del footer*/
     width: 100%;
