@@ -242,109 +242,260 @@ nav input{
     background-color: rgba(0, 0 , 0 , 0.5);
     height: auto;
 }
+/*estilos para las etiquetas*/
 img{
-    height: 79px;
-    width: 79px;
-    border-radius: 40px;
-    
-}
-main {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 1rem;
+    width: 80%;
+    height: 90%;
+    border-radius: 20px 20px 0 0;
 }
 
-h1 {
-    text-align: center;
-    color: #ADC178;
-    position: relative;
-    top:30px;
-    margin-bottom: 5rem;
-    font-size: 45px;
-}
-h1{
-    font-family:"Rowdies";
-}
-h2{
-    font-family:"Rowdies";
-}
-main{
-    margin-top: 80px;
-}
-
-.hospedajes-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 1rem;
-}
-
-.hospedaje-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.hospedaje-card:hover {
-    transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
-    
-}
-
-.hospedaje-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px 15px 0 0;
-}
-
-.hospedaje-info {
-    padding: 1.5rem;
-}
-
-.hospedaje-info h2 {
-    color: #ADC178;
-    margin: 0 0 0.5rem 0;
-}
-
-.ubicacion {
-    color: #666;
-    margin-bottom: 1rem;
-}
-
-.descripcion {
-    color: #444;
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-
-.detalles {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    color: #666;
-}
-
-.reservar-btn {
-    width: 100%;
-    padding: 0.8rem;
-    background-color: #ADC178;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.reservar-btn a{
+a{
     text-decoration: none;
     color: white;
 }
 
-.reservar-btn:hover {
-    background-color: #9eb06a;
+h1{
+    font-family: 'Rowdies';
+    color: #adc178;
 }
 
+p{
+    font-size:15px;
+}
+
+button{
+    width: 100%;
+    height: 30px;
+    padding: 20px 40px;
+    margin-top: 10px;
+    background-color: #adc178;
+    border: none;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover{
+    box-shadow: 0 0 5px #adc178;
+    transition: all 0.5s ease-in-out;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 920px;
+}
+/*estilos para las ids*/
+#slider-container{
+    position: relative;
+    width: 95%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+/*estilos para las clases*/
+.titulo{
+    font-size: 40px;
+    margin-top: 120px;
+}
+
+.slider{
+    display: flex;
+    transition: transform .5s ease;
+}
+
+.slide{
+    min-width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.card{/*estilos para las tarjetas que va a tener el slider y que van a contener la información de los destinos*/
+    width: 25%;
+    height: 90%;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.texto{
+    width: 90%;
+}
+.card h1{
+    font-size: 30px;
+    margin: 10px 0 10px 0;
+}
+.card h3{
+    font-size: 15px;
+    margin: 0;
+}
+
+/*estilos para las flechas*/
+.arrow{
+    position: absolute;
+    top:40%;
+    width: 45px;
+    height: 45px;
+    padding: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left{
+    left: 10px;
+}
+
+.right{
+    right: 10px;
+}
+.imgs{
+    width: 100%;
+    height: 50%;
+}
+
+/*comienza el responsive*/
+@media (max-width:500px){
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 12px;
+    }
+    
+    p{
+        font-size: 10px;
+    }
+
+    a{
+        font-size: 8px;
+    }
+
+    .slide{
+        height: 400px;
+    }
+    .imgs{
+        height: 20%;
+    }
+
+    .arrow{
+        width: 30px;
+        height: 30px;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
+    }
+}
+
+@media (min-width:501px) and (max-width:819px){
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+    
+    p{
+        font-size: 14px;
+    }
+
+    a{
+        font-size: 10px;
+    }
+
+    .slide{
+        height: 450px;
+    }
+    .imgs{
+        height: 25%;
+    }
+
+    .arrow{
+        width: 30px;
+        height: 30px;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
+    }
+}
+
+@media (min-width:820px) and (max-width:1023px){
+    body{
+        height: 100vh;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 16px;
+    }
+    
+    p{
+        font-size: 14px;
+    }
+
+    a{
+        font-size: 10px;
+    }
+
+    .slide{
+        height: 450px;
+    }
+    .imgs{
+        height: 25%;
+    }
+
+    .arrow{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+@media (min-width:1024px) and (max-width:1250px){
+    body{
+        height: 185vh;
+        width: 100%;
+    }
+
+    .titulo{
+        margin-left: 80px;
+    }
+    .content{
+        width:80%;
+        height: 50%;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .imgs{
+        margin: 0;
+        padding: 0;
+    }
+    .content img{
+        height: 100%;
+    }
+}
 /*FOOTER*/
 .pie-pagina{
     width: 100%;

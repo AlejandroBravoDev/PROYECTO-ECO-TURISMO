@@ -293,7 +293,7 @@ nav input{
 }
 @media (max-width:600px){
     .sli img{
-        height: 300px;
+        height: 350px;
     }
 }
 /*SECTION DEL MAIN*/
@@ -330,7 +330,7 @@ main{
     font-size: 25px;
     color: white;
     text-shadow: black 0 0 4px;
-    font-weight: 500;
+    font-weight: 600;
     margin-left: 20px;
 }
 .btn-inicio{
@@ -369,7 +369,7 @@ main{
 @media (max-width: 600px){
     .titulo-inicio{
         position: relative;
-        bottom: 140px;
+        bottom: 100px;
         max-width: 240px;
         height: 130px;
         right: 10px;
@@ -394,7 +394,7 @@ main{
     color: white;
     font-size: 15px;
     text-shadow:  0 0 2px black;
-    font-weight: bold;
+    font-weight: 600;
 }
 .btn-inicio a:hover{
     background: #9daf6d;
@@ -583,7 +583,7 @@ button:hover{
     width: 90%;
     font-size: 20px;
     color: white;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
     bottom: 40px;
 }
@@ -650,7 +650,7 @@ button:hover{
     }
     .btn-info{
         position: relative;
-        bottom: 20px;
+        bottom: 30px;
     }
 }
 @media (max-width:600px){
@@ -661,7 +661,7 @@ button:hover{
 }
 @media (max-width:600px){
     .sli2 img{
-        height: 300px;
+        height: 350px;
     }
     .textos-info{
         width: 250px;
