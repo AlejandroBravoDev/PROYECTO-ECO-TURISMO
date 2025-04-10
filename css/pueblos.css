@@ -46,7 +46,7 @@ header{
     margin: 4px 0;
     border-radius: 1px;
 }
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1280px){
     .navbar{
         position: relative;
         background-color: #403f3f;
@@ -81,8 +81,8 @@ header{
         top: 18px;
     }
     .nav-links input{
-        position: absolute;
-        bottom: 220px;
+        position: relative;
+        top: 100px;
     }
     .avatar{
         position: absolute;
@@ -158,6 +158,7 @@ nav input{
 /*estilos etiquetas generales*/
 main{
     margin-top: 120px;
+    margin-bottom: 50px;
 }
 button{
     width:100%;
@@ -182,19 +183,14 @@ img{
     border-radius: 50%;
 }
 
+h1{
+    font-family: 'Rowdies';
+    color: #adc178;
+}
+
 a{
     text-decoration: none;
     color: white;
-}
-
-footer{
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    background-color: #403f3f;
-    padding: 10px;
-    text-align: center;
-    color: #fff;
 }
 /*terminan los estilos de las etiquetas*/
 /*estilos para las ids*/
@@ -206,8 +202,8 @@ footer{
 }
 
 #container{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 420px);
     flex-wrap: wrap;
@@ -215,7 +211,7 @@ footer{
     margin-left: 20px;
     column-count: 3;
     column-gap: 1rem;
-    margin-top: 80px;
+    margin-top: 15px;
     justify-content: center;
 }
 /*terminan los estilos para las etiquetas*/
@@ -233,11 +229,14 @@ footer{
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
+.titulo{
+    text-align: center;
+}
+
 .content:hover{
     transform: scale(1.01);
     transition: all 0.5s ease-in-out;
 }
-
 
 .content h1{
     margin-top: 10px;
@@ -345,4 +344,102 @@ footer{
         grid-template-columns: repeat(3, 325px);/*en este caso quiero que sean de a 2 columnas*/
         gap: 20px;/*separación entre las tarjetas*/
     }
+}
+/*FOOTER*/
+.pie-pagina{
+    width: 100%;
+    background-color: #403f3f;
+
+
+}
+.pie-pagina .parte-1{
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    padding: 45px 0px;
+}
+.pie-pagina .parte-1 .caja figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-footer{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 3px black;
+    position: relative;
+    bottom: 18px;
+}
+.pie-pagina .parte-1 .caja h2{
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #ADC178;
+    position: relative;
+    bottom: 10px;
+}
+.pie-pagina .parte-1 .caja p{
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 30px;
+    width: 90%;
+}
+.pie-pagina .parte-1 .imagenes-footer a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #383838;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    bottom: 20px;
+    
+    
+}
+.pie-pagina .parte-1 .imagenes-footer {
+    border-radius: 10px;
+}
+.pie-pagina .parte-1 .imagenes-footer a:hover{
+    color: rgb(204, 201, 201);
+}
+.logos{
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+}
+.pie-pagina .parte-2{
+    background-color: #383838;
+    padding: 15px 10px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+@media screen and (max-width: 800px) {
+    .pie-pagina .parte-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    .pie-pagina .parte-1 .imagenes-footer a{
+        margin-bottom: 50px;
+    }
+    
 }
