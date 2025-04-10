@@ -4,6 +4,8 @@ body{
     font-family:sans-serif;
     overflow-x: hidden;
     background:white;
+    background-image: url('../img/cascade-boat-clean-china-natural-rural.jpg');
+    background-size: cover;
 }
 /*HEADER*/
 header{
@@ -247,7 +249,7 @@ nav input{
 img{
     width: 80%;
     height: 90%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
 }
 
 a{
@@ -265,7 +267,7 @@ p{
 }
 
 button{
-    width: 100%;
+    width: 300px;
     height: 30px;
     padding: 20px 40px;
     margin-top: 10px;
@@ -275,6 +277,7 @@ button{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 button:hover{
@@ -317,8 +320,9 @@ main{
 }
 
 .card{/*estilos para las tarjetas que va a tener el slider y que van a contener la información de los destinos*/
-    width: 25%;
+    width: 20%;
     height: 90%;
+    padding: 20px;
     border-radius: 20px;
     background-color: white;
     display: flex;
