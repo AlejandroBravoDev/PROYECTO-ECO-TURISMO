@@ -328,10 +328,11 @@ main {
     text-align: center;
     color: white;
     font-size: 15px;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 99999;
+    padding: 12px;
     p{
         color: white;
     }
