@@ -18,20 +18,40 @@
 <body>
     <main>
         <!-- HEADER -->
-        <header class="header">
-            <div class="logo">
-                <img src="/PROYECTO-ECO-TURISMO/img/logo.jpg" alt="" width="75" height="75">
-            </div>
-            <div class="nav">
-                <a href="/PROYECTO-ECO-TURISMO/html/inicio.html">Inicio</a>
-                <a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html">Sitios</a>
-                <a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html">Hospedajes</a>
-            </div>
-            <input class="search" type="text" placeholder="Buscar">
-            <div class="user">
-                <img src="/PROYECTO-ECO-TURISMO/img/perfil.jpg" alt="" width="67" height="67">
-            </div>
+        <header>
+            <nav class="navbar">
+                <!--que la imagen lleve al inicio de la pagina-->
+                <a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> <img src="/PROYECTO-ECO-TURISMO/img/logo.jpg" class="logo"
+                        alt=""></a>
+                <ul class="nav-links">
+                    <!--botones del header-->
+                    <li class="li-avatar"><a href="/PROYECTO-ECO-TURISMO/html/usuario.html">
+                        <div class="redireccionPerfil">
+                            <div class="ubiAvatar">
+                                <img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
+                                    class="avatarResponsive" alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                            </div>
+                            <div class="datosUsuario">
+                                <h3>DAYANNA SIN FUENTES</h3>
+                                <p>Dayana123</p>
+                            </div>
+                        </div></a>
+                    </li>
+                    <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
+                    <li><a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html"> Destinos </a></li>
+                    <li><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"> Hospedajes </a></li>
+                </ul>
+                <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+                <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
+                        class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
+                <div class="burger active">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
         </header>
+        
         <!-- SECTION PROFILE -->
         <div class="container">
             <h1 class="title-profile">Información personal</h1>
