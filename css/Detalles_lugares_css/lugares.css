@@ -1,0 +1,830 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family:arial;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+/*HEADER*/
+header{
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    z-index: 9999;
+}
+/* menu hamburguesa*/
+.nav-links{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20%;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    right: 0px;
+}
+@media (max-width: 1500px){
+    .nav-links{
+        gap: 15%;
+        position: relative;
+        right: 0px;
+    }
+}
+.nav-links input{
+    height: 20px;/*Tamaño de el input tipo texto*/
+
+}
+.burger{
+    display: none;/*Para que no se muestre en pantalla normal*/
+    flex-direction: column;
+    cursor: pointer;
+}
+.line{
+    width: 25px;
+    height: 2.5px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 1px;
+}
+.avatarResponsive{
+    display: none;
+}
+/*Responsive del menu hamburguesa*/
+@media (max-width: 1280px){
+    .avatarResponsive{
+        display: block;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+    }
+    .avatar{
+        display: none;
+    }
+    header{
+        height: 65px;
+    }
+    .navbar{
+        position: relative;
+        background-color: rgba(0, 0 , 0 , 0.6);
+        height: 65px;
+    
+    }
+    .burger{
+        display: flex;
+        position: absolute;
+        right: 20px;
+
+    }
+    .nav-links{
+        background-color: rgba(0, 0 , 0 , 0.6);
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 30%;
+        height: 1250px;
+        top: 64px;
+        right: 0;
+        margin: 0;
+        gap: 50px;
+        align-items: center;
+    }
+    .nav-links.active{
+        padding-left: 0;
+        display: flex;
+    }
+    .logo{
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    .nav-links input{
+        position: relative;
+        top: 100px;
+    }
+    .avatar{
+        position: absolute;
+        right: 60px;
+        top: 28px;
+        }
+    .nav-links li{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        bottom: 440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        cursor: pointer;
+    }
+    .nav-links li:hover{
+        background-color: rgba(0, 0 , 0 , 0.4);
+        color: #9daf6d;
+    } 
+    .baja{
+        height: 65px;
+    }
+    .li-avatar{
+        display: block;
+    }
+    .redireccionPerfil{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .ubiAvatar{
+        margin-right: 10px;
+    }
+    .datosUsuario h3{
+        position: relative;
+        top: 5px;
+        color: white;
+        font-size: 20px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 15px;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    .search{
+        position: absolute;
+        right: 80px;
+    }
+}
+@media (max-width:985px){
+    .ubiAvatar{
+        margin-right: 5px;
+    }
+    .datosUsuario h3{
+        font-size: 12px;
+    }
+    .datosUsuario p{
+        font-size: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+}
+@media (max-width:630px){
+    .ubiAvatar img{
+        width: 30px;
+        height: 30px;
+    }
+    .datosUsuario h3{
+        font-size: 10px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 5px;
+        font-size: 8px;
+    }
+    .nav-links{
+        font-size: 15px;
+    }
+    
+}
+@media (max-width:600px){
+    .nav-links{
+        width: 45%;
+    }
+}
+.li-avatar{
+    display: none;
+}
+/*Estilos navbar*/
+nav{
+    width: 100%;
+    height: 85px;
+    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+nav img{
+    border-radius: 50%;
+}
+nav .img{
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 15px black;
+    margin-left: 100px;
+}
+nav img{
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 15px black;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav a:hover{
+    color: #ADC178;
+}
+nav input{
+    width: 150px;
+    padding: 6px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black;
+}
+/*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
+.baja{
+    background-color: rgba(0, 0 , 0 , 0.5);
+    height: auto;
+}
+/*ESTILOS SLIDER*/
+.slider-container{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
+    width: 100%;
+    overflow: hidden;
+    margin: auto;
+    position: relative;
+}
+.slider{
+    width: 400%;
+    display: flex;
+    animation: slide 25s infinite alternate ease-in-out;/*ANIMACION DEL SLIDER*/
+}
+.sli {
+    width: 100%;
+    position: relative;   
+}
+.sli img{/*TAMAÑO DE LAS IMAGENES DE EL SLIDER*/
+    width: 100%;
+    height: 820px;
+}
+/*KEYFRAMES PARA EJECUTAR LA ANIMACION DE EL SLIDER*/
+@keyframes slide{
+    0%{transform: translateX(0) }
+    20%{transform: translateX(0)}
+
+    25%{transform: translateX(-25%)}
+    45%{transform: translateX(-25%)}
+
+    50%{transform: translateX(-50%)}
+    70%{transform: translateX(-50%)}
+
+    75%{transform: translateX(-75%)}
+    100%{transform: translateX(-75%)}
+}
+/*RESPONSIVE SLIDER*/
+@media (max-width: 1023px) {
+    .sli img{
+        height: 620px;
+    }
+}
+@media (max-width:600px){
+    .sli img{
+        height: 350px;
+    }
+}
+/*INICIA EL MAIN*/
+.titulo-inicio{/*PRIMER SECTION*/
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+}
+/*VENTANA EMERGENTE PRIMER SECTION*/
+.ventana{/*CONTENEDOR DE LA VENTANA EMERGENTE*/
+    width: 100%;
+    height:1850px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    background-color: rgba(0, 0 , 0 , 0.8);
+    overflow: hidden;
+}
+.modal--show{/*CAMBIA CON JS, EN EL CONTENEDOR PRINCIPAL LA VENTANA TIENE OPACITY 0, EN JS PONEMOS UN EVENTO CLICK PARA QUE CUANDO ALGUIEN LE DE CLICK A CIERTO BOTON LA OPACIDAD DE ESTA PASE DE 0 A 1 Y APAREZCA LA VENTANA EMERGENTE*/
+    opacity: 1;
+    pointer-events: unset;
+}
+.flecha{
+    width: 100%;
+}
+.ventana-emergente{/*VENTANA EMERGENTE*/
+    width: 430px;
+    height: 260px;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 300px;
+    z-index: 99999; 
+}
+.ventana-emergente img{/*ESTILOS AL LOGO DE LA VENTANA EMERGENTE*/
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px;
+    position: relative;
+    left: 10px;
+ 
+ }
+ .title-ventana{/*TITULO DE LA VENTANA EMERGENTE*/
+    font-size: 30px;
+    color: #ADC178;
+    border: none;
+    text-shadow: 0 0 2px black;
+    position: relative;
+    bottom: 15px;
+ }
+ .parrafo-ventana{/*PARRAFO DE LA VENTANA EMERGENTE*/
+    width: 82%;
+    text-align: center;
+    position: relative;
+    bottom: 40px;
+    font-weight: 600;
+ }
+ .buttons{/*CONTENEDOR DE LOS BOTONES DE LA VENTANA EMERGENTE*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    bottom: 30px;
+ }
+ .registro{/*BOTON DE REGISTRO*/
+    background-color: #ADC178;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 2px black;
+ }
+ .registro a{
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+ }
+ .continuar{/*BOTON DE CONTINUAR COMO INVITADO*/
+    background-color: #403f3f;
+    padding: 12px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 2px black;
+ }
+ .continuar a{
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+ }
+ 
+ .continuar a:hover{
+    background-color: #4d4c4c;
+ }
+ .continuar:hover{
+    background-color: #4d4c4c;
+ }
+ .volver{/*TEXTO PARA VOLVER A LA SECTION ANTEIOR*/
+     position: relative;
+     bottom: 0;
+ }
+ .volver a{
+     text-decoration: none;
+     color: gray;
+ }
+ .volver a:hover{
+     color: rgb(119, 119, 119);
+ }
+ /*RESPONSIVE DE LA VENTANA EMERGENTE*/
+@media screen and (max-width:600px) {
+    .ventana-emergente{
+        width: 320px;
+        position: absolute;
+        top: 300px;
+        height: 220px;
+    }
+    .ventana-emergente img{
+       position: relative;
+       top: 10px;
+    }
+    .title-ventana{
+        position: relative;
+        bottom: 0;
+        font-size: 20px;
+    }
+    .parrafo-ventana{
+        position: relative;
+        bottom: 20px;
+        font-size: 15px;
+    }
+    .registro a{
+        font-size: 10px;
+    }
+    .continuar a{
+        font-size: 10px;
+    }
+    .registro{
+        position: relative;
+        top: 10px;
+    }
+    .continuar{
+        position: relative;
+        top: 10px;
+    }
+}
+/*SEGUIMOS CON LOS ESTILOS DE LA PRIMER SECTION*/
+main{
+    width: 100%;
+    height: auto;
+ }
+.recuadro{
+    margin-left: 30px;
+    display: flex;
+    justify-content: left;
+    align-items: bottom;
+    position: absolute;
+    top: 370px;
+}
+.titulo-inicio{
+    max-width: 700px;
+    background-color: rgba(0, 0 , 0 , 0.6);
+    flex: 1 1 300px;
+    height: 420px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+.titulo-inicio h1{
+    font-size: 50px;
+    color: #ADC178;
+    text-shadow: black 0 0 2px;
+    margin-left: 20px;
+    font-weight: 800;
+    position: relative;
+    bottom: 20px;
+}
+.titulo-inicio p{
+    width: 88%;
+    font-size: 25px;
+    color: white;
+    text-shadow: black 0 0 4px;
+    font-weight: 600;
+    margin-left: 20px;
+    position: relative;
+    bottom: 70px;
+}
+.btn-destinos{
+    padding: 10px;
+    width: 220px;
+    border: none;
+    background: #ADC178;
+    cursor: pointer;
+    border:  none;
+    margin-left: 30px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+}
+/*Responsive del recuadro que esta encima del slider*/
+
+@media (max-width: 1023px){
+    .recuadro{
+        position: absolute;
+        top: 330px;
+    }
+    .titulo-inicio{
+        max-width: 400px;
+        height: 270px;
+        margin-left: 10px;
+    }
+    .titulo-inicio h1{
+        font-size: 30px;
+    }
+    .titulo-inicio p{
+        position: relative;
+        bottom: 50px;
+        font-size: 15px;
+    }
+    .btn-destinos{
+        width: 150px;
+        margin-left: 20px;
+        position: absolute;
+    }
+    
+}
+
+@media (max-width:600px){
+    .recuadro{
+        margin-left: 10px;
+        position: absolute;
+        top: 230px;
+        
+    }
+    .titulo-inicio p{
+        display: none;
+    
+    }
+    .titulo-inicio{
+        height: 100px;
+        width: 220px;
+    }
+    .titulo-inicio h1{
+        position: relative;
+        bottom: 5px;
+        font-size: 15px;
+        margin-left: 10px;
+        
+    }
+    .btn-destinos{
+        padding: 6px;
+        margin-left: 10px;
+        width: 150px;
+    }
+}
+.btn-destinos a{/*Estilos del boton del inicio*/
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+    text-shadow:  0 0 2px black;
+    font-weight: 600;
+}
+.btn-destinos a:hover{
+    background: #9daf6d;
+}
+button:hover{
+    background: #9daf6d;
+}
+/*segunda section*/
+.comentarios{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.comentarios-parte1{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comentarios-parte1 h1{
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #ADC178;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+.comentarios-parte1 span{
+    font-size: 1.8rem;
+    color: #ADC178;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.comentarios-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.comentarios-container1{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0 , 0 , 0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.img-cliente{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.img-cliente img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.perfil-persona{
+    display: flex;
+    align-items: center;
+}
+.username{
+    display: flex;
+    flex-direction: column;
+}
+.username strong{
+    color: black;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.username span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+.calificacion{
+    color:#f9d71c ;
+}
+.container-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.parrafo p{
+    font-size: 0.9rem;
+    color: #4b4b4b;
+
+}
+.comentarios-container1:hover{
+    transform: translateY(-5px);
+    transition: all ease 0.3s;
+}
+.comentarios-parte2{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.comentarios-parte2 H2{
+    font-size: 2rem;
+    font-weight: 500;
+    background-color: #ADC178;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-align: center;
+}
+.comentarios-parte2 input{
+    width: 200px;
+    padding: 10px;
+}
+.comentar{
+    margin-top: 20px;
+}
+.comentar button{
+    font-weight: 500;
+    background-color: #ADC178;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border: 1px solid #979797;
+    cursor: pointer;
+    
+}
+.comentar a{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+.comentar button:hover{
+    background-color: #9daf6d;
+}
+.comentar a:hover{
+    background-color: #9daf6d;
+}
+@media(max-width:1141px){
+    .comentarios-container1{
+        width: 45%;
+        padding: 10px;
+    }
+
+}
+@media(max-width:999px){
+    .comentarios-container1{
+        width: 100%;
+    }
+    .comentarios-container h1{
+        font-size: 1.4rem;
+
+    }
+}
+@media (max-width:370px){
+    .comentarios-parte2 input{
+        width: 150px;
+    }
+}
+@media (max-width:320px){
+    .container-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .calificacion{
+        margin-top: 10px;
+    }
+}
+/*FOOTER*/
+.pie-pagina{/*Contenedor del footer*/
+    width: 100%;
+    background-color: #403f3f;
+}
+.pie-pagina .parte-1{/*Primera parte de el footer*/
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    padding: 45px 0px;
+}
+.pie-pagina .parte-1 .caja figure{/*Estilos a las cajas de el footer*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-footer{/*Estilos al logo de la pagina en el footer*/
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 3px black;
+    position: relative;
+    bottom: 18px;
+}
+.pie-pagina .parte-1 .caja h2{/*Estilos a los h2 de las cajas*/
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #ADC178;
+    position: relative;
+    bottom: 20px;
+}
+.pie-pagina .parte-1 .caja p{/*Estilos a los parrafos del footer*/
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 40px;
+    width: 90%;
+}
+.pie-pagina .parte-1 .imagenes-footer a{/*Estilos a los iconos de las redes sociales*/
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #383838;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    bottom: 30px; 
+}
+.pie-pagina .parte-1 .imagenes-footer {/*Border-radius al contenedor de los iconos*/
+    border-radius: 10px;
+}
+.pie-pagina .parte-1 .imagenes-footer a:hover{
+    color: rgb(204, 201, 201);
+}
+.logos{/*Tamaño de cada icono*/
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+}
+.pie-pagina .parte-2{/*Estilos a la segunda parte de el footer*/
+    background-color: #383838;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    z-index: 99999;
+}
+/*RESPONSIVE DEL FOOTER*/
+@media screen and (max-width: 800px) {
+    .pie-pagina .parte-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    .pie-pagina .parte-1 .imagenes-footer a{
+        margin-bottom: 50px;
+    }
+}

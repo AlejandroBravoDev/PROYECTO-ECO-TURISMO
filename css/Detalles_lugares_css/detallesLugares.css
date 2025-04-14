@@ -1,0 +1,490 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: sans-serif;
+    background-image: url(/PROYECTO-ECO-TURISMO/img/slider4.jpg);/*fondo de la section*/
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+/*HEADER*/
+header{
+    width: 100%;
+    height: 85px;
+    position: fixed;
+    z-index: 9999;
+}
+/* menu hamburguesa*/
+.nav-links{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 20%;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    right: 0px;
+}
+@media (max-width: 1500px){
+    .nav-links{
+        gap: 15%;
+        position: relative;
+        right: 0px;
+    }
+}
+.nav-links input{
+    height: 20px;/*Tamaño de el input tipo texto*/
+
+}
+.burger{
+    display: none;/*Para que no se muestre en pantalla normal*/
+    flex-direction: column;
+    cursor: pointer;
+}
+.line{
+    width: 25px;
+    height: 2.5px;
+    background-color: white;
+    margin: 4px 0;
+    border-radius: 1px;
+}
+.avatarResponsive{
+    display: none;
+}
+/*Responsive del menu hamburguesa*/
+@media (max-width: 1280px){
+    .avatarResponsive{
+        display: block;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+    }
+    .avatar{
+        display: none;
+    }
+    header{
+        height: 65px;
+    }
+    .navbar{
+        position: relative;
+        background-color: rgba(0, 0 , 0 , 0.6);
+        height: 65px;
+    
+    }
+    .burger{
+        display: flex;
+        position: absolute;
+        right: 20px;
+
+    }
+    .nav-links{
+        background-color: rgba(0, 0 , 0 , 0.6);
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 30%;
+        height: 1250px;
+        top: 64px;
+        right: 0;
+        margin: 0;
+        gap: 50px;
+        align-items: center;
+    }
+    .nav-links.active{
+        padding-left: 0;
+        display: flex;
+    }
+    .logo{
+        width: 45px;
+        height: 45px;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+    }
+    .nav-links input{
+        position: relative;
+        top: 100px;
+    }
+    .avatar{
+        position: absolute;
+        right: 60px;
+        top: 28px;
+        }
+    .nav-links li{
+        width: 100%;
+        height: 50px;
+        position: relative;
+        bottom: 440px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        cursor: pointer;
+    }
+    .nav-links li:hover{
+        background-color: rgba(0, 0 , 0 , 0.4);
+        color: #9daf6d;
+    } 
+    .baja{
+        height: 65px;
+    }
+    .li-avatar{
+        display: block;
+    }
+    .redireccionPerfil{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .ubiAvatar{
+        margin-right: 10px;
+    }
+    .datosUsuario h3{
+        position: relative;
+        top: 5px;
+        color: white;
+        font-size: 20px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 15px;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    .search{
+        position: absolute;
+        right: 80px;
+    }
+}
+@media (max-width:985px){
+    .ubiAvatar{
+        margin-right: 5px;
+    }
+    .datosUsuario h3{
+        font-size: 12px;
+    }
+    .datosUsuario p{
+        font-size: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+}
+@media (max-width:630px){
+    .ubiAvatar img{
+        width: 30px;
+        height: 30px;
+    }
+    .datosUsuario h3{
+        font-size: 10px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 5px;
+        font-size: 8px;
+    }
+    .nav-links{
+        font-size: 15px;
+    }
+    
+}
+@media (max-width:600px){
+    .nav-links{
+        width: 45%;
+    }
+}
+.li-avatar{
+    display: none;
+}
+/*Estilos navbar*/
+nav{
+    width: 100%;
+    height: 85px;
+    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+nav img{
+    border-radius: 50%;
+}
+nav .img{
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 0 15px black;
+    margin-left: 100px;
+}
+nav img{
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 15px black;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav a:hover{
+    color: #ADC178;
+}
+nav input{
+    width: 150px;
+    padding: 6px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 5px black;
+}
+/*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
+.baja{
+    background-color: rgba(0, 0 , 0 , 0.5);
+    height: auto;
+}
+h1{
+    font-family:"Rowdies";
+}
+h2{
+    font-family:"Rowdies";
+}
+
+.main-container {
+    width: 100%;
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section{
+    width: 70%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0 , 0 , 0.7);
+    border-radius: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.image-section {
+    flex: 1 1 400px;
+    max-width: 500px;
+    padding: 10px;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info-section {
+    flex: 1 1 400px;
+    max-width: 600px;
+    padding: 10px;
+    text-align: left;
+}
+
+.info-section h1 {
+    color: #ADC178;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    bottom: 30px;
+}
+
+.info-section p {
+    margin: 10px 0px;
+    color: white;
+    font-size: 18px;
+    position: relative;
+    bottom: 30px;
+}
+
+.btn {
+    width: 90%;
+    display: block;
+    padding: 10px 10px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #ADC178;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    left: 20px;
+    bottom: 30px;
+}
+
+.btn:hover {
+    background-color: #9daf6d;
+}
+
+.btn2 {
+    width: 90%;
+    display: block;
+    padding: 10px 10px;
+    margin-top: 10px;
+    color: #fff;
+    background-color: #ADC178;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    left: 20px;
+    bottom: 30px;
+}
+
+.btn2:hover {
+    background-color: #9daf6d;
+}
+a{
+   text-decoration: none;
+   color: white;
+}
+.btn2 a:hover{
+   background-color: #9daf6d;
+}
+/*responsive */
+@media (max-width:1228px){
+    .main-container{
+        height: 1300px;
+    }
+    .section{
+        height: 90%;
+        margin-top: 100px;
+
+    }
+    .info-section h1{
+        font-size: 50px;
+        position: relative;
+        bottom: 80px;
+    }
+    .info-section p{
+        position: relative;
+        bottom: 90px;
+        padding: 10px;
+    }
+    .btn{
+        position: relative;
+        bottom: 90px;
+        
+    }
+    .btn2{
+        position: relative;
+        bottom: 90px;
+        
+    }
+}
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .section{
+        width: 90%;
+    }
+}
+/*FOOTER*/
+.pie-pagina{/*Contenedor del footer*/
+    width: 100%;
+    background-color: #403f3f;
+}
+.pie-pagina .parte-1{/*Primera parte de el footer*/
+    width: 100%;
+    margin: auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+    padding: 45px 0px;
+}
+.pie-pagina .parte-1 .caja figure{/*Estilos a las cajas de el footer*/
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo-footer{/*Estilos al logo de la pagina en el footer*/
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 0 3px black;
+    position: relative;
+    bottom: 18px;
+}
+.pie-pagina .parte-1 .caja h2{/*Estilos a los h2 de las cajas*/
+    color: white;
+    margin-bottom: 25px;
+    font-size: 20px;
+    color: #ADC178;
+    position: relative;
+    bottom: 20px;
+}
+.pie-pagina .parte-1 .caja p{/*Estilos a los parrafos del footer*/
+    color: white;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 40px;
+    width: 90%;
+}
+.pie-pagina .parte-1 .imagenes-footer a{/*Estilos a los iconos de las redes sociales*/
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    margin-right: 10px;
+    background-color: #383838;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    bottom: 30px; 
+}
+.pie-pagina .parte-1 .imagenes-footer {/*Border-radius al contenedor de los iconos*/
+    border-radius: 10px;
+}
+.pie-pagina .parte-1 .imagenes-footer a:hover{
+    color: rgb(204, 201, 201);
+}
+.logos{/*Tamaño de cada icono*/
+    width: 30px;
+    height: 30px;
+    margin-top: 7px;
+}
+.pie-pagina .parte-2{/*Estilos a la segunda parte de el footer*/
+    padding: 15px 10px;
+    background-color: #383838;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 99999;
+}
+/*RESPONSIVE DEL FOOTER*/
+@media screen and (max-width: 800px) {
+    .pie-pagina .parte-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 30px;
+        padding: 35px 0px;
+    }
+    .pie-pagina .parte-1 .imagenes-footer a{
+        margin-bottom: 50px;
+    }
+}

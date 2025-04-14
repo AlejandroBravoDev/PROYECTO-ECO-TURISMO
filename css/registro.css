@@ -13,7 +13,14 @@ body {
     background-color: #DDE5B6;
     font-family: sans-serif;
 }
-
+#rol {
+    width: 100%;
+    padding: 10px 0;
+    font-family: sans-serif;
+    border-radius: 10px;
+    border-color: #ADC178;
+    color: gray;
+}
 .registro-container {
     width: 90%;
     max-width: 400px;
@@ -35,7 +42,7 @@ body {
 h2 {
     color: #ADC178;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 1.8rem;
 }
 
@@ -90,7 +97,7 @@ button:hover {
 }
 
 .toggle-form a {
-    color: #ADC178;
+    color: #a9a9a9;
     text-decoration: none;
     font-size: 14px;
 }
