@@ -33,7 +33,7 @@
                         </div></a>
                     </li>
                     <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
-                    <li><a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html"> Destinos </a></li>
+                    <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Destinos </a></li>
                     <li><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"> Hospedajes </a></li>
                 </ul>
                 <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
@@ -53,8 +53,8 @@
                 <select name="actividades" class="filtro actividades">
                     <option value="">Glamping</option>
                 </select>
-                <select name="municipios" class="filtro municipios">
-                    <option value="municipio">pereira</option>
+                <select name="municipios" class="filtro municipios" id="menu" onchange="irAPagina()">
+                    <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/santaRosa.html">Pereira</option>
                     <option value="Dosque">Dosquebradas</option>
                     <option value="santa">Sata Rosa</option>
                 </select>
@@ -66,67 +66,70 @@
                     <div class="slide">
                         <!--contenido del slide-->
                         <div class="card">
-                            <img src="/PROYECTO-ECO-TURISMO/img/parque_ucumari.jpg" alt="naturaleza" class="imgs">
+                            <img src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg" alt="naturaleza" class="imgs">
 
                             <div class="texto">
-                                <h1>Parque Natural Ucumari</h1>
-                                <p>El Parque Natural Ucumarí, en Risaralda, Colombia, es una reserva ecológica con bosques de niebla, rica biodiversidad y senderos ideales para el ecoturismo, la observación de aves y el contacto con la naturaleza..</p>
+                                <h1>BIOPARQUE UKUMARI</h1>
+                                <p class="text">El Bioparque Ukumarí, en Pereira, es un centro de conservación y educación ambiental con bioregiones que recrean hábitats naturales. Alberga especies como pumas, rinocerontes y monos, promoviendo el respeto por la biodiversidad.</p>
                                 
                             </div>
-                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn">Más información</button></a>
+                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
                         </div>
 
                         <div class="card">
                             <img src="/PROYECTO-ECO-TURISMO/img/laguna-otun.jpg" alt="naturaleza" class="imgs">
 
                             <div class="texto">
-                                <h1>Lugar</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
-                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                                <h1>LAGUNA DEL OTÚN</h1>
+                                <p class="text">La Laguna del Otún, ubicada en el Parque Natural Los Nevados, en Risaralda, es un lago a más de 3,900 m de altitud. Sus aguas alimentan el río Otún y es hogar de diversas especies, como el pato andino y el frailejón. Es un destino ideal para el ecoturismo y el senderismo de alta montaña.
+                                </p>
+                                
                             </div>
-                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn">Más información</button></a>
+                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
                         </div>
                         <div class="card">
                             <img src="/PROYECTO-ECO-TURISMO/img/Yarumal.jpg" alt="naturaleza" class="imgs">
 
                             <div class="texto">
-                                <h1>Lugar</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
-                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                                <h1>SENDERO YARUMAL</h1>
+                                <p class="text">El Sendero Ecológico Yarumal, en Risaralda, es una ruta de ecoturismo que atraviesa bosques de niebla, permitiendo la observación de flora y fauna nativa. Es ideal para el senderismo y la conexión con la naturaleza.
+                                </p>
+                               
                             </div>
-                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn">Más información</button></a>
+                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
                         </div>
                     </div>
+
+                    <!--2pag del slider-->
                     <div class="slide">
                         <div class="card">
                             <img src="/PROYECTO-ECO-TURISMO/img/jardin-utp.jpeg" alt="naturaleza" class="imgs">
 
                             <div class="texto">
-                                <h1>Lugar</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
-                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                                <h1>JARDÍN BOTANICO UTP</h1>
+                                <p class="text">El Jardín Botánico de la UTP, en Pereira, es un espacio de conservación y educación ambiental con senderos ecológicos, diversidad de flora y fauna, y áreas destinadas a la investigación y el ecoturismo.
+                                </p>
                             </div>
-                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn">Más información</button></a>
+                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
                         </div>
                         <div class="card">
-                            <img src="/PROYECTO-ECO-TURISMO/img/bioparque-ukumari.jpg" alt="naturaleza" class="imgs">
+                            <img src="/PROYECTO-ECO-TURISMO/img/parque_ucumari.jpg" alt="naturaleza" class="imgs">
 
                             <div class="texto">
-                                <h1>Lugar</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
-                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                                <h1>PARQUE NATURAL UCUMARI</h1>
+                                <p class="text">El Parque Natural Ucumarí, en Risaralda, Colombia, es una reserva ecológica con bosques de niebla, rica biodiversidad y senderos ideales para el ecoturismo, la observación de aves y el contacto con la naturaleza.</p>
                             </div>
-                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn">Más información</button></a>
+                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
                         </div>
                         <div class="card">
                             <img src="/PROYECTO-ECO-TURISMO/img/divisa-don-juan.jpg" alt="naturaleza" class="imgs">
 
                             <div class="texto">
                                 <h1>Lugar</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
-                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                                <p class="text">La Divisa de Don Juan, en Pereira, es una finca cafetera que ofrece experiencias inmersivas sobre el cultivo y proceso del café. Ubicada en el Paisaje Cultural Cafetero, combina tradición, sostenibilidad y recorridos guiados, permitiendo a los visitantes conocer de cerca la producción cafetera y disfrutar de la naturaleza.
+                                </p>
                             </div>
-                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn">Más información</button></a>
+                            <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
                         </div>
                     </div>
                 </div>

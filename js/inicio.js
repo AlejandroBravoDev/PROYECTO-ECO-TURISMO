@@ -54,3 +54,11 @@ document.addEventListener('DOMContentLoaded'/*espera a que todo el html esté ca
         uptadeSlider(); //se actualiza la vista del slider
     });
 });
+
+//cambio de pagina en el select
+function irAPagina() {
+    const seleccion = document.getElementById("menu").value;
+    if (seleccion) {
+      window.location.href = seleccion;
+    }
+}
