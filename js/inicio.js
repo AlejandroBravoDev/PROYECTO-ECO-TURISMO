@@ -62,3 +62,26 @@ function irAPagina() {
       window.location.href = seleccion;
     }
 }
+
+//función para que la flecha de los filtros gire
+function flechaMunicipiosIn(){
+    let flecha = document.getElementById('flechis');
+    flecha.style.transform = "rotate(90deg)";
+    flecha.style.transition = ".5s";
+}
+
+function flechaMunicipiosOut(){
+    let flecha = document.getElementById('flechis');
+    flecha.style.transform = "rotate(0deg)";
+}
+
+function flechaMunicipiosIn2(){
+    let flecha = document.getElementById('flechis2');
+    flecha.style.transform = "rotate(90deg)";
+    flecha.style.transition = ".5s";
+}
+
+function flechaMunicipiosOut2(){
+    let flecha = document.getElementById('flechis2');
+    flecha.style.transform = "rotate(0deg)";
+}
