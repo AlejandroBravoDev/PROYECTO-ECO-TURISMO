@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded'/*espera a que todo el html esté ca
     //esta variable va a mantener un registro de que slider se está mostrando
     let currentIndex = 0;
     const totalSlides = slides.length; //en esta variable se almacena el numero total de sliders que hay, por eso se seleccionaron los elementos con la clase slide. lo que hace este slides.length es que cuenta la cantidad de elementos con la clase slide hay
-
+    
     //esta función va a actualizar la vista del slide, o sea, va a pasar al siguente slide
     function uptadeSlider(){
         //esta linea sirve para darle una animación al slider y que no se vea tan brusco el cambio de slides
@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded'/*espera a que todo el html esté ca
         slider1.style.transform = `translateX(-${currentIndex * 100}%)`;//no entendí porque se usan los ´´
     };
 
+    if (currentIndex > 0){
+        leftBtn.style.display = "none"
+    }
     //este evento click sirve para devolvernos en los sliders
     leftBtn.addEventListener('click', function(){
         //esta condicional verifica en que pagina estamos a la hora de dar click
