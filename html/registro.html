@@ -11,8 +11,17 @@
 <body>
     <div class="registro-container"><!--se abre contenedor para el registro-->
         <div class="auth-box"><!--se crea un div para el registro-->
-            <h2>Registro</h2>
+            <h2>Registro🌿</h2>
+            <select id="rol" name="rol" required> <!--se abre seccion-->          
+                <option value="admin">Administrador</option> <!--opcion para elegir el admi-->
+                <option value="guia">Dueño</option> <!--opcion para elegir el guiat-->
+                <option value="turista">Turista</option> <!--opcion para elegir el turista-->
+            </select>
             <form><!--se abre un formulario-->
+                <div class="form-group"><!--formulario para que la info tenga donde estar-->
+                    <label for="registerName">Nombre usuario</label><!--se crea un label para lo que vamos a ver-->
+                    <input type="text" id="registerName" required><!-- un input que es donde copiaremos lo que nos pide ingresar-->
+                </div>
                 <div class="form-group"><!--formulario para que la info tenga donde estar-->
                     <label for="registerName">Nombre Completo</label><!--se crea un label para lo que vamos a ver-->
                     <input type="text" id="registerName" required><!-- un input que es donde copiaremos lo que nos pide ingresar-->

@@ -5,7 +5,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('/PROYECTO-ECO-TURISMO/img/imagen-risaralda.jpg');
+    background-image: url('/PROYECTO-ECO-TURISMO/img/sendero.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@ img {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(235, 6, 6, 0.1);
     position: relative;
 }
 
@@ -97,11 +97,11 @@ button:hover {
 .form-footer {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .form-footer a {
-    color: #ADC178;
+    color: #a9a9a9;
     text-decoration: none;
     font-size: 14px;
 }
@@ -120,8 +120,13 @@ footer {
     color: #000;
 }
 a{
-    color: #ADC178;
-    text-align: center;
+    color: #a9a9a9;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size:14px ;
+}
+a:hover {
     text-decoration: underline;
 }
 /* Responsive Design */
