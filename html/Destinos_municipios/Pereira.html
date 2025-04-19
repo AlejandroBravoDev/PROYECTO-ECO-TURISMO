@@ -57,8 +57,11 @@
                     <svg id="flechis" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#adc178" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg>
                 </div>
 
-                <select name="actividades" class="filtro actividades" style="font-size: 18px;" onfocus="flechaMunicipiosIn2()" onblur="flechaMunicipiosOut2()">
+                <select id="menu" name="actividades" class="filtro actividades" style="font-size: 18px;" onfocus="flechaMunicipiosIn2()" onchange="irAPaginaActividades()" onblur="flechaMunicipiosOut2()">
                     <option value="">Actividades</option>
+                    <option value="/PROYECTO-ECO-TURISMO/html/actividades/cascadas-termales.html">Cascadas y termales</option>
+                    <option value="/PROYECTO-ECO-TURISMO/html/actividades/senderismo.html">Senderismo</option>
+                    <option value="/PROYECTO-ECO-TURISMO/html/actividades/ver-fauna.html">Avistamiento de fauna y flora</option>
                 </select>
 
                 <div id="flecha2">
@@ -66,7 +69,7 @@
                 </div>
                 
 
-                <select name="municipios" class="filtro municipios" id="menu" onchange="irAPagina()" onclick="flechaMunicipiosIn()" onblur="flechaMunicipiosOut()" style="font-size: 18px;">
+                <select name="municipios" class="filtro municipios" id="menu2" onchange="irAPagina()" onclick="flechaMunicipiosIn()" onblur="flechaMunicipiosOut()" style="font-size: 18px;">
                     
                     <option value="">Municipios</option>
                     <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html">Pereira</option>
@@ -77,8 +80,6 @@
                     <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Mistrato.html">Mistrato</option>
                     <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Balboa.html">Balboa</option>
                     <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Guatica.html">Guatica</option>
-                    <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Apia.html">Apia</option>
-                    <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/La-celia.html">La Celia</option>
                 </select>
             </div>
             <!--contenedor del slider-->

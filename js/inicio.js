@@ -32,9 +32,6 @@ document.addEventListener('DOMContentLoaded'/*espera a que todo el html esté ca
         slider1.style.transform = `translateX(-${currentIndex * 100}%)`;//no entendí porque se usan los ´´
     };
 
-    if (currentIndex > 0){
-        leftBtn.style.display = "none"
-    }
     //este evento click sirve para devolvernos en los sliders
     leftBtn.addEventListener('click', function(){
         //esta condicional verifica en que pagina estamos a la hora de dar click
@@ -56,16 +53,31 @@ document.addEventListener('DOMContentLoaded'/*espera a que todo el html esté ca
         }
         uptadeSlider(); //se actualiza la vista del slider
     });
+
+    setInterval(function() {
+        if (currentIndex < totalSlides - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        uptadeSlider();
+    }, 8000);
 });
 
 //cambio de pagina en el select
-function irAPagina() {
+function irAPaginaActividades() {
     const seleccion = document.getElementById("menu").value;
     if (seleccion) {
       window.location.href = seleccion;
     }
 }
 
+function irAPagina() {
+    const seleccion = document.getElementById("menu2").value;
+    if (seleccion) {
+      window.location.href = seleccion;
+    }
+}
 //función para que la flecha de los filtros gire
 function flechaMunicipiosIn(){
     let flecha = document.getElementById('flechis');
