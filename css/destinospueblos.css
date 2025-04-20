@@ -273,6 +273,7 @@ button{
     justify-content: center;
     align-items: center;
     color: white;
+    cursor: pointer;
 }
 
 button:hover{
@@ -290,6 +291,7 @@ select{
     width: 45%;
     border-radius: 10px;
     background-color: #D9D9D9;
+    cursor: pointer;
 }
 
 svg{
@@ -421,10 +423,6 @@ p{
     width: 90%;
     height: 40%;
     border-radius: 10px;
-}
-
-.opciones{
-    color: black;
 }
 /*estilos para las flechas*/
 .arrow{
