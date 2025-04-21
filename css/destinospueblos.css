@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    height: auto;
     font-family:sans-serif;
     overflow-x: hidden;
     background:white;
@@ -276,10 +277,6 @@ button{
     cursor: pointer;
 }
 
-button:hover{
-    box-shadow: 0 0 5px #adc178;
-    transition: all 0.5s ease-in-out;
-}
 main{
     display: flex;
     flex-direction: column;
@@ -315,6 +312,7 @@ p{
     margin-top: 12rem;
 }
 
+/*estos estilos para las id flechas son para las flechas de los filtros*/
 #flecha{
     position: absolute;
     display: flex;
@@ -358,10 +356,11 @@ p{
     justify-content: space-evenly;
     align-items: center;
     font-size: 2rem;
+    flex-wrap: wrap;
 }
 
 .card{/*estilos para las tarjetas que va a tener el slider y que van a contener la información de los destinos*/
-    width: 25rem;
+    width: 12.5em;
     height: 90%;
     padding: 10px;
     border-radius: 20px;
@@ -402,6 +401,7 @@ p{
     height: 3.2rem;
     margin-top: 0;
 }
+
 
 .text{
     font-size: 1.2rem;
@@ -453,33 +453,90 @@ p{
 
 /*comienza el responsive*/
 @media (max-width:500px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
     body{
-        height: 100vh;
+        height: auto;
         width: 100%;
     }
 
     h1{
-        font-size: 12px;
-    }
-    
-    p{
-        font-size: 10px;
+        font-size: 11px;
     }
 
-    a{
-        font-size: 8px;
+    select{
+        height: 30%;
+        width: 90%;
     }
 
+     #slider-container{
+        margin-top: 20em;
+        height: 150vh;
+        overflow-y: visible;
+    }
+
+
+    #flecha{
+        position: absolute;
+        height:30px;
+        top: 72px;
+        right: 5%;
+    }
+
+   #flecha2{
+        position: absolute;
+        height:30px;
+        top: 25px;
+        left: 86%;
+    }
+
+    .flechas{
+        width: 10%;
+    }
+
+    .titulo{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 5rem;
+    }
+
+    .card h1{
+        font-size: 1.2rem;
+    }
+
+    .card .t-btn{
+        font-size: .9rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .btn{
+        width: 15rem;
+        height: 10px;
+    }
+
+    .text{
+        font-size: .7rem;
+    }
     .slide{
-        height: 400px;
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        gap: 20px;
     }
     .imgs{
-        height: 20%;
+        height: 45%;
     }
-
+ 
     .arrow{
         width: 30px;
         height: 30px;
+        top: 40em;
     }
 
     .left{
@@ -488,37 +545,113 @@ p{
 
     .right{
         right: -5px;
+    }
+
+    .card{
+        height: 38%;
+        width: 70%;
+    }
+
+    .card:nth-child(2) .title{
+        font-size: 1.1rem;
+    }
+
+    .left{
+        left: 10px;
+    }
+    
+    .right{
+        right: 10px;
+    }
+
+    .filtros{
+        width: 90%;
+        height: 8rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 3em;
     }
 }
 
 @media (min-width:501px) and (max-width:819px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
     body{
-        height: 100vh;
+        height: auto;
         width: 100%;
     }
 
     h1{
-        font-size: 16px;
-    }
-    
-    p{
-        font-size: 14px;
+        font-size: 11px;
     }
 
-    a{
-        font-size: 10px;
+    select{
+        height: 3rem;
+        width: 90%;
     }
 
+    #slider-container{
+        margin-top: 20em;
+        height: 100vh;
+        overflow-y: visible;
+    }
+
+    #flecha{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 80px;
+        right: 5.5%;
+    }
+
+   #flecha2{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 20px;
+        left: 88%;
+    }
+
+    .titulo{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 5rem;
+    }
+
+    .card .t-btn{
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .btn{
+        width: 12rem;
+    }
+
+    .text{
+        display: none;
+    }
     .slide{
-        height: 450px;
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        gap: 0;
     }
     .imgs{
-        height: 25%;
+        height: 45%;
     }
 
     .arrow{
         width: 30px;
         height: 30px;
+        top: 35em;
     }
 
     .left{
@@ -528,36 +661,150 @@ p{
     .right{
         right: -5px;
     }
+
+    .card{
+        height: 25%;
+        width: 40%;
+        margin-top: -200px;
+    }
+
+    .card:last-child{
+        margin-top: -600px;
+    }
+
+    .left{
+        left: 10px;
+    }
+    
+    .right{
+        right: 10px;
+    }
+
+    .filtros{
+        width: 90%;
+        height: 8rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 3em;
+    }
+
 }
 
 @media (min-width:820px) and (max-width:1023px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
     body{
-        height: 100vh;
+        height: auto;
         width: 100%;
     }
 
     h1{
-        font-size: 16px;
-    }
-    
-    p{
-        font-size: 14px;
+        font-size: 11px;
     }
 
-    a{
-        font-size: 10px;
+    select{
+        height: 3rem;
+        width: 90%;
     }
 
+    #slider-container{
+        margin-top: 20em;
+        height: 100vh;
+        overflow-y: visible;
+    }
+
+    #flecha{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 80px;
+        right: 5.5%;
+    }
+
+   #flecha2{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 20px;
+        left: 88%;
+    }
+
+    .titulo{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 5rem;
+    }
+
+    .card .t-btn{
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .btn{
+        width: 12rem;
+    }
+
+    .text{
+        display: none;
+    }
     .slide{
-        height: 450px;
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        gap: 0;
     }
     .imgs{
-        height: 25%;
+        height: 45%;
     }
 
     .arrow{
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
+        top: 35em;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
+    }
+
+    .card{
+        height: 25%;
+        width: 40%;
+        margin-top: -200px;
+    }
+
+    .card:last-child{
+        margin-top: -600px;
+    }
+
+    .left{
+        left: 10px;
+    }
+    
+    .right{
+        right: 10px;
+    }
+
+    .filtros{
+        width: 90%;
+        height: 8rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 3em;
     }
 }
 

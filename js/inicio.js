@@ -54,14 +54,14 @@ document.addEventListener('DOMContentLoaded'/*espera a que todo el html esté ca
         uptadeSlider(); //se actualiza la vista del slider
     });
 
-    setInterval(function() {
-        if (currentIndex < totalSlides - 1) {
-            currentIndex++;
-        } else {
-            currentIndex = 0;
-        }
-        uptadeSlider();
-    }, 8000);
+    // setInterval(function() {
+    //     if (currentIndex < totalSlides - 1) {
+    //         currentIndex++;
+    //     } else {
+    //         currentIndex = 0;
+    //     }
+    //     uptadeSlider();
+    // }, 10000);
 });
 
 //cambio de pagina en el select
