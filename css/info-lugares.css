@@ -278,6 +278,8 @@ iframe{
     width: 100%;
     height: 100%;
     border-radius: 20px;
+    border: none;
+    box-shadow: 0 0 5px, 0 0 10px rgba(0, 0 , 0 , 0.2);
 }
 
 button{
@@ -314,9 +316,10 @@ video{
 
 #container{
     width: 85%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 150px;
+    justify-content: space-around;
 }
 /*estilos para las clases*/
 /*estilos para el div de el titulo*/
@@ -342,6 +345,10 @@ video{
     font-size: 2rem;
 }
 
+.btn{
+    margin-top: 30px;
+}
+
 .t-btn{
     color: white;
     margin: 0;
@@ -349,8 +356,9 @@ video{
 
 /*estilos para las imagenes*/
 .info{
-    width: 55%;
+    width: 100%;
     height: 100%; 
+    margin-bottom: 50px;
 }
 
 .images{
@@ -404,7 +412,7 @@ video{
 
 /*estilos para el mapa y el botoón de abajo*/
 .map{
-    width: 40%;
+    width: 100%;
     height: 30em;
     display: flex;
     flex-direction: column;
@@ -427,12 +435,29 @@ video{
 }
 
 
-/*estilos para el video*/
-.video{
-    width: 50%;
-    
+.btn-cnt{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: solid 1px violet;
 }
 /*Terminan los estilos de las secciones y toda la vuelta*/
+/*comienza el responsive de la parte principal*/
+@media (max-width:1000px) {
+    #container{
+        grid-template-columns: 1fr;
+    }
+
+    .info{
+        margin-bottom: -50px;
+    }
+
+    .map{
+        margin-bottom: 50px;
+    }
+}
+
+
 /*FOOTER*/
 .pie-pagina{/*Contenedor del footer*/
     width: 100%;

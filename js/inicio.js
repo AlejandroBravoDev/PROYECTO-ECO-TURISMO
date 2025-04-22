@@ -102,9 +102,6 @@ function flechaMunicipiosOut2(){
 }
 
 function cambiaEstrella(){
-    let staroff = document.getElementById('staroff');
-    let staron = document.getElementById('staron');
-
-    staroff.style.display = "none";
-    staron.style.display = "block";
+    let star = document.getElementsByClassName('star');
+    star.style.color = "yellow";
 }

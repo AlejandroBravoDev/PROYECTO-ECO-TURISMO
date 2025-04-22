@@ -468,13 +468,12 @@ p{
 
 .star{
     position: relative;
-    right: -40%;
+    right: -38%;
     border-radius: 10px ;
     z-index: 1000;
-    top: 4%;
+    top: 5%;
     width:2rem;
     height: 2rem;
-    background-color: rgba(0, 0 , 0 , 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
