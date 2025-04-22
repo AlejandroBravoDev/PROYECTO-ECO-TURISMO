@@ -1,27 +1,6 @@
-* {
+body{
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: #fff;
-    font-family: "poppins", sans-serif;
-    font-size: 16px;
-}
-
-h4 {
-    font-size: 1.5rem;
-    color: #000;
-}
-
-p {
-    font-size: 1rem;
-    color: #000;
-}
-
-main {
-    min-height: 100vh;
+    font-family: arial;
 }
 
 /*HEADER*/
@@ -114,7 +93,7 @@ header{
         padding-left: 0;
         display: flex;
     }
-    .logo{
+    nav .logo{
         width: 45px;
         height: 45px;
         position: absolute;
@@ -154,7 +133,7 @@ header{
     .redireccionPerfil{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         cursor: pointer;
     }
@@ -173,9 +152,10 @@ header{
         font-size: 12px;
         color: #d6d6d6;
     }
-    .search{
+    .buscador{
+        width: 170px;
         position: absolute;
-        right: 80px;
+        right: 100px;
     }
 }
 @media (max-width:985px){
@@ -235,9 +215,9 @@ nav .img{
     width: 40px;
     height: 40px;
     box-shadow: 0 0 15px black;
-    margin-left: 100px;
+    margin-left: 140px;
 }
-nav img{
+.logo{
     width: 60px;
     height: 60px;
     box-shadow: 0 0 15px black;
@@ -250,12 +230,25 @@ nav a{
 nav a:hover{
     color: #ADC178;
 }
+.buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 155px;
+}
+.buscador img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 180px;    
+    cursor: pointer;
+}
+
 nav input{
-    width: 150px;
-    padding: 6px;
+    width: 170px;
+    padding: 9px;
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 0 5px black;
+    border-radius: 10px;
 }
 /*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
 .baja{

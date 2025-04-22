@@ -139,7 +139,7 @@ header{
     .redireccionPerfil{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         cursor: pointer;
     }
