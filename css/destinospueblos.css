@@ -360,6 +360,7 @@ p{
 }
 
 .card{/*estilos para las tarjetas que va a tener el slider y que van a contener la información de los destinos*/
+
     width: 12.5em;
     height: 90%;
     padding: 10px;
@@ -419,7 +420,8 @@ p{
     top: 7rem;
 }
 .imgs{
-    margin-top: 10px;
+    position: relative;
+    top: -2%;
     width: 90%;
     height: 40%;
     border-radius: 10px;
@@ -450,6 +452,20 @@ p{
     height: 2rem;
 }
 
+.star{
+    position: relative;
+    right: -40%;
+    border-radius: 10px ;
+    z-index: 1000;
+    top: 4%;
+    width:2rem;
+    height: 2rem;
+    background-color: rgba(0, 0 , 0 , 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /*comienza el responsive*/
 @media (max-width:500px){
@@ -476,8 +492,8 @@ p{
         margin-top: 20em;
         height: 150vh;
         overflow-y: visible;
+        margin-bottom: 100px;
     }
-
 
     #flecha{
         position: absolute;
@@ -524,10 +540,11 @@ p{
         font-size: .7rem;
     }
     .slide{
-        height: 150vh;
+        height: auto;
         display: flex;
         align-items: center;
         gap: 20px;
+       
     }
     .imgs{
         height: 45%;
@@ -834,11 +851,11 @@ p{
     }
 }
 /*FOOTER*/
-.pie-pagina{
+.pie-pagina{/*Contenedor del footer*/
     width: 100%;
     background-color: #403f3f;
 }
-.pie-pagina .parte-1{
+.pie-pagina .parte-1{/*Primera parte de el footer*/
     width: 100%;
     margin: auto;
     max-width: 1200px;
@@ -847,14 +864,14 @@ p{
     grid-gap: 100px;
     padding: 45px 0px;
 }
-.pie-pagina .parte-1 .caja figure{
+.pie-pagina .parte-1 .caja figure{/*Estilos a las cajas de el footer*/
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo-footer{
+.logo-footer{/*Estilos al logo de la pagina en el footer*/
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -863,7 +880,7 @@ p{
     position: relative;
     bottom: 18px;
 }
-.pie-pagina .parte-1 .caja h2{
+.pie-pagina .parte-1 .caja h2{/*Estilos a los h2 de las cajas*/
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
@@ -871,14 +888,14 @@ p{
     position: relative;
     bottom: 20px;
 }
-.pie-pagina .parte-1 .caja p{
+.pie-pagina .parte-1 .caja p{/*Estilos a los parrafos del footer*/
     color: white;
     margin-bottom: 10px;
     position: relative;
     bottom: 40px;
     width: 90%;
 }
-.pie-pagina .parte-1 .imagenes-footer a{
+.pie-pagina .parte-1 .imagenes-footer a{/*Estilos a los iconos de las redes sociales*/
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -890,33 +907,34 @@ p{
     text-align: center;
     border-radius: 10px;
     position: relative;
-    bottom: 30px;
-    
-    
+    bottom: 30px; 
 }
-.pie-pagina .parte-1 .imagenes-footer {
+.pie-pagina .parte-1 .imagenes-footer {/*Border-radius al contenedor de los iconos*/
     border-radius: 10px;
 }
 .pie-pagina .parte-1 .imagenes-footer a:hover{
     color: rgb(204, 201, 201);
 }
-.logos{
+.logos{/*Tamaño de cada icono*/
     width: 30px;
     height: 30px;
     margin-top: 7px;
 }
-.pie-pagina .parte-2{
+.pie-pagina .parte-2{/*Estilos a la segunda parte de el footer*/
     background-color: #383838;
-    padding: 15px 10px;
     text-align: center;
     color: white;
     font-size: 15px;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
     z-index: 99999;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+/*RESPONSIVE DEL FOOTER*/
 @media screen and (max-width: 800px) {
     .pie-pagina .parte-1{
         width: 90%;
@@ -925,7 +943,6 @@ p{
         padding: 35px 0px;
     }
     .pie-pagina .parte-1 .imagenes-footer a{
-        margin-bottom: 50px;
+        margin-bottom: 50px;
     }
-    
 }

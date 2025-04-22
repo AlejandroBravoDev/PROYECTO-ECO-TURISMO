@@ -100,3 +100,11 @@ function flechaMunicipiosOut2(){
     let flecha = document.getElementById('flechis2');
     flecha.style.transform = "rotate(0deg)";
 }
+
+function cambiaEstrella(){
+    let staroff = document.getElementById('staroff');
+    let staron = document.getElementById('staron');
+
+    staroff.style.display = "none";
+    staron.style.display = "block";
+}
