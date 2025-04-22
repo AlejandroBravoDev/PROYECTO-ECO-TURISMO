@@ -439,7 +439,6 @@ video{
     width: 100%;
     display: flex;
     justify-content: center;
-    border: solid 1px violet;
 }
 /*Terminan los estilos de las secciones y toda la vuelta*/
 /*comienza el responsive de la parte principal*/
