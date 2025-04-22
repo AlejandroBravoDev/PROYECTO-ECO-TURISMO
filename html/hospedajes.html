@@ -1,31 +1,47 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "shortcut icon" href="/PROYECTO-ECO-TURISMO/img/logo.jpg">
-        <title>Hospedajes - Ecoturismo Risaralda</title>
-        <link rel="stylesheet" href="/PROYECTO-ECO-TURISMO/css/hospedajes.css">
+        <link rel="icon" href="/PROYECTO-ECO-TURISMO/img/LogoProyecto.jpg">
+        <link rel="stylesheet" href="/PROYECTO-ECO-TURISMO/css/destinospueblos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <title>Destinos</title>
     </head>
     <body>
+
+        <!--header-->
         <header>
             <nav class="navbar">
-    
                 <!--que la imagen lleve al inicio de la pagina-->
-                <a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> <img src="/PROYECTO-ECO-TURISMO/img/LogoProyecto.jpg" class="logo" alt=""></a>
+                <a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> <img src="/PROYECTO-ECO-TURISMO/img/logo.jpg" class="logo"
+                        alt=""></a>
                 <ul class="nav-links">
-                
                     <!--botones del header-->
+                    <li class="li-avatar"><a href="/PROYECTO-ECO-TURISMO/html/usuario.html">
+                        <div class="redireccionPerfil">
+                            <div class="ubiAvatar">
+                                <img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
+                                    class="avatarResponsive" alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                            </div>
+                            <div class="datosUsuario">
+                                <h3>DAYANNA</h3>
+                                <p>Dayana123</p>
+                            </div>
+                        </div></a>
+                    </li>
                     <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
-                    <li><a href="/PROYECTO-ECO-TURISMO/html/pueblos.html"> Destinos </a></li>
+                    <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Destinos </a></li>
                     <li><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"> Hospedajes </a></li>
-                    <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
-                
-                    
                 </ul>
-                
-                <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png" class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
+                <div class="buscador">
+                    <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
+                    <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+                </div>
+                <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
+                        class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
                 <div class="burger active">
                     <div class="line"></div>
                     <div class="line"></div>
@@ -33,324 +49,92 @@
                 </div>
             </nav>
         </header>
-
+        
+        <!--contenido principal-->
         <main>
-            <h1>Hospedajes de los sitios turisticos🌿</h1><!--se cera ese h1 para el titulo-->
-            <div class="hospedajes-container"><!--una clase para los hospedajes-->
-                <article class="hospedaje-card"><!--un articulo que hara que la informacion se encuentre en esa casilla-->
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-apia.jpeg" alt=""><!--se pone la imagen que deseamos-->
-                    <div class="hospedaje-info"><!--para la informacion que ira dentro de el artiuclo-->
-                        <h2>hotel junior plaza</h2><!--se crea un subtitulo-->
-                        <p class="ubicacion">📍 Apia</p><!--una clase para que se sepa la ubicacion-->
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p><!--una descripcion para que las personas sepan lo que estan viendo-->
-                        <div class="detalles"><!--se crea este div para la info mas detallada-->
-                            <span>🛏️ 2-4 personas</span><!--para el mensaje-->
-                            <span>💰 $115.226 dia</span><!--para el mensaje-->
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button><!--un boton para que la lleve a otro sitio para que reserve-->
-                    </div>
-                </article><!--se cierra el articulo-->
+            <h1 class="titulo">Hospedajes</h1>
+            <!--contenedor del slider-->
+            <div id="slider-container">
+                <div class="slider">
+                    <!--el div que se va a mover-->
+                    <div class="slide">
+                        <!--contenido del slide-->
+                        <div class="card">
+                            <img src="/PROYECTO-ECO-TURISMO/img/istockphoto-611891416-612x612.jpg" alt="naturaleza" class="imgs">
 
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-dorado.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel el dorado</h2>
-                        <p class="ubicacion">📍 Quinchia</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 4-6 personas</span>
-                            <span>💰 $300.000/noche</span>
+                            <div class="texto">
+                                <h1>Lugar</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
+                                <button><a href="/PROYECTO-ECO-TURISMO/html/detallesHospedajes.html">Más información</a></button>
+                            </div>
                         </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
 
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-apia.jpeg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel junior plaza</h2>
-                        <p class="ubicacion">📍 balboa</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-4 personas</span>
-                            <span>💰 $300.000/noche</span>
+                        <div class="card">
+                            <img src="/PROYECTO-ECO-TURISMO/img/istockphoto-611891416-612x612.jpg" alt="naturaleza" class="imgs">
+
+                            <div class="texto">
+                                <h1>Lugar</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
+                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                            </div>
                         </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-apia.jpeg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel junior plaza</h2>
-                        <p class="ubicacion">📍 celia</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2 personas</span>
-                            <span>💰 $190.000/noche</span>
+                        <div class="card">
+                            <img src="/PROYECTO-ECO-TURISMO/img/istockphoto-611891416-612x612.jpg" alt="naturaleza" class="imgs">
+
+                            <div class="texto">
+                                <h1>Lugar</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
+                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                            </div>
                         </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
                     </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-pedro.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel don pedro</h2>
-                        <p class="ubicacion">📍 Pueblo rico</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $200.000/noche</span>
+                    <div class="slide">
+                        <div class="card">
+                            <img src="/PROYECTO-ECO-TURISMO/img/istockphoto-611891416-612x612.jpg" alt="naturaleza" class="imgs">
+
+                            <div class="texto">
+                                <h1>Lugar</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
+                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                            </div>
                         </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-posada.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel la posada</h2>
-                        <p class="ubicacion">📍 belen de umbria</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2 personas</span>
-                            <span>💰 $250.000/noche</span>
+                        <div class="card">
+                            <img src="/PROYECTO-ECO-TURISMO/img/istockphoto-611891416-612x612.jpg" alt="naturaleza" class="imgs">
+
+                            <div class="texto">
+                                <h1>Lugar</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
+                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                            </div>
                         </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-paraiso.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel paraiso</h2>
-                        <p class="ubicacion">📍 Belen de umbria</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $350.000/noche</span>
+                        <div class="card">
+                            <img src="/PROYECTO-ECO-TURISMO/img/istockphoto-611891416-612x612.jpg" alt="naturaleza" class="imgs">
+
+                            <div class="texto">
+                                <h1>Lugar</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus provident neque dolor architecto magni autem obcaecati voluptate. Totam vel, at blanditiis, dicta nam magnam ratione eius architecto voluptatum esse vero.</p>
+                                <button><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">Más información</a></button>
+                            </div>
                         </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
                     </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-campo.jpeg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel campo real</h2>
-                        <p class="ubicacion">📍 Belen de umbria</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $250.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-pachamma.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel pachamama campestre</h2>
-                        <p class="ubicacion">📍 pereira</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $360.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-movich.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel movich</h2>
-                        <p class="ubicacion">📍 pereira</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $390.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-alfonso.JPG" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel don Alfonso</h2>
-                        <p class="ubicacion">📍 pereira</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $150.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-casonareal.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel la casona real</h2>
-                        <p class="ubicacion">📍 Marsella</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $280.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-encanto.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel/Mirador el encanto</h2>
-                        <p class="ubicacion">📍 Marsella</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $350.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-arrayanal.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel Arrayanal</h2>
-                        <p class="ubicacion">📍 mistrato</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $250.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-las brisas.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel las brisas de mistrato</h2>
-                        <p class="ubicacion">📍 Mistrato</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $260.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-buriti.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel Buriti EcoHotel</h2>
-                        <p class="ubicacion">📍 Santa rosa</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-4 personas</span>
-                            <span>💰 $320.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-lasflores.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel  las flores</h2>
-                        <p class="ubicacion">📍 Santa rosa</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $300.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-casagrande.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel casa grande</h2>
-                        <p class="ubicacion">📍 Santa rosa</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 3 personas</span>
-                            <span>💰 $350.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-cristales.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel los cristales</h2>
-                        <p class="ubicacion">📍 Santa rosa</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 3 personas</span>
-                            <span>💰 $400.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/hotel-anzea.jpg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel Anzea/Hotel Quinchia</h2>
-                        <p class="ubicacion">📍 Guatica</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2 personas</span>
-                            <span>💰 $230.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-ayenda.webp" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel ayenda</h2>
-                        <p class="ubicacion">📍 Dosquebradas</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $150.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-gudalupe.avif" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel Guadalupe plaza</h2>
-                        <p class="ubicacion">📍 Dosquebradas</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 2-3 personas</span>
-                            <span>💰 $350.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
-                <article class="hospedaje-card">
-                    <img src="/PROYECTO-ECO-TURISMO/img/h-veneton.jpeg" alt="">
-                    <div class="hospedaje-info">
-                        <h2>Hotel veneton</h2>
-                        <p class="ubicacion">📍 Dosquebradas</p>
-                        <p class="descripcion">Sumérgete en la tranquilidad de la naturaleza con todas las comodidades. Disfruta de habitaciones acogedoras, vistas impresionantes, desayunos con productos locales y actividades como senderismo y meditación.</p>
-                        <div class="detalles">
-                            <span>🛏️ 3 personas</span>
-                            <span>💰 $300.000/noche</span>
-                        </div>
-                        <button class="reservar-btn"><a href="/PROYECTO-ECO-TURISMO/html/disponibilidad.html">Reservar Ahora</a></button>
-                    </div>
-                </article>
+                </div>
+                <button class="arrow left">&#10094;</button>
+                <button class="arrow right">&#10095;</button>
             </div>
+            
+            
         </main>
 
+        <!--footer-->
         <footer class="pie-pagina">
             <div class="parte-1">
                 <div class="caja">
                     <img src="/PROYECTO-ECO-TURISMO/img/logo.jpg" class="logo-footer" alt="logo de la pagina">
                 </div>
                 <div class="caja">
-                    <h2>SOBRE NOSOTROS</h2>
-                    <p><b>Ecoturismo Risaralda</b> nosotros buscamos mostrarle al mundo la belleza de nuestro departamento.</p>
+                    <h2>ECOTURISMO RISARALDA</h2>
+                    <p>Buscamos mostrarle al mundo la belleza de nuestro departamento.</p>
                     <p>Enfatizamos en el area de el Eco turismo. Si te interesa contactanos...</p>
-                    
                 </div>
                 <div class="caja">
                     <h2>SIGUENOS </h2>
@@ -361,8 +145,9 @@
                     </div>
                 </div>
             </div>
-            <div class="parte-2">&copy; 2024-2025 <b>Ecoturismo Risaralda</b> Todos los derechos reservados</div>
+            <div class="parte-2"><p>&copy; 2024-2025 <b>Ecoturismo Risaralda</b> Todos los derechos reservados</p></div>
         </footer>
+
         <script type="text/javascript" src="/PROYECTO-ECO-TURISMO/js/inicio.js"></script>
     </body>
 </html>

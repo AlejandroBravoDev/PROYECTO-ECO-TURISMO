@@ -1,16 +1,21 @@
 body{
     margin: 0;
+
     padding: 0;
     font-family:sans-serif;
     overflow-x: hidden;
     background:white;
     background-size: cover;
 }
+    font-family: arial;
+}
 /*HEADER*/
 header{
     width: 100%;
     height: 85px;
     position: fixed;
+    top: 0;
+
     z-index: 9999;
 }
 /* menu hamburguesa*/
@@ -52,6 +57,12 @@ header{
 .avatarResponsive{
     display: none;
 }
+
+}
+.avatarResponsive{
+    display: none;
+}
+
 /*Responsive del menu hamburguesa*/
 @media (max-width: 1280px){
     .avatarResponsive{
@@ -95,7 +106,8 @@ header{
         padding-left: 0;
         display: flex;
     }
-    .logo{
+    nav .logo{
+
         width: 45px;
         height: 45px;
         position: absolute;
@@ -136,6 +148,7 @@ header{
         width: 100%;
         display: flex;
         justify-content: center;
+        justify-content: left;
         align-items: center;
         cursor: pointer;
     }
@@ -154,9 +167,15 @@ header{
         font-size: 12px;
         color: #d6d6d6;
     }
+
     .search{
         position: absolute;
         right: 80px;
+  }
+    .buscador{
+        width: 170px;
+        position: absolute;
+        right: 100px;
     }
 }
 @media (max-width:985px){
@@ -214,7 +233,45 @@ nav .img{
     width: 40px;
     height: 40px;
     box-shadow: 0 0 15px black;
-    margin-left: 100px;
+    margin-left: 140px;
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 15px black;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+nav a:hover{
+    color: #ADC178;
+}
+.buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 155px;
+}
+.buscador img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 180px;    
+    cursor: pointer;
+}
+
+nav input{
+    width: 170px;
+    padding: 9px;
+    border: none;
+    border-radius: 10px;
+}
+/*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
+.baja{
+    background-color: rgba(0, 0 , 0 , 0.5);
+    height: auto;
 }
 nav img{
     width: 60px;
@@ -259,6 +316,10 @@ nav input{
     text-align: center;
     color: #8a9b59;
     margin-bottom: 30px;
+    font-size: 4em;
+    color: #000;
+    margin: 30px 0;
+    padding-top: 100px;
 }
 
 /* Cuadrícula para organizar los campos del formulario */
@@ -324,6 +385,7 @@ nav input{
     transition: background 0.3s ease;
 }
 
+
 /* Efecto hover para el botón de guardar */
 .save-button:hover {
     background: #adc178;
@@ -345,6 +407,9 @@ h1{
     font-size: 2rem;
     color:#adc178;
     margin: auto;
+}
+  .title-favorite{
+    margin: 1.5em 0;
     text-align: center;
 }
 #slider-container2{

@@ -7,22 +7,35 @@ body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    font-family: sans-serif;
+    font-family: arial;
+    height: auto;
 }
 /*HEADER*/
 header{
     width: 100%;
-    height: 90px;
+    height: 85px;
     position: fixed;
     z-index: 9999;
 }
 /* menu hamburguesa*/
 .nav-links{
+    width: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
-    gap: 100px;
+    gap: 20%;
     font-size: 20px;
     font-weight: bold;
+    position: relative;
+    right: 0px;
+}
+@media (max-width: 1500px){
+    .nav-links{
+        gap: 15%;
+        position: relative;
+        right: 0px;
+    }
 }
 .nav-links input{
     height: 20px;/*Tamaño de el input tipo texto*/
@@ -40,11 +53,27 @@ header{
     margin: 4px 0;
     border-radius: 1px;
 }
+.avatarResponsive{
+    display: none;
+}
 /*Responsive del menu hamburguesa*/
-@media screen and (max-width: 1280px){
+@media (max-width: 1280px){
+    .avatarResponsive{
+        display: block;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+    }
+    .avatar{
+        display: none;
+    }
+    header{
+        height: 65px;
+    }
     .navbar{
         position: relative;
-        background-color: #403f3f;
+        background-color: rgba(0, 0 , 0 , 0.6);
+        height: 65px;
     
     }
     .burger{
@@ -54,15 +83,15 @@ header{
 
     }
     .nav-links{
+        background-color: rgba(0, 0 , 0 , 0.6);
         display: none;
         flex-direction: column;
         position: absolute;
-        width: 50%;
-        height: 1000px;
-        top: 100%;
+        width: 30%;
+        height: 1250px;
+        top: 64px;
         right: 0;
         margin: 0;
-        background-color: #403f3f;
         gap: 50px;
         align-items: center;
     }
@@ -70,10 +99,12 @@ header{
         padding-left: 0;
         display: flex;
     }
-    .logo{
+    nav .logo{
+        width: 45px;
+        height: 45px;
         position: absolute;
         left: 10px;
-        top: 18px;
+        top: 10px;
     }
     .nav-links input{
         position: relative;
@@ -87,9 +118,8 @@ header{
     .nav-links li{
         width: 100%;
         height: 50px;
-        background-color: #403f3f;
         position: relative;
-        top: 30px;
+        bottom: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -97,19 +127,92 @@ header{
         cursor: pointer;
     }
     .nav-links li:hover{
-        background-color: #4d4c4c;
+        background-color: rgba(0, 0 , 0 , 0.4);
         color: #9daf6d;
     } 
+    .baja{
+        height: 65px;
+    }
+    .li-avatar{
+        display: block;
+    }
+    .redireccionPerfil{
+        width: 100%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        cursor: pointer;
+    }
+    .ubiAvatar{
+        margin-right: 10px;
+    }
+    .datosUsuario h3{
+        position: relative;
+        top: 5px;
+        color: white;
+        font-size: 20px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 15px;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    .buscador{
+        width: 170px;
+        position: absolute;
+        right: 100px;
+    }
+}
+@media (max-width:985px){
+    .ubiAvatar{
+        margin-right: 5px;
+    }
+    .datosUsuario h3{
+        font-size: 12px;
+    }
+    .datosUsuario p{
+        font-size: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+}
+@media (max-width:630px){
+    .ubiAvatar img{
+        width: 30px;
+        height: 30px;
+    }
+    .datosUsuario h3{
+        font-size: 10px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 5px;
+        font-size: 8px;
+    }
+    .nav-links{
+        font-size: 15px;
+    }
+    
+}
+@media (max-width:600px){
+    .nav-links{
+        width: 45%;
+    }
+}
+.li-avatar{
+    display: none;
 }
 /*Estilos navbar*/
 nav{
     width: 100%;
-    height: 100px;
+    height: 85px;
     background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8%;
+    
+    
 }
 nav img{
     border-radius: 50%;
@@ -117,11 +220,12 @@ nav img{
 nav .img{
     width: 40px;
     height: 40px;
-    box-shadow: 0 0 15px black; 
+    box-shadow: 0 0 15px black;
+    margin-left: 140px;
 }
-nav img{
-    width: 70px;
-    height: 70px;
+.logo{
+    width: 60px;
+    height: 60px;
     box-shadow: 0 0 15px black;
 }
 nav a{
@@ -132,17 +236,30 @@ nav a{
 nav a:hover{
     color: #ADC178;
 }
+.buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 155px;
+}
+.buscador img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 170px;    
+    cursor: pointer;
+}
+
 nav input{
-    width: 150px;
-    padding: 8px;
+    width: 170px;
+    padding: 9px;
     border: none;
-    border-radius: 15px;
-    box-shadow: 0 0 5px black;
+    border-radius: 10px;
 }
 /*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
 .baja{
-    background: #403f3f;
-    height: 94px;
+    background-color: rgba(0, 0 , 0 , 0.5);
+    height: auto;
 }
 /*Estilos slider*/
 .slider-container{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
@@ -156,14 +273,12 @@ nav input{
     animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
 }
 .sli {
-    width: 100%;   
+    flex: 1 1 400px;
+    max-width: 100%;  
 }
 .sli img{
     width: 100%;
-    height: 920px;
-}
-h1{
-    font-family:"Rowdies";
+    height: 820px;
 }
 /*Keyframes para que se ejecute la animaciòn*/
 @keyframes slide{
@@ -181,64 +296,59 @@ h1{
 }
 /*Responsive del slider*/
 @media (max-width: 1023px) {
-    .slider{
-        position: relative;
-        top: 100px;
-        height: 600px;
-        background-color: white;
-    }
-    .sli{
-        position: relative;
-        top: 0;
-        width: 100%;
-        height: 550px;
-    }
     .sli img{
-        position: relative;
-        top: 0;
-        width: 100%;
-        height: 550px;
+        height: 620px;
     }
 }
-/*Fuente declarada para los h1,h2*/
-h1{
-    font-family:"Rowdies";
+@media (max-width:600px){
+    .sli img{
+        height: 400px;
+    }
 }
-h2{
-    font-family:"Rowdies";
+@media (max-width:600px){
+    .sli img{
+        height: 350px;
+    }
 }
 /*SECTION DEL MAIN*/
 main{
    width: 100%;
    height: auto;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
-.recuadro{
-    margin-left: 30px;
-    display: flex;
-    justify-content: left;
-    align-items: bottom;
-    position: relative;
-    bottom: 480px;
-}
+
 /*Recuadro encima del slider*/
+.recuadro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 300px;
+    left: 30px;
+}
 .titulo-inicio{
     max-width: 700px;
     background-color: rgba(0, 0 , 0 , 0.6);
     flex: 1 1 300px;
     height: 380px;
     flex-wrap: wrap;
+    border-radius: 10px;
 }
 .titulo-inicio h1{
-    font-size: 50px;
+    font-size: 48px;
     color: #ADC178;
     text-shadow: black 0 0 2px;
     margin-left: 20px;
+    font-weight: 800;
 }
 .titulo-inicio p{
     font-size: 25px;
     color: white;
     text-shadow: black 0 0 4px;
-    font-weight: bold;
+    font-weight: 600;
     margin-left: 20px;
 }
 .btn-inicio{
@@ -249,31 +359,60 @@ main{
     cursor: pointer;
     border:  none;
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
+    left: 20px;
+    border-radius: 10px;
 }
 /*Responsive del recuadro que esta encima del slider*/
-@media (max-width: 800px){
+@media (max-width: 1023px){
     .titulo-inicio{
-        max-width: 400px;
-        height: 350px;
-        margin-left: 10px;
-        position: relative;
-        top: 70px;
-        right: 20px;
+        max-width: 420px;
+        height: 250px;
+        
     }
     .titulo-inicio h1{
-        font-size: 32px;
+        font-size: 28px;
     }
     .titulo-inicio p{
-        font-size: 18px;
+        font-size: 16px;
+    }
+    .btn-inicio{
+        width: 120px;
+        padding: 6px;
+    }
+    .btn-inicio a{
+        font-size: 15px;
+    }
+}
+@media (max-width: 600px){
+    .titulo-inicio{
+        position: relative;
+        bottom: 100px;
+        max-width: 240px;
+        height: 130px;
+        right: 10px;
+    }
+    .titulo-inicio p{
+        display: none;
+    }
+    .titulo-inicio h1{
+        font-size: 16px;
+        margin-left: 10px;
+    }
+    .btn-inicio{
+        width: 80px;
+        position: relative;
+        left: 10px;
+        top: 20px;
+     
     }
 }
 .btn-inicio a{/*Estilos del boton del inicio*/
     text-decoration: none;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     text-shadow:  0 0 2px black;
-    font-weight: bold;
+    font-weight: 600;
 }
 .btn-inicio a:hover{
     background: #9daf6d;
@@ -282,38 +421,49 @@ button:hover{
     background: #9daf6d;
 }
 /*SEGUNDA SECTION*/
-.container-cartas{
-    width: 100%;
-    height: auto;
+.container-sitios{
+    width: 80%;
+    height: 100%;
+    text-shadow:  0 10px 30px rgba(0, 0 , 0 , 0.2);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 100px;
-    position: relative;
-    bottom: 200px;
+}
+.sitiosFavoritos{
+    text-shadow:  0 5px 10px rgba(0, 0 , 0 , 0.1);
+    color: #ADC178;
+    font-size: 50px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-inline: 20px;
 }
 .cartas{
     flex: 1 1 400px;
-    max-width: 400px;
     height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .cartas img{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     overflow: hidden;
     transition: transform 0.3s ease;
     cursor: pointer;
     box-shadow: 0 3px 10px rgba(0, 0 , 0 , 0.3);
 }
 .cartas img:hover {
-    transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
+    transform: translateY(-5px); /*Cuando paso el mouse por encima de l objeto, este sobresale un poco*/
 }
 .cuadro-links{
-    width: 350px;
+    width: 300px;
     height: 150px;
     background-color: #ADC178;
     position: relative;
+    right: 10px;
     bottom: 100px;
     cursor: pointer;
     padding: 15px;
@@ -340,48 +490,41 @@ button:hover{
     text-decoration: none;
     color: white;
 }
-.flecha{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    bottom: 170px;
-}
-.flecha img{
-    transition: transform 0.3s ease;
-}
-.flecha img:hover {
-    transform: translateY(-5px);/*Se agrega cuando quiero que el elemento sobresalga un poco*/
-}
-@media (max-width:450px){
-    .cartas{
-        max-width: 320px;
-    }
-    .cartas img{
-        width: 320px;
-        height: 320px;
-    }
-    .cuadro-links{
-        width: 270px;
-    }
-    .cuadro-links h1{
-        font-size: 35px;
-    }
-}
 /*TERCERA SECTION*/
 .info-risaralda{
     width: 100%;
-    height: 920px;
+    height: auto;
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.info-risaralda img{
-    width: 100%;
-    height: 920px;
+@media (max-width:495px){
+    .cartas{
+        height: 400px;
+    }
+    .cuadro-links{
+        width: 230px;
+        height: 100px;
+        position: relative;
+        bottom: 80px;
+    }
+    .cuadro-links h1{
+        position: relative;
+        bottom: 45px;
+    }
+    .cuadro-links p{
+        position: relative;
+        bottom: 25px;
+    }
+    .cartas img{
+        width: 280px;
+        height: 280px;
+    }
+    .sitiosFavoritos{
+        font-size: 33px;
+    }
 }
 /*Textos sgunda section*/
 .textos-info{
@@ -395,36 +538,38 @@ button:hover{
     color: #ADC178;
     background-color: rgba(0, 0 , 0 , 0.6);
     position: absolute;
-    right: 50px;
+    right: 30px;
+    border-radius: 10px;
 }
 .textos-info h1{
-    width: 90%;
+    width: 92%;
     font-size: 42px;
     text-shadow: 0 0 2px black;
+    font-weight: 800;
 }
 .textos-info p{
     width: 90%;
     font-size: 20px;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     position: relative;
     bottom: 40px;
 }
 /*Boton tercera section*/
 .btn-info{
-    width: 300px;
-    padding: 15px;
+    width: 310px;
+    padding: 10px;
     border: none;
     background-color: #ADC178;
-    font-size: 20px;
     cursor: pointer;
+    border-radius: 10px;
 }
 .btn-info a{
     text-decoration: none;
     color: white;
     text-shadow:  0 0 2px black;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
 
 }
 .btn-info a:hover{
@@ -449,49 +594,68 @@ button:hover{
 }
 .sli2 img{
     width: 100%;
-    height: 920px;
+    height: 820px;
+    position: relative;
+    top: 10px;
 }
-@media (max-width:860px){
-    .info-risaralda{
-        height: 600px;
-    }
-    .info-risaralda img{
-        height: 600px;
+/*Responsive del slider*/
+@media (max-width: 1023px) {
+    .sli2 img{
+        height: 620px;
     }
     .textos-info{
-        max-width: 400px;
+        width: 450px;
+        height: 300px;
+    }
+    .textos-info p{
+        font-size: 16px;
     }
     .textos-info h1{
         font-size: 30px;
-    }
-    .textos-info p{
-        font-size: 15px;
+        text-align: center;
+        position: relative;
+        bottom: 10px;
     }
     .btn-info{
-        width: 200px;
-    }
-    .btn-info a{
-        font-size: 15px;
+        position: relative;
+        bottom: 30px;
     }
 }
-@media (max-width: 490px){
-    .textos-info{
-        max-width: 300px;
-        height: 370px;
-    }
-    .info-risaralda{
-        height: 450px;
-    }
-    .info-risaralda img{
-        height: 450px;
+@media (max-width:600px){
+    .sli2 img{
+        margin-top: 65px;
+        height: 400px;
     }
 }
-@media (max-width:400px){
+@media (max-width:600px){
+    .sli2 img{
+        height: 350px;
+    }
     .textos-info{
+        width: 250px;
+        height: 150px;
+        margin-top: 150px;
         position: absolute;
-        right: 20px;
+        right: 10px;
+        
+    }
+    .textos-info p{
+        font-size: 16px;
+        display: none;
+    }
+    .textos-info h1{
+        font-size: 20px;
+        text-align: center;
+        position: relative;
+        bottom: 10px;
+    }
+    .btn-info{
+        width: 180px;
+        position: relative;
+        bottom: 0px;
     }
 }
+
 /*FOOTER*/
 .pie-pagina{/*Contenedor del footer*/
     width: 100%;
@@ -567,10 +731,14 @@ button:hover{
     text-align: center;
     color: white;
     font-size: 15px;
-    position: fixed;
-    bottom: 0;
+    /* position: fixed;
+    bottom: 0; */
     width: 100%;
     z-index: 99999;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /*RESPONSIVE DEL FOOTER*/
 @media screen and (max-width: 800px) {

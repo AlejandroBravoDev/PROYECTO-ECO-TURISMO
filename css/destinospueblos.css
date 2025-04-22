@@ -1,30 +1,42 @@
 body{
     margin: 0;
     padding: 0;
+    height: auto;
     font-family:sans-serif;
     overflow-x: hidden;
     background:white;
+    background-image: url('../img/cascade-boat-clean-china-natural-rural.jpg');
+    background-size: cover;
 }
-/*comienza el header*/
+/*HEADER*/
 header{
     width: 100%;
-    height: 90px;
+    height: 85px;
     position: fixed;
-    top:0;
     z-index: 9999;
 }
-
-/*responsive nav*/
+/* menu hamburguesa*/
 .nav-links{
+    width: 50%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     list-style: none;
-    gap: 100px;
+    gap: 20%;
     font-size: 20px;
     font-weight: bold;
+    position: relative;
+    right: 0px;
 }
-
+@media (max-width: 1500px){
+    .nav-links{
+        gap: 15%;
+        position: relative;
+        right: 0px;
+    }
+}
 .nav-links input{
-    height: 20px;
+    height: 20px;/*Tamaño de el input tipo texto*/
 
 }
 .burger{
@@ -39,10 +51,27 @@ header{
     margin: 4px 0;
     border-radius: 1px;
 }
-@media screen and (max-width: 1280px){
+.avatarResponsive{
+    display: none;
+}
+/*Responsive del menu hamburguesa*/
+@media (max-width: 1280px){
+    .avatarResponsive{
+        display: block;
+        width: 40px;
+        height: 40px;
+        box-shadow: none;
+    }
+    .avatar{
+        display: none;
+    }
+    header{
+        height: 65px;
+    }
     .navbar{
         position: relative;
-        background-color: #403f3f;
+        background-color: rgba(0, 0 , 0 , 0.6);
+        height: 65px;
     
     }
     .burger{
@@ -52,15 +81,15 @@ header{
 
     }
     .nav-links{
+        background-color: rgba(0, 0 , 0 , 0.6);
         display: none;
         flex-direction: column;
         position: absolute;
-        width: 50%;
-        height: 1000px;
-        top: 100%;
+        width: 30%;
+        height: 1250px;
+        top: 64px;
         right: 0;
         margin: 0;
-        background-color: #403f3f;
         gap: 50px;
         align-items: center;
     }
@@ -68,10 +97,12 @@ header{
         padding-left: 0;
         display: flex;
     }
-    .logo{
+    nav .logo{
+        width: 45px;
+        height: 45px;
         position: absolute;
         left: 10px;
-        top: 18px;
+        top: 10px;
     }
     .nav-links input{
         position: relative;
@@ -85,9 +116,8 @@ header{
     .nav-links li{
         width: 100%;
         height: 50px;
-        background-color: #403f3f;
         position: relative;
-        top: 30px;
+        bottom: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,20 +125,92 @@ header{
         cursor: pointer;
     }
     .nav-links li:hover{
-        background-color: #4d4c4c;
+        background-color: rgba(0, 0 , 0 , 0.4);
         color: #9daf6d;
+    } 
+    .baja{
+        height: 65px;
+    }
+    .li-avatar{
+        display: block;
+    }
+    .redireccionPerfil{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .ubiAvatar{
+        margin-right: 10px;
+    }
+    .datosUsuario h3{
+        position: relative;
+        top: 5px;
+        color: white;
+        font-size: 20px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 15px;
+        font-size: 12px;
+        color: #d6d6d6;
+    }
+    .buscador{
+        width: 170px;
+        position: absolute;
+        right: 100px;
     }
 }
-
+@media (max-width:985px){
+    .ubiAvatar{
+        margin-right: 5px;
+    }
+    .datosUsuario h3{
+        font-size: 12px;
+    }
+    .datosUsuario p{
+        font-size: 10px;
+        position: relative;
+        bottom: 10px;
+    }
+}
+@media (max-width:630px){
+    .ubiAvatar img{
+        width: 30px;
+        height: 30px;
+    }
+    .datosUsuario h3{
+        font-size: 10px;
+    }
+    .datosUsuario p{
+        position: relative;
+        bottom: 5px;
+        font-size: 8px;
+    }
+    .nav-links{
+        font-size: 15px;
+    }
+    
+}
+@media (max-width:600px){
+    .nav-links{
+        width: 45%;
+    }
+}
+.li-avatar{
+    display: none;
+}
+/*Estilos navbar*/
 nav{
     width: 100%;
-    height: 100px;
-    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent) #403f3f;
+    height: 85px;
+    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8%;
-
+    
+    
 }
 nav img{
     border-radius: 50%;
@@ -116,38 +218,53 @@ nav img{
 nav .img{
     width: 40px;
     height: 40px;
-    box-shadow: 0 0 15px black; 
+    box-shadow: 0 0 15px black;
+    margin-left: 140px;
 }
-nav img{
-    width: 70px;
-    height: 70px;
+.logo{
+    width: 60px;
+    height: 60px;
     box-shadow: 0 0 15px black;
 }
-
 nav a{
     color: white;
     text-decoration: none;
     cursor: pointer;
 }
-
 nav a:hover{
     color: #ADC178;
 }
-
-nav input{
-    width: 150px;
-    padding: 8px;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 0 5px black;
+.buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 155px;
+}
+.buscador img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 170px;    
+    cursor: pointer;
 }
 
+nav input{
+    width: 170px;
+    padding: 9px;
+    border: none;
+    border-radius: 10px;
+}
+/*Estilos para cuando se haga scroll, el header deja de ser transparente y se pone gris*/
+.baja{
+    background-color: rgba(0, 0 , 0 , 0.5);
+    height: auto;
+}
 /*termina el header y empieza el contenido principal*/
 /*estilos para las etiquetas*/
 img{
     width: 80%;
     height: 90%;
-    border-radius: 20px 20px 0 0;
+    border-radius: 20px;
 }
 
 a{
@@ -158,44 +275,83 @@ a{
 h1{
     font-family: 'Rowdies';
     color: #adc178;
-}
-
-p{
-    font-size:15px;
+    text-align: center;
 }
 
 button{
-    width: 100%;
-    height: 30px;
+    height: 45px;
     padding: 20px 40px;
-    margin-top: 10px;
     background-color: #adc178;
+    color: white;
     border: none;
-    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    cursor: pointer;
 }
 
-button:hover{
-    box-shadow: 0 0 5px #adc178;
-    transition: all 0.5s ease-in-out;
-}
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 920px;
 }
+
+select{
+    width: 45%;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    cursor: pointer;
+}
+
+svg{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+p{
+    display: flex;
+    align-items: center;
+}
+
 /*estilos para las ids*/
 #slider-container{
     position: relative;
-    width: 95%;
-    height: 500px;
+    width: 100%;
+    height: 650px;
     overflow: hidden;
     border-radius: 20px;
+    margin-top: 12rem;
 }
 
+/*estos estilos para las id flechas son para las flechas de los filtros*/
+#flecha{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 6px;
+    right: 2px;
+    width: 10%;
+    height: 70%;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
+
+#flecha2{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 6px;
+    left: 36%;
+    width: 8%;
+    height: 70%;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+}
 /*estilos para las clases*/
 .titulo{
     font-size: 40px;
@@ -209,36 +365,81 @@ main{
 
 .slide{
     min-width: 100%;
-    height: 500px;
+    height: 600px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-size: 2rem;
+    flex-wrap: wrap;
 }
 
 .card{/*estilos para las tarjetas que va a tener el slider y que van a contener la información de los destinos*/
-    width: 25%;
+
+    width: 12.5em;
     height: 90%;
+    padding: 10px;
     border-radius: 20px;
-    background-color: white;
+    background-color: #D9D9D9;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
+.filtros{
+    position: absolute;
+    width: 30rem;
+    height: 2.5rem;
+    right: 4.5%;
+    top: 7rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 50px;
+    border-radius: 10px;
+}
+
+
+
 .texto{
     width: 90%;
+    height: 100%;
 }
 .card h1{
-    font-size: 30px;
-    margin: 10px 0 10px 0;
+    font-size: 26px;
+  
 }
-.card h3{
-    font-size: 15px;
+
+.btn{
+    position: relative;
+    bottom: 20px;
+    width: 28em;
+    height: 3.2rem;
+    margin-top: 0;
+}
+
+
+.text{
+    font-size: 1.2rem;
+}
+
+.t-btn{
+    color: white;
     margin: 0;
 }
 
+.titulo{
+    position: absolute;
+    left: 4.5%;
+    margin: 0;
+    top: 7rem;
+}
+.imgs{
+    position: relative;
+    top: -2%;
+    width: 90%;
+    height: 40%;
+    border-radius: 10px;
+}
 /*estilos para las flechas*/
 .arrow{
     position: absolute;
@@ -248,49 +449,124 @@ main{
     padding: 0;
     border-radius: 50%;
     cursor: pointer;
+    color: black;
 }
 
 .left{
-    left: 10px;
+    left: 5px;
 }
 
 .right{
-    right: 10px;
+    right: 5px;
 }
-.imgs{
-    width: 100%;
-    height: 50%;
+
+/*estilos para el iconito de las ciudades en el filtro de actividades*/
+.icon{
+    width: 2rem;
+    height: 2rem;
 }
+
+.star{
+    position: relative;
+    right: -38%;
+    border-radius: 10px ;
+    z-index: 1000;
+    top: 5%;
+    width:2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /*comienza el responsive*/
 @media (max-width:500px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
     body{
-        height: 100vh;
+        height: auto;
         width: 100%;
     }
 
     h1{
-        font-size: 12px;
-    }
-    
-    p{
-        font-size: 10px;
+        font-size: 11px;
     }
 
-    a{
-        font-size: 8px;
+    select{
+        height: 30%;
+        width: 90%;
     }
 
+     #slider-container{
+        margin-top: 20em;
+        height: 150vh;
+        overflow-y: visible;
+        margin-bottom: 100px;
+    }
+
+    #flecha{
+        position: absolute;
+        height:30px;
+        top: 72px;
+        right: 5%;
+    }
+
+   #flecha2{
+        position: absolute;
+        height:30px;
+        top: 25px;
+        left: 86%;
+    }
+
+    .flechas{
+        width: 10%;
+    }
+
+    .titulo{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 5rem;
+    }
+
+    .card h1{
+        font-size: 1.2rem;
+    }
+
+    .card .t-btn{
+        font-size: .9rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .btn{
+        width: 15rem;
+        height: 10px;
+    }
+
+    .text{
+        font-size: .7rem;
+    }
     .slide{
-        height: 400px;
+        height: auto;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+       
     }
     .imgs{
-        height: 20%;
+        height: 45%;
     }
-
+ 
     .arrow{
         width: 30px;
         height: 30px;
+        top: 40em;
     }
 
     .left{
@@ -299,37 +575,113 @@ main{
 
     .right{
         right: -5px;
+    }
+
+    .card{
+        height: 38%;
+        width: 70%;
+    }
+
+    .card:nth-child(2) .title{
+        font-size: 1.1rem;
+    }
+
+    .left{
+        left: 10px;
+    }
+    
+    .right{
+        right: 10px;
+    }
+
+    .filtros{
+        width: 90%;
+        height: 8rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 3em;
     }
 }
 
 @media (min-width:501px) and (max-width:819px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
     body{
-        height: 100vh;
+        height: auto;
         width: 100%;
     }
 
     h1{
-        font-size: 16px;
-    }
-    
-    p{
-        font-size: 14px;
+        font-size: 11px;
     }
 
-    a{
-        font-size: 10px;
+    select{
+        height: 3rem;
+        width: 90%;
     }
 
+    #slider-container{
+        margin-top: 20em;
+        height: 100vh;
+        overflow-y: visible;
+    }
+
+    #flecha{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 80px;
+        right: 5.5%;
+    }
+
+   #flecha2{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 20px;
+        left: 88%;
+    }
+
+    .titulo{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 5rem;
+    }
+
+    .card .t-btn{
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .btn{
+        width: 12rem;
+    }
+
+    .text{
+        display: none;
+    }
     .slide{
-        height: 450px;
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        gap: 0;
     }
     .imgs{
-        height: 25%;
+        height: 45%;
     }
 
     .arrow{
         width: 30px;
         height: 30px;
+        top: 35em;
     }
 
     .left{
@@ -339,36 +691,150 @@ main{
     .right{
         right: -5px;
     }
+
+    .card{
+        height: 25%;
+        width: 40%;
+        margin-top: -200px;
+    }
+
+    .card:last-child{
+        margin-top: -600px;
+    }
+
+    .left{
+        left: 10px;
+    }
+    
+    .right{
+        right: 10px;
+    }
+
+    .filtros{
+        width: 90%;
+        height: 8rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 3em;
+    }
+
 }
 
 @media (min-width:820px) and (max-width:1023px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
     body{
-        height: 100vh;
+        height: auto;
         width: 100%;
     }
 
     h1{
-        font-size: 16px;
-    }
-    
-    p{
-        font-size: 14px;
+        font-size: 11px;
     }
 
-    a{
-        font-size: 10px;
+    select{
+        height: 3rem;
+        width: 90%;
     }
 
+    #slider-container{
+        margin-top: 20em;
+        height: 100vh;
+        overflow-y: visible;
+    }
+
+    #flecha{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 80px;
+        right: 5.5%;
+    }
+
+   #flecha2{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 20px;
+        left: 88%;
+    }
+
+    .titulo{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 5rem;
+    }
+
+    .card .t-btn{
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .btn{
+        width: 12rem;
+    }
+
+    .text{
+        display: none;
+    }
     .slide{
-        height: 450px;
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        gap: 0;
     }
     .imgs{
-        height: 25%;
+        height: 45%;
     }
 
     .arrow{
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
+        top: 35em;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
+    }
+
+    .card{
+        height: 25%;
+        width: 40%;
+        margin-top: -200px;
+    }
+
+    .card:last-child{
+        margin-top: -600px;
+    }
+
+    .left{
+        left: 10px;
+    }
+    
+    .right{
+        right: 10px;
+    }
+
+    .filtros{
+        width: 90%;
+        height: 8rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 3em;
     }
 }
 
@@ -398,14 +864,11 @@ main{
     }
 }
 /*FOOTER*/
-.pie-pagina{
+.pie-pagina{/*Contenedor del footer*/
     width: 100%;
     background-color: #403f3f;
-    margin-top: 120px;
-
-
 }
-.pie-pagina .parte-1{
+.pie-pagina .parte-1{/*Primera parte de el footer*/
     width: 100%;
     margin: auto;
     max-width: 1200px;
@@ -414,14 +877,14 @@ main{
     grid-gap: 100px;
     padding: 45px 0px;
 }
-.pie-pagina .parte-1 .caja figure{
+.pie-pagina .parte-1 .caja figure{/*Estilos a las cajas de el footer*/
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo-footer{
+.logo-footer{/*Estilos al logo de la pagina en el footer*/
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -430,7 +893,7 @@ main{
     position: relative;
     bottom: 18px;
 }
-.pie-pagina .parte-1 .caja h2{
+.pie-pagina .parte-1 .caja h2{/*Estilos a los h2 de las cajas*/
     color: white;
     margin-bottom: 25px;
     font-size: 20px;
@@ -438,14 +901,14 @@ main{
     position: relative;
     bottom: 20px;
 }
-.pie-pagina .parte-1 .caja p{
+.pie-pagina .parte-1 .caja p{/*Estilos a los parrafos del footer*/
     color: white;
     margin-bottom: 10px;
     position: relative;
     bottom: 40px;
     width: 90%;
 }
-.pie-pagina .parte-1 .imagenes-footer a{
+.pie-pagina .parte-1 .imagenes-footer a{/*Estilos a los iconos de las redes sociales*/
     display: inline-block;
     text-decoration: none;
     width: 45px;
@@ -457,33 +920,32 @@ main{
     text-align: center;
     border-radius: 10px;
     position: relative;
-    bottom: 30px;
-    
-    
+    bottom: 30px; 
 }
-.pie-pagina .parte-1 .imagenes-footer {
+.pie-pagina .parte-1 .imagenes-footer {/*Border-radius al contenedor de los iconos*/
     border-radius: 10px;
 }
 .pie-pagina .parte-1 .imagenes-footer a:hover{
     color: rgb(204, 201, 201);
 }
-.logos{
+.logos{/*Tamaño de cada icono*/
     width: 30px;
     height: 30px;
     margin-top: 7px;
 }
-.pie-pagina .parte-2{
+.pie-pagina .parte-2{/*Estilos a la segunda parte de el footer*/
     background-color: #383838;
-    padding: 15px 10px;
     text-align: center;
     color: white;
     font-size: 15px;
-    position: fixed;
-    bottom: 0;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     z-index: 99999;
 }
-
+/*RESPONSIVE DEL FOOTER*/
 @media screen and (max-width: 800px) {
     .pie-pagina .parte-1{
         width: 90%;
@@ -494,5 +956,4 @@ main{
     .pie-pagina .parte-1 .imagenes-footer a{
         margin-bottom: 50px;
     }
-    
 }
