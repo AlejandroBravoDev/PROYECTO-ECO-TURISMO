@@ -939,14 +939,12 @@ p{
     text-align: center;
     color: white;
     font-size: 15px;
-    /* position: fixed;
-    bottom: 0; */
-    width: 100%;
-    z-index: 99999;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    z-index: 99999;
 }
 /*RESPONSIVE DEL FOOTER*/
 @media screen and (max-width: 800px) {
@@ -957,6 +955,6 @@ p{
         padding: 35px 0px;
     }
     .pie-pagina .parte-1 .imagenes-footer a{
-        margin-bottom: 50px;
+        margin-bottom: 50px;
     }
 }
