@@ -273,7 +273,8 @@ a{
 }
 
 h1{
-    font-family: 'Rowdies';
+    font-family:Arial;
+    font-weight: 1000;
     color: #adc178;
     text-align: center;
 }
@@ -403,6 +404,7 @@ p{
 .texto{
     width: 90%;
     height: 100%;
+    margin: -5%x;
 }
 .card h1{
     font-size: 26px;
@@ -422,6 +424,11 @@ p{
     font-size: 1.2rem;
 }
 
+.text h1{
+    margin-top: -50px;
+    padding: 0;
+}
+
 .t-btn{
     color: white;
     margin: 0;
@@ -437,7 +444,7 @@ p{
     position: relative;
     top: -2%;
     width: 90%;
-    height: 40%;
+    height: 38%;
     border-radius: 10px;
 }
 /*estilos para las flechas*/
@@ -647,6 +654,10 @@ p{
         left: 88%;
     }
 
+    .text{
+        font-size: .8rem;
+    }
+
     .titulo{
         text-align: center;
         width: 100%;
@@ -665,9 +676,6 @@ p{
         width: 12rem;
     }
 
-    .text{
-        display: none;
-    }
     .slide{
         height: 150vh;
         display: flex;
@@ -681,7 +689,7 @@ p{
     .arrow{
         width: 30px;
         height: 30px;
-        top: 35em;
+        top: 55em;
     }
 
     .left{
@@ -693,13 +701,13 @@ p{
     }
 
     .card{
-        height: 25%;
-        width: 40%;
+        height: 40%;
+        width: 45%;
         margin-top: -200px;
     }
 
     .card:last-child{
-        margin-top: -600px;
+        margin-top: -60%;
     }
 
     .left{
@@ -783,7 +791,124 @@ p{
     }
 
     .text{
-        display: none;
+        font-size: 1rem;
+    }
+    .slide{
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        gap: 0;
+    }
+    .imgs{
+        height: 45%;
+    }
+
+    .arrow{
+        width: 30px;
+        height: 30px;
+        top: 35em;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
+    }
+
+    .card{
+        height: 35%;
+        width: 40%;
+        margin-top: -200px;
+    }
+
+    .card:last-child{
+        margin-top: -500px;
+    }
+
+    .left{
+        left: 10px;
+    }
+    
+    .right{
+        right: 10px;
+    }
+
+    .filtros{
+        width: 90%;
+        height: 8rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 3em;
+    }
+}
+
+
+@media (min-width:1024px) and (max-width:1250px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        height: auto;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 11px;
+    }
+
+    select{
+        height: 3rem;
+        width: 90%;
+    }
+
+    #slider-container{
+        margin-top: 20em;
+        height: 100vh;
+        overflow-y: visible;
+    }
+
+    #flecha{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 80px;
+        right: 5.5%;
+    }
+
+   #flecha2{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 20px;
+        left: 88%;
+    }
+
+    .titulo{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 5rem;
+    }
+
+    .card .t-btn{
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .btn{
+        width: 12rem;
+    }
+
+    .text{
+        font-size: 1rem;
     }
     .slide{
         height: 150vh;
@@ -816,7 +941,7 @@ p{
     }
 
     .card:last-child{
-        margin-top: -600px;
+        margin-top: -900px;
     }
 
     .left{
@@ -835,32 +960,6 @@ p{
         align-items: center;
         gap: 10px;
         margin-top: 3em;
-    }
-}
-
-
-@media (min-width:1024px) and (max-width:1250px){
-    body{
-        height: 185vh;
-        width: 100%;
-    }
-
-    .titulo{
-        margin-left: 80px;
-    }
-    .content{
-        width:80%;
-        height: 50%;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .imgs{
-        margin: 0;
-        padding: 0;
-    }
-    .content img{
-        height: 100%;
     }
 }
 /*FOOTER*/
