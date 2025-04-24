@@ -431,13 +431,13 @@ button:hover{
     margin-inline: 20px;
     margin-bottom: 20px;
 }
-.wrapper{
+.container-carta{
     padding: 2px 50px;
 }
 #carta-area{
     padding: 50px 0;
 }
-.box-area{
+.container{
     width: 100%;
     display: flex;
     justify-content: center;
@@ -447,21 +447,21 @@ button:hover{
 
     
 }
-.box{
+.carta{
     max-width: 30%;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
-.box img{
+.carta img{
     width: 100%;
     height: 500px;
     border-radius: 10px;
     display: block;
     transition: transform 0.5s;
 }
-.overlay{
+.info-carta{
     height: 0;
     width: 100%;
     background: linear-gradient(transparent, rgba(0, 0, 0, 0.8) 58%);
@@ -477,7 +477,7 @@ button:hover{
     font-size: 14px;
     transition:  height 0.5s;
 }
-.overlay h3{
+.info-carta h3{
     font-weight: 800;
     margin-bottom: 5px;
     margin-top: 80px;
@@ -485,12 +485,12 @@ button:hover{
     letter-spacing: 2px;
     color: #ADC178;
 }
-.overlay p{
+.info-carta p{
     text-align: center;
     width: 80%;
     color: white;
 }
-.overlay a{
+.info-carta a{
     margin-top: 10px;
     color: white;
     text-decoration: none;
@@ -501,126 +501,98 @@ button:hover{
     padding: 8px 15px;
     text-shadow: 0 0 2px black;
 }
-.overlay a:hover{
+.info-carta a:hover{
     background-color: #9daf6d;
 }
-.box:hover img{
+.carta:hover img{
     transform: scale(1.2);
 }
-.box:hover .overlay{
+.carta:hover .info-carta{
     height: 55%;
 }
 /*RESPONSIVE TEXTOS*/
 @media (max-width:1600px){
-    .overlay h3{
+    .info-carta h3{
         font-size: 20px;
     }
 }
 @media (max-width:1300px){
-    .box:hover .overlay{
+    .carta:hover .info-carta{
         height: 75%;
     }
 }
 @media (max-width:422px){
-    .overlay h3{
+    .info-carta h3{
         font-size: 18px;
     }
-    .overlay p{
+    .info-carta p{
         font-size: 12px;
     }
-    .box:hover .overlay{
+    .carta:hover .overlay{
         height: 95%;
     }
 }
 /*RESPONSIVE CARTAS*/
 @media (max-width:1450px){
-    .wrapper{
+    .container-carta{
         padding: 2px 10px;
     }
 }
 @media (max-width:1300px){
-    .box img{
+    .carta img{
         height: 350px;
     }
-    .box-area{
+    .container{
         gap: 20px;
     }
 }
 @media (max-width:1000px){
-    .box{
+    .carta{
         max-width: 47%;
     }
 }
 @media (max-width:700px){
-    .box{
+    .carta{
         max-width: 85%;
     }
 }
 @media (max-width:410px){
-    .box img{
+    .carta img{
         height: 250px;
     }
 }
-/*TERCERA SECTION*/
-.info-risaralda{
-    width: 100%;
-    height: auto;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
 @media (max-width:495px){
-    .container-sitios{
-        gap: 0;
-    }
-    .cartas{
-        max-width: 280px;
-        height: 400px;
-    }
-    .cuadro-links{
-        width: 230px;
-        height: 100px;
-        position: relative;
-        bottom: 80px;
-    }
-    .cuadro-links h1{
-        position: relative;
-        bottom: 45px;
-    }
-    .cuadro-links p{
-        position: relative;
-        bottom: 25px;
-    }
-    .cartas img{
-        width: 280px;
-        height: 280px;
-    }
     .sitiosFavoritos{
         font-size: 33px;
     }
 }
+/*TERCERA SECTION*/
+.info-risaralda{
+    margin-top: 30PX;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /*Textos sgunda section*/
 .textos-info{
-    flex: 1 1 500px;
-    max-width: 760px;
-    height: 400px;
+    width: 40%;
+    height: 726px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ADC178;
-    background-color: rgba(0, 0 , 0 , 0.6);
-    position: absolute;
-    right: 30px;
-    border-radius: 10px;
+    background-color: #ADC178;
 }
 .textos-info h1{
-    width: 92%;
+    width: 90%;
     font-size: 42px;
-    text-shadow: 0 0 2px black;
+    text-shadow: 0 0 1px black;
     font-weight: 800;
+    color: #FFF;
+    text-align: center;
 }
 .textos-info p{
     width: 90%;
@@ -629,108 +601,113 @@ button:hover{
     font-weight: 600;
     position: relative;
     bottom: 40px;
+    text-align: center;
 }
 /*Boton tercera section*/
 .btn-info{
-    width: 310px;
+    width: 130px;
     padding: 10px;
     border: none;
-    background-color: #ADC178;
+    background-color: #FFF;
     cursor: pointer;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .btn-info a{
     text-decoration: none;
-    color: white;
-    text-shadow:  0 0 2px black;
+    color: #ADC178;
     font-weight: bold;
     font-size: 15px;
 
 }
 .btn-info a:hover{
-    background: #9daf6d;
+    background: #F5F5F5;
     
 }
 .btn-info:hover{
-    background: #9daf6d;   
+    background: #F5F5F5;   
 }
 .slider-container2{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
-    width: 100%;
+    width: 60%;
+    height: 726px;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease-in-out;
+    background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider1.jpg);
     overflow: hidden;
-    margin: auto;
+    animation: slider1 35s infinite linear;
 }
-.slider2{
-    width: 400%;
-    display: flex;
-    animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
+@keyframes slider1{
+    0%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider1.jpg);}
+    20%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider1.jpg);}
+
+    22%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider2.jpg);}
+    40%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider2.jpg);}
+
+    42%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider3.jpg);}
+    60%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider3.jpg);}
+
+    62%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider4.jpg);}
+    80%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider4.jpg);}
+
+    82%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider5.jpg);}
+    100%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider5.jpg);}
 }
-.sli2 {
-    width: 100%;   
-}
-.sli2 img{
-    width: 100%;
-    height: 820px;
-    position: relative;
-    top: 10px;
-}
-/*Responsive del slider*/
-@media (max-width: 1023px) {
-    .sli2 img{
-        height: 620px;
-    }
+@media (max-width:1300px){
     .textos-info{
-        width: 450px;
-        height: 300px;
+        width: 50%;
+        height: 600px;
+
     }
-    .textos-info p{
-        font-size: 16px;
+    .slider-container2{
+        width: 50%;
+        height: 600px;
     }
+}
+@media (max-width:1035px){
+    .textos-info{
+        width: 100%;
+        height: 500px;
+    }
+    .slider-container2{
+        width: 100%;
+        height: 800px;
+    }
+}
+@media (max-width:800px){
     .textos-info h1{
         font-size: 30px;
-        text-align: center;
-        position: relative;
-        bottom: 10px;
-    }
-    .btn-info{
-        position: relative;
-        bottom: 30px;
-    }
-}
-@media (max-width:600px){
-    .sli2 img{
-        margin-top: 65px;
-        height: 400px;
-    }
-}
-@media (max-width:600px){
-    .sli2 img{
-        height: 350px;
-    }
-    .textos-info{
-        width: 250px;
-        height: 150px;
-        margin-top: 150px;
-        position: absolute;
-        right: 10px;
-        
     }
     .textos-info p{
-        font-size: 16px;
-        display: none;
+        font-size: 15px;
+    }
+    .slider-container2{
+        height: 600px;
+    }
+    .textos-info{
+        height: 350px;
+    }
+}
+@media (max-width:550px){
+    .textos-info{
+        height: 350px;
+        gap: 12px;
     }
     .textos-info h1{
         font-size: 20px;
-        text-align: center;
-        position: relative;
-        bottom: 10px;
+    }
+    .textos-info p{
+        font-size: 14px;
+    }
+    .slider-container2{
+        height: 350px;
     }
     .btn-info{
-        width: 180px;
         position: relative;
-        bottom: 0px;
+        bottom: 50px;
     }
 }
-
 /*FOOTER*/
 .pie-pagina{/*Contenedor del footer*/
     width: 100%;
