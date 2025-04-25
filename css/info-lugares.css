@@ -18,19 +18,11 @@ header{
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 20%;
+    gap: 17%;
     font-size: 20px;
     font-weight: bold;
-    position: relative;
-    right: 0px;
 }
-@media (max-width: 1500px){
-    .nav-links{
-        gap: 15%;
-        position: relative;
-        right: 0px;
-    }
-}
+
 .nav-links input{
     height: 20px;/*Tamaño de el input tipo texto*/
 
@@ -81,6 +73,7 @@ header{
         display: none;
         flex-direction: column;
         position: absolute;
+        top: 100px;
         width: 30%;
         height: 1250px;
         top: 64px;
@@ -100,10 +93,6 @@ header{
         left: 10px;
         top: 10px;
     }
-    .nav-links input{
-        position: relative;
-        top: 100px;
-    }
     .avatar{
         position: absolute;
         right: 60px;
@@ -112,13 +101,14 @@ header{
     .nav-links li{
         width: 100%;
         height: 50px;
-        position: relative;
-        bottom: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
         cursor: pointer;
+        position: relative;
+        bottom: 310px;
+        
     }
     .nav-links li:hover{
         background-color: rgba(0, 0 , 0 , 0.4);
@@ -133,7 +123,7 @@ header{
     .redireccionPerfil{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         cursor: pointer;
     }
@@ -153,9 +143,14 @@ header{
         color: #d6d6d6;
     }
     .buscador{
-        width: 170px;
-        position: absolute;
-        right: 100px;
+        max-width: 170px;
+        position: relative;
+        bottom: 300px;
+    }
+    .area-notificaciones{
+        position: relative;
+        bottom: 833px;
+        left: 120px;
     }
 }
 @media (max-width:985px){
@@ -169,6 +164,11 @@ header{
         font-size: 10px;
         position: relative;
         bottom: 10px;
+    }
+    .area-notificaciones{
+        position: relative;
+        bottom: 833px;
+        left: 80px;
     }
 }
 @media (max-width:630px){
@@ -187,26 +187,54 @@ header{
     .nav-links{
         font-size: 15px;
     }
-    
+    .area-notificaciones{
+        position: relative;
+        bottom: 833px;
+        left: 60px;
+    }
+    .area-notificaciones img{
+        width: 20px;
+        height: 20px;
+    }
 }
 @media (max-width:600px){
     .nav-links{
         width: 45%;
     }
 }
+@media (max-width:480px){
+    
+    .buscador input{
+        width: 120px;
+        position: relative;
+        right: 40px;
+    }
+    .buscador {
+        max-width: 120px;
+    }
+    .buscador img{
+        margin-right: 70px;
+        z-index: 99999;
+    }
+}
 .li-avatar{
     display: none;
+}
+
+.area-notificaciones img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 /*Estilos navbar*/
 nav{
     width: 100%;
     height: 85px;
-    background-color: rgba(0, 0 , 0 , 0.5);
+    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+    gap: 200px;
 }
 nav img{
     border-radius: 50%;
@@ -215,12 +243,12 @@ nav .img{
     width: 40px;
     height: 40px;
     box-shadow: 0 0 15px black;
-    margin-left: 140px;
 }
 .logo{
     width: 60px;
     height: 60px;
     box-shadow: 0 0 15px black;
+    margin: 0;
 }
 nav a{
     color: white;
@@ -234,7 +262,7 @@ nav a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 155px;
+    max-width: 155px;
 }
 .buscador img{
     width: 20px;
@@ -243,7 +271,6 @@ nav a:hover{
     left: 170px;    
     cursor: pointer;
 }
-
 nav input{
     width: 170px;
     padding: 9px;
@@ -255,7 +282,64 @@ nav input{
     background-color: rgba(0, 0 , 0 , 0.5);
     height: auto;
 }
-/*terminan los estilos del header*/
+/*BANDEJA DE ENTRADA*/
+.area-bandeja{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    background-color: rgba(0, 0 , 0 , 0.6);
+}
+.bandeja-entrada{
+    width: 300px;
+    height: 300px;
+    background-color: #F5F5F5;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    position: fixed;
+    top: 120px;
+}
+.bandeja-entrada h2{
+    color: #ADC178;
+    margin-left: 10px;
+}
+.container-notificacion{
+    width: 100%;
+    display: flex;
+    position: relative;
+    bottom: 20px;
+}
+.notificacion{
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.notificacion img{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.texto-noti{
+    width: 60%;
+}
+.texto-noti p{
+    font-size: 12px;
+    color: rgb(36, 36, 36);
+}
+.bandeja{
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    z-index: 99999;
+}
+.redireccion-noti{
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+}
+/*TERMINA EL HEADER*/
 /*empiezan los estilos de las secciones y toda la vuelta*/
 /*estilos para las etiquetas*/
 section{

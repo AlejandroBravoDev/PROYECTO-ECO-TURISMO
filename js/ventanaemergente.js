@@ -21,3 +21,9 @@ burguer.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 
 });
+const Open = document.querySelector('.notificaciones');
+const Modal = document.querySelector('.bandeja-entrada');
+
+Open.addEventListener("click", () => {
+    Modal.classList.toggle('bandeja');
+});

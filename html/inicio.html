@@ -21,6 +21,7 @@
             <ul class="nav-links">
                 <!--botones del header-->
                 <li class="li-avatar"><a href="/PROYECTO-ECO-TURISMO/html/usuario.html">
+                    
                         <div class="redireccionPerfil">
                             <div class="ubiAvatar">
                                 <img src="/PROYECTO-ECO-TURISMO/img/avatar.png" class="avatarResponsive"
@@ -36,11 +37,14 @@
                 <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
                 <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Sitios </a></li>
                 <li><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"> Hospedajes </a></li>
+                <div class="buscador">
+                    <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
+                    <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+                </div>
+                <div class="area-notificaciones">
+                    <img src="/PROYECTO-ECO-TURISMO/img/campana.png" class="notificaciones" alt="campana">
+                </div>
             </ul>
-            <div class="buscador">
-                <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
-                <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
-            </div>
             <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
                     class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
             <div class="burger active">
@@ -66,16 +70,31 @@
                     <img src="/PROYECTO-ECO-TURISMO/img/marsella-slider4.jpg" class="sli4" alt="">
                 </div>
             </div>
+            <div class="area-bandeja">
+                <div class="bandeja-entrada">
+                    <h2>Notificaciones</h2>
+                    <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html" class="redireccion-noti">
+                        <div class="container-notificacion">
+                            <div class="notificacion">
+                                <img src="/PROYECTO-ECO-TURISMO/img/ukumari.jpeg">
+                            </div>
+                            <div class="texto-noti">
+                                <p class="notificacion-texto">Se ha agregado un nuevo evento al Bioparque Ukumari, haz click aqui para verlo.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <div class="recuadro">
                 <div class="titulo-inicio">
                     <h1>¡Bienvenido a tu próxima aventura ecológica!</h1>
                     <p>Encuentra la paz entre montañas y cafetales.<br>
                         Arma tu plan con Ecoturismo.</p>
-                    <button class="btn-inicio"><a href="#container-sitios">VER</a></button>
+                    <button class="btn-inicio"><a href="#sitiosFavoritos">VER</a></button>
                 </div>
             </div>
         </div>
-        <h1 class="sitiosFavoritos">LOS SITIOS MAS VISITADOS</h1>
+        <h1 class="sitiosFavoritos" id="sitiosFavoritos">LOS SITIOS MAS VISITADOS</h1>
         <div id="carta-area">
             <div class="container-carta">
                 <div class="container">
