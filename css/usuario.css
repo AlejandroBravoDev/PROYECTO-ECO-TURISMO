@@ -1,35 +1,19 @@
-* {
+body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family:sans-serif;
+    overflow-x: hidden;
+    background:white;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
-body {
-    background-color: #fff;
-    font-family: "poppins", sans-serif;
-    font-size: 16px;
-}
-
-h4 {
-    font-size: 1.5rem;
-    color: #000;
-}
-
-p {
-    font-size: 1rem;
-    color: #000;
-}
-
-main {
-    min-height: 100vh;
-}
-
 /*HEADER*/
 header{
     width: 100%;
     height: 85px;
     position: fixed;
-    top: 0;
     z-index: 9999;
 }
 /* menu hamburguesa*/
@@ -221,12 +205,10 @@ header{
 nav{
     width: 100%;
     height: 85px;
-    background: linear-gradient(to bottom, rgba(0, 0 , 0 , 0.9), transparent);
+    background-color: rgba(0, 0 , 0 , 0.5);
     display: flex;
     justify-content: center;
-    align-items: center;
-    
-    
+    align-items: center;   
 }
 nav img{
     border-radius: 50%;
@@ -262,121 +244,136 @@ nav input{
     background-color: rgba(0, 0 , 0 , 0.5);
     height: auto;
 }
-
-.container {
-    width: 95%;
+/* Contenedor principal del perfil - establece el ancho máximo y márgenes */
+.profile-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    margin:  auto;
+    padding: 77px;
 }
-
-.title-profile {
+/* Estilo para la tarjeta del perfil de usuario */
+.user-profile {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #adc178;
+    margin-top: 50px;
+}
+/* Estilo para el título del perfil */
+.user-profile h1 {
     text-align: center;
-    font-size: 4em;
-    color: #000;
-    margin: 30px 0;
-    padding-top: 100px;
+    color: #8a9b59;
+    margin-bottom: 30px;
 }
 
-.profile-info-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 1.2rem;
-    justify-content: center;
+
+
+/* Cuadrícula para organizar los campos del formulario */
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    margin-bottom: 30px;
 }
 
-.hero-right img {
+/* Estilo para cada caja de entrada de datos */
+.input-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;    
+}
+
+/* Estilo para las etiquetas de los campos */
+.input-box label {
+    display: block;
+    margin-bottom: 10px;
+    color: #222b0c;
+    font-weight: 500;
+}
+
+/* Estilos compartidos para inputs y áreas de texto */
+.input-box input,
+.input-box textarea {
     width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 10px;
-}
-
-.hero-left {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 600px;
-}
-
-.hero-left .group {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.hero-left .description {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    width: 100%;
-}
-
-.hero-left .description .text {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
-    margin-left: 0;
-}
-
-.max-text {
-    display: flex;
-    justify-content: end;
-    padding: 10px;
-}
-
-.btn-edit {
-    background-color: #403F3F;
-    width: 100%;
-    max-width: 200px;
-    border: none;
-    color: white;
-    padding: 12px 30px;
-    text-align: start;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 12px;
+    border: 1px solid #dee2e6;
     border-radius: 5px;
-    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
 }
-.title-favorite{
-    margin: 1.5em 0;
+
+/* Estilo específico para áreas de texto */
+.input-box textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+/* Efectos al enfocar campos de entrada */
+.input-box input:focus,
+.input-box textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+/* Estilo para el botón de guardar */
+.save-button {
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+    padding: 12px 0;
+    background: #d9e698;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+/* Efecto hover para el botón de guardar */
+.save-button:hover {
+    background: #adc178;
+    color: white;
+    
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-container {
+        margin: 20px auto;
+    }
+}
+h1{
+    font-size: 2rem;
+    color:#adc178;
+    margin: auto;
     text-align: center;
 }
-/*estilos para las ids*/
-#slider-container2{
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.slider1{
+.container-sitios{
+    width: 80%;
+    height: 100%;
+    text-shadow:  0 10px 30px rgba(0, 0 , 0 , 0.2);
     display: flex;
-    transition: transform .5s ease;
-}
-.slide{
-    min-width: 100%;
-    height: 500px;
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    flex-wrap: wrap;
 }
 .cartas{
-    width: 24%;
+    flex: 1 1 400px;
     height: 500px;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .cartas img{
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     overflow: hidden;
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -386,8 +383,8 @@ nav input{
     transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
 }
 .cuadro-links{
-    width: 350px;
-    height: 150px;
+    width: 300px;
+    height: 100px;
     background-color: #ADC178;
     position: relative;
     bottom: 100px;
@@ -400,13 +397,14 @@ nav input{
     transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
 }
 .cuadro-links h1{
-    font-size: 40px;
+    font-size: 2rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+    color: #ffffff;
     
 }
 .cuadro-links p{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ffffff;
     margin-bottom: 10px;
     letter-spacing: 2px;
@@ -487,108 +485,5 @@ nav input{
     .cuadro-links p{
         margin-top: 10px;
         
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .header .search {
-        max-width: 100%;
-    }
-
-    .hero-right img {
-        max-width: 200px;
-    }
-
-    .swiper-slide .hero-bottom a {
-        font-size: 1.2em;
-    }
-
-    .btn-edit {
-        max-width: 100%;
-    }
-}
-
-
-.pie-pagina{/*Contenedor del footer*/
-    width: 100%;
-    background-color: #403f3f;
-}
-.pie-pagina .parte-1{/*Primera parte de el footer*/
-    width: 100%;
-    margin: auto;
-    max-width: 1200px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 100px;
-    padding: 45px 0px;
-}
-.pie-pagina .parte-1 .caja figure{/*Estilos a las cajas de el footer*/
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo-footer{/*Estilos al logo de la pagina en el footer*/
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: none;
-    box-shadow: 0 0 3px black;
-    position: relative;
-    bottom: 18px;
-}
-.pie-pagina .parte-1 .caja h2{/*Estilos a los h2 de las cajas*/
-    color: white;
-    margin-bottom: 25px;
-    font-size: 20px;
-    color: #ADC178;
-    position: relative;
-    bottom: 20px;
-}
-.pie-pagina .parte-1 .caja p{/*Estilos a los parrafos del footer*/
-    color: white;
-    margin-bottom: 10px;
-    position: relative;
-    bottom: 40px;
-    width: 90%;
-}
-.pie-pagina .parte-1 .imagenes-footer a{/*Estilos a los iconos de las redes sociales*/
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: white;
-    margin-right: 10px;
-    background-color: #383838;
-    text-align: center;
-    border-radius: 10px;
-    position: relative;
-    bottom: 30px; 
-}
-.pie-pagina .parte-1 .imagenes-footer {/*Border-radius al contenedor de los iconos*/
-    border-radius: 10px;
-}
-.pie-pagina .parte-1 .imagenes-footer a:hover{
-    color: rgb(204, 201, 201);
-}
-.logos{/*Tamaño de cada icono*/
-    width: 30px;
-    height: 30px;
-    margin-top: 7px;
-}
-.pie-pagina .parte-2{/*Estilos a la segunda parte de el footer*/
-    background-color: #383838;
-    text-align: center;
-    color: white;
-    font-size: 15px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 99999;
-    padding: 12px;
-    p{
-        color: white;
     }
 }

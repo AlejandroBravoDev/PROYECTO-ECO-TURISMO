@@ -139,7 +139,7 @@ header{
     .redireccionPerfil{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         cursor: pointer;
     }
@@ -246,7 +246,7 @@ nav a:hover{
     width: 20px;
     height: 20px;
     position: relative;
-    left: 180px;    
+    left: 170px;    
     cursor: pointer;
 }
 
