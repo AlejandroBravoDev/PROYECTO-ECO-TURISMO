@@ -462,7 +462,7 @@ p{
 .card{/*estilos para las tarjetas que va a tener el slider y que van a contener la información de los destinos*/
 
     width: 12.5em;
-    height: 90%;
+    height: 100%;
     padding: 10px;
     border-radius: 20px;
     background-color: #D9D9D9;
