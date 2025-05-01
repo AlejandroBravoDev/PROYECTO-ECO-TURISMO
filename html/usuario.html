@@ -24,6 +24,67 @@
                         <h3>DAYANNA</h3>
                         <p>Dayana123</p>
                     </div>
+    <!--header-->
+    <header>
+        <nav class="navbar">
+            <!--que la imagen lleve al inicio de la pagina-->
+            <a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> <img src="/PROYECTO-ECO-TURISMO/img/logo.jpg" class="logo"
+                    alt=""></a>
+            <ul class="nav-links">
+                <!--botones del header-->
+                <li class="li-avatar"><a href="/PROYECTO-ECO-TURISMO/html/usuario.html">
+                    <div class="redireccionPerfil">
+                        <div class="ubiAvatar">
+                            <img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
+                                class="avatarResponsive" alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                        </div>
+                        <div class="datosUsuario">
+                            <h3>DAYANNA SIN FUENTES</h3>
+                            <p>Dayana123</p>
+                        </div>
+                    </div></a>
+                </li>
+                <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
+                <li><a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html"> Destinos </a></li>
+                <li><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"> Hospedajes </a></li>
+            </ul>
+            <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+            <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
+                    class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
+            <div class="burger active">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    <!-- Contenedor principal del perfil -->
+    <main class="profile-container">
+        <!-- Sección que contiene el formulario del perfil de usuario -->
+        <section class="user-profile">
+            <!-- Título principal de la página -->
+            <h1>Perfil de Usuario</h1>
+            
+            <!-- Contenedor grid para organizar los campos del formulario -->
+            <div class="profile-grid">
+                <!-- Primera fila -->
+                <div class="input-box">
+                    <!-- Campo para el nombre completo del usuario -->
+                    <label>Nombre Completo</label>
+                    <input type="text" placeholder="Ingrese nombre completo">
+                </div>
+                
+                <div class="input-box">
+                    <!-- Campo para el nombre de usuario -->
+                    <label>Nombre de Usuario</label>
+                    <input type="text" placeholder="Ingrese nombre de usuario">
+                </div>
+                
+                <!-- Segunda fila -->
+                <div class="input-box">
+                    <!-- Campo para el correo electrónico -->
+                    <label>Correo Electrónico</label>
+                    <input type="email" placeholder="Ingrese correo electrónico">
                 </div>
 
                 <nav class="sidebar-nav">
@@ -84,59 +145,7 @@
         </div>
     </main>
     <h1>TUS DESTINOS FAVORITOS</h1>
-    <!-- <div id="slider-container2">
-        <div class="slider1">
-            <div class="slide">
-                <div class="cartas">
-                    <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
-                    <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
-                        <p>CHORROS DE DON LOLO</p>
-                        <h1>VER SITIO</h1></a>
-                    </div>
-                </div>
-                
-                <div class="cartas">
-                    <a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"><img src="/PROYECTO-ECO-TURISMO/img/h-apia.jpeg"></a>
-                    <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html">
-                        <p>TERMALES SANTA ROSA</p>
-                        <h1>VER SITIO</h1></a>
-                    </div>
-                </div>
-                <div class="cartas">
-                    <a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html"><img src="/PROYECTO-ECO-TURISMO/img/slider3.jpg"></a>
-                    <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html">
-                        <p>RESERVA NATURAL LA NONA</p>
-                        <h1>VER SITIO</h1></a>
-                    </div>
-                </div>
-            </div>
-            <div class="slide">
-                <div class="cartas">
-                    <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
-                    <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
-                        <p>CERRO BATERO</p>
-                        <h1>VER SITIO</h1></a>
-                    </div>
-                </div>
-                <div class="cartas">
-                    <a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"><img src="/PROYECTO-ECO-TURISMO/img/h-apia.jpeg"></a>
-                    <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html">
-                        <p>CASCADA LA ESTRELLA</p>
-                        <h1>VER SITIO</h1></a>
-                    </div>
-                </div>
-                <div class="cartas">
-                    <a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html"><img src="/PROYECTO-ECO-TURISMO/img/slider3.jpg"></a>
-                    <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html">
-                        <p>PARAMILLO DE SANTA ROSA</p>
-                        <h1>VER SITIO</h1></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="arrow left">&#10094;</button>
-        <button class="arrow right">&#10095;</button>
-    </div> -->
+   
     <!-- Slider main container -->
     <div class="swiper">
         <!-- Additional required wrapper -->
@@ -212,6 +221,38 @@
 
         <!-- If we need scrollbar -->
         <div class="swiper-scrollbar"></div>
+            <!-- Botón para guardar los cambios del formulario -->
+            <button class="save-button">Guardar Cambios</button>
+
+            
+        </section>
+
+        
+    </main>
+
+    <div class="container-sitios" id="container-sitios">
+        <!--contenido del slide-->
+        <div class="cartas">
+            <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html"><img src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
+            <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html">
+                <p>BIOPARQUE UKUMARI</p>
+                <h1>VER SITIO</h1></a>
+            </div>
+        </div>
+        <div class="cartas">
+            <a href="/PROYECTO-ECO-TURISMO/html/Pereira/jardinBotanicoUTP.html"><img src="/PROYECTO-ECO-TURISMO/img/JardinBotanico3.jpg"></a>
+            <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Pereira/jardinBotanicoUTP.html">
+                <p>JARDIN BOTANICO UTP</p>
+                <h1>VER SITIO</h1></a>
+            </div>
+        </div>
+        <div class="cartas">
+            <a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html"><img src="/PROYECTO-ECO-TURISMO/img/naturaleza.jpg"></a>
+            <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html">
+                <p>TERMALES SANTA ROSA</p>
+                <h1>VER SITIO</h1></a>
+            </div>
+        </div>
     </div>
 
 </body>
