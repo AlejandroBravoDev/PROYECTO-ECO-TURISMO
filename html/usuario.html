@@ -1,108 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "shortcut icon" href="/PROYECTO-ECO-TURISMO/img/logo.jpg">
-        <title>Usuario</title>
-        <link rel="stylesheet" href="/PROYECTO-ECO-TURISMO/css/usuario.css">
-        <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/PROYECTO-ECO-TURISMO/img/logo.jpg">
+    <title>Usuario</title>
+    <link rel="stylesheet" href="/PROYECTO-ECO-TURISMO/css/usuario.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
 <body>
     <main>
-        <!-- HEADER -->
-        <header>
-            <nav class="navbar">
-                <!--que la imagen lleve al inicio de la pagina-->
-                <a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> <img src="/PROYECTO-ECO-TURISMO/img/logo.jpg" class="logo"
-                        alt=""></a>
-                <ul class="nav-links">
-                    <!--botones del header-->
-                    <li class="li-avatar"><a href="/PROYECTO-ECO-TURISMO/html/usuario.html">
-                        <div class="redireccionPerfil">
-                            <div class="ubiAvatar">
-                                <img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
-                                    class="avatarResponsive" alt="avatar"><!--que la imagen del avatar lleve al perfil-->
-                            </div>
-                            <div class="datosUsuario">
-                                <h3>DAYANNA</h3>
-                                <p>Dayana123</p>
-                            </div>
-                        </div></a>
-                    </li>
-                    <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
-                    <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Destinos </a></li>
-                    <li><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"> Hospedajes </a></li>
-                </ul>
-                <div class="buscador">
-                    <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
-                    <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+        <div class="layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <img src="/PROYECTO-ECO-TURISMO/img/avatar.png" alt="Profile Picture" class="profile-picture">
+                    <div class="user-info">
+                        <h3>DAYANNA</h3>
+                        <p>Dayana123</p>
+                    </div>
                 </div>
-                <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
-                        class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
-                <div class="burger active">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-            </nav>
-        </header>
-        
-        <!-- SECTION PROFILE -->
-        <div class="container">
-            <h1 class="title-profile">Información personal</h1>
-            <div class="profile-info-container">
-                <div class="hero-right">
-                    <img src="/PROYECTO-ECO-TURISMO/img/perfil.jpg" alt="Foto de perfil">
-                </div>
-                
-                <div class="input-box">
-                    <!-- Campo para el nombre de usuario -->
-                    <label>Nombre de Usuario</label>
-                    <input type="text" placeholder="Ingrese nombre de usuario">
-                </div>
-                
-                <!-- Segunda fila -->
-                <div class="input-box">
-                    <!-- Campo para el correo electrónico -->
-                    <label>Correo Electrónico</label>
-                    <input type="email" placeholder="Ingrese correo electrónico">
-                </div>
-                
-                <div class="input-box">
-                    <!-- Campo para la descripción personal -->
-                    <label>Descripción Personal</label>
-                    <textarea placeholder="Escriba una breve descripción"></textarea>
+
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="#" class="active"><i class="fas fa-user"></i>Perfil</a></li>
+                        <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"><i class="fas fa-home"></i>Inicio</a></li>
+                        <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"><i
+                                    class="fas fa-map-marker-alt"></i>Destinos</a></li>
+                        <li><a href="/PROYECTO-ECO-TURISMO/html/Hoteles/Pereira.html"><i
+                                    class="fas fa-bed"></i>Hospedajes</a></li>
+                        <li><a href="/PROYECTO-ECO-TURISMO/html/contraseña.html"><i class="fas fa-key"></i>Cambiar
+                                Contraseña</a></li>
+                        <li class="notification-settings">
+                            <span><i class="fas fa-bell"></i>Notificaciones</span>
+                            <label class="switch">
+                                <input type="checkbox" id="notificationToggle">
+                                <span class="slider round"></span>
+                            </label>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <h1 class="title-profile">Información personal</h1>
+                <div class="profile-info-container">
+                    <div class="hero-right">
+                        <img src="/PROYECTO-ECO-TURISMO/img/perfil.jpg" alt="Foto de perfil" id="foto-perfil">
+                        <button class="change-photo">Cambiar foto</button>
+                    </div>
+                    <div class="input-box">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Ingrese su nombre">
+                    </div>
+                    <div class="input-box">
+                        <label>Nombre de Usuario</label>
+                        <input type="text" placeholder="Ingrese nombre de usuario">
+                    </div>
+                    <div class="input-box">
+                        <label>Telefono</label>
+                        <input type="text" placeholder="Ingrese su telefono">
+                    </div>
+                    <div class="input-box">
+                        <label>Correo Electrónico</label>
+                        <input type="email" placeholder="Ingrese correo electrónico">
+                    </div>
+                    <div class="input-box">
+                        <label>Descripción Personal</label>
+                        <textarea placeholder="Escriba una breve descripción"></textarea>
+                    </div>
+                    <div class="container-buttons">
+                        <button class="change-button">Editar informacion</button>
+                        <button class="save-button">Guardar Cambios</button>
+                    </div>
                 </div>
             </div>
-            <!-- Botón para guardar los cambios del formulario -->
-            <button class="save-button">Guardar Cambios</button>
-        </section>
+        </div>
     </main>
     <h1>TUS DESTINOS FAVORITOS</h1>
-    <div id="slider-container2">
+    <!-- <div id="slider-container2">
         <div class="slider1">
-            <!--el div que se va a mover-->
             <div class="slide">
-                <!--contenido del slide-->
                 <div class="cartas">
                     <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
                     <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
-                        <p>BIOPARQUE UKUMARI</p>
+                        <p>CHORROS DE DON LOLO</p>
                         <h1>VER SITIO</h1></a>
                     </div>
                 </div>
+                
                 <div class="cartas">
                     <a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"><img src="/PROYECTO-ECO-TURISMO/img/h-apia.jpeg"></a>
                     <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html">
-                        <p>JUNIOR PLAZA</p>
-                        <h1>HOSPEDAJES</h1></a>
+                        <p>TERMALES SANTA ROSA</p>
+                        <h1>VER SITIO</h1></a>
                     </div>
                 </div>
                 <div class="cartas">
                     <a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html"><img src="/PROYECTO-ECO-TURISMO/img/slider3.jpg"></a>
                     <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html">
-                        <p>TERMALES SANTA ROSA</p>
+                        <p>RESERVA NATURAL LA NONA</p>
                         <h1>VER SITIO</h1></a>
                     </div>
                 </div>
@@ -111,21 +114,21 @@
                 <div class="cartas">
                     <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
                     <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
-                        <p>BIOPARQUE UKUMARI</p>
+                        <p>CERRO BATERO</p>
                         <h1>VER SITIO</h1></a>
                     </div>
                 </div>
                 <div class="cartas">
                     <a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"><img src="/PROYECTO-ECO-TURISMO/img/h-apia.jpeg"></a>
                     <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html">
-                        <p>JUNIOR PLAZA</p>
-                        <h1>HOSPEDAJES</h1></a>
+                        <p>CASCADA LA ESTRELLA</p>
+                        <h1>VER SITIO</h1></a>
                     </div>
                 </div>
                 <div class="cartas">
                     <a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html"><img src="/PROYECTO-ECO-TURISMO/img/slider3.jpg"></a>
                     <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html">
-                        <p>TERMALES SANTA ROSA</p>
+                        <p>PARAMILLO DE SANTA ROSA</p>
                         <h1>VER SITIO</h1></a>
                     </div>
                 </div>
@@ -133,6 +136,134 @@
         </div>
         <button class="arrow left">&#10094;</button>
         <button class="arrow right">&#10095;</button>
+    </div> -->
+    <!-- Slider main container -->
+    <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img
+                        src="/PROYECTO-ECO-TURISMO/img/chorrosDonlolo1.png"></a>
+                <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
+                        <p>CHORROS DE DON LOLO</p>
+                        <h1>VER SITIO</h1>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img
+                        src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
+                <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
+                        <p>CHORROS DE DON LOLO</p>
+                        <h1>VER SITIO</h1>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img
+                        src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
+                <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
+                        <p>CHORROS DE DON LOLO</p>
+                        <h1>VER SITIO</h1>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img
+                        src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
+                <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
+                        <p>CHORROS DE DON LOLO</p>
+                        <h1>VER SITIO</h1>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img
+                        src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
+                <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
+                        <p>CHORROS DE DON LOLO</p>
+                        <h1>VER SITIO</h1>
+                    </a>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html"><img
+                        src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
+                <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Detalles_lugares/ukumari.html">
+                        <p>CHORROS DE DON LOLO</p>
+                        <h1>VER SITIO</h1>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
     </div>
+
 </body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script type="module">
+    import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 3, // Show 3 slides at once
+    spaceBetween: 30, // Space between slides
+
+    // If we need pagination
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+    // And if we need scrollbar
+    scrollbar: {
+        el: '.swiper-scrollbar',
+    },
+
+    // Responsive breakpoints
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10
+        },
+        // when window width is >= 768px
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 3,
+            spaceBetween: 30
+        }
+    }
+});
+</script>
+
 </html>

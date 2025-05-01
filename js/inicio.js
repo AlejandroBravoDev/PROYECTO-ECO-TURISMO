@@ -78,6 +78,13 @@ function irAPagina() {
       window.location.href = seleccion;
     }
 }
+//cambio de pagina en el select
+function irAPaginaHoteles() {
+    const seleccion = document.getElementById("filtro-h").value;
+    if (seleccion) {
+      window.location.href = seleccion;
+    }
+}
 //función para que la flecha de los filtros gire
 function flechaMunicipiosIn(){
     let flecha = document.getElementById('flechis');

@@ -57,21 +57,19 @@
             <div id="flecha">
                 <svg id="flechis" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#adc178" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg>
             </div>
-            <select name="municipios" class="filtro municipios" id="menu2" onchange="irAPagina()" onclick="flechaMunicipiosIn()" onblur="flechaMunicipiosOut()" style="font-size: 18px;">
+            <select name="municipios" class="filtro municipios" id="filtro-h" onchange="irAPaginaHoteles()" onclick="flechaMunicipiosIn()" onblur="flechaMunicipiosOut()" style="font-size: 18px;">
                 
                 <option value="">Municipios</option>
-                <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html">Pereira</option>
-                <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Dosquebradas.html">Dosquebradas</option>
-                <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/SantaRosa.html">Santa Rosa</option>
-                <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Quinchia.html">Quinchia</option>
-                    <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Marsella.html">Marsella</option>
-                <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Mistrato.html">Mistrato</option>
-                <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Balboa.html">Balboa</option>
-                <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Guatica.html">Guatica</option>
-                <option value="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Guatica.html">Belen de Umbria</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Pereira.html">Pereira</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Dosquebradas.html">Dosquebradas</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/SantaRosa.html">Santa Rosa</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Quinchia.html">Quinchia</option>
+                    <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Marsella.html">Marsella</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Balboa.html">Balboa</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Guatica.html">Guatica</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/BelenUmbria.html">Belen de Umbria</option>
             </select>
         </div>
-        <!--contenedor del slider-->
         <div id="slider-container">
             <div class="slider">
                 <!--el div que se va a mover-->
@@ -81,44 +79,85 @@
                         <div class="star" onclick="cambiarEstrella()">
                             <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
                         </div>
-                        <img src="/PROYECTO-ECO-TURISMO/img/H-mary.jpg" alt="naturaleza" class="imgs">
+                        <img src="/PROYECTO-ECO-TURISMO/img/H-floresta.jpg" alt="naturaleza" class="imgs">
+
                         <div class="texto">
                             <h1>HOTEL CAMPESTRE VILLA MARY</h1>
-                            <p class="text">Dispone de wifi gratis, piscina al aire libre, jardín y salón de uso común,Ukumari Zoo está a 30 km del alojamiento, y Viaducto entre Pereira y Dosquebradas está a 13 km.
-                            </p>
+                            <p class="text">Dispone de wifi gratis, piscina al aire libre, jardín y salón de uso común,Ukumari Zoo está a 30 km del alojamiento, y Viaducto entre Pereira y Dosquebradas está a 13 km.</p>
                         </div>
-                        <a href="/PROYECTO-ECO-TURISMO/html/Quinchia/cerro-gobia.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html" class="a-btn"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
                     </div>
 
                     <div class="card">
                         <div class="star" onclick="cambiarEstrella()">
                             <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
                         </div>
-                        <img src="/PROYECTO-ECO-TURISMO/img//H-silencio.jpg" alt="naturaleza" class="imgs">
+                        <img src="/PROYECTO-ECO-TURISMO/img/H-silencio.jpg" alt="naturaleza" class="imgs">
                         <div class="texto">
                             <h1>ECOHOTEL GLAMPINGEL EL SILENCIO</h1>
-                            <p class="text">Ofrece cúpulas de lujo con vistas panorámicas, terraza privada y baño con paredes de vidrio. Ideal para una experiencia de glamping inmersiva en la naturaleza.
+                            <p class="text">Comprometidos con el servicio en la organización de eventos empresariales, sociales y recreativos; contamos con un talento humano altamente calificado en la prestación del servicio.
                             </p>
                         </div>
-                        <a href="/PROYECTO-ECO-TURISMO/html/Quinchia/cerro-batero.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/laguna_otun.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
                     </div>
-
                     <div class="card">
                         <div class="star" onclick="cambiarEstrella()">
                             <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
                         </div>
-                        <img src="/PROYECTO-ECO-TURISMO/img/H-cabañas.jpg" alt="naturaleza" class="imgs">
+                        <img src="/PROYECTO-ECO-TURISMO/img/H-villa.jpg" alt="naturaleza" class="imgs">
                         <div class="texto">
-                            <h1>CABAÑAS EL PORTAL</h1>
-                            <p class="text">Cabañas el Portal está en Santa Rosa de Cabal y cuenta con vistas a la montaña, jardín, salón de uso común, terraza y restaurante. El lodge ofrece wifi y parking privado, ambos gratis.
+                            <h1>FINCA CAMPESTRE VILLA DEL CAMPO</h1>
+                            <p class="text">Finca Campestre Villa del Campo se encuentra en Santa Rosa de Cabal y ofrece alojamiento con terraza o balcón, wifi gratis y TV de pantalla plana, además de piscina al aire libre y jardín.
                             </p>
                         </div>
-                        <a href="/PROYECTO-ECO-TURISMO/html/Quinchia/cueva-indio.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/alto_el_toro.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
                     </div>
                 </div>
+                <!--2pag del slider-->
+                <div class="slide">
+                    <div class="card">
+                        <div class="star" onclick="cambiarEstrella()">
+                            <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
+                        </div>
+                        <img src="/PROYECTO-ECO-TURISMO/img/H-lagos.jpg" alt="naturaleza" class="imgs">
+                        <div class="texto">
+                            <h1>LAGOS DE VENECIA</h1>
+                            <p class="text">Cuenta con restaurante, servicio de habitaciones, bar, jardín, piscina al aire libre abierta todo el año y terraza. El agroturismo ofrece wifi y parking privado, ambos gratis.
+                            </p>
+                        </div>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/jardinBotanicoUTP.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                    </div>
+                    <div class="card">
+                        <div class="star" onclick="cambiarEstrella()">
+                            <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
+                        </div>
+                        <img src="/PROYECTO-ECO-TURISMO/img/h-buriti.jpg" alt="naturaleza" class="imgs">
+                        <div class="texto">
+                            <h1>ECOHOTEL BURITI</h1>
+                            <p class="text">Ukumari Zoo está a 30 km del alojamiento, y Viaducto entre Pereira y Dosquebradas está a 13 km. El aeropuerto (Aeropuerto internacional Matecaña) está a 20 km, y el alojamiento ofrece servicio de traslado de pago para ir o volver del aeropuerto.</p>
+                        </div>
+                        <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html" class="a-btn"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                    </div>
+                    <div class="card">
+                        <div class="star" onclick="cambiarEstrella()">
+                            <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
+                        </div>
+                        <img src="/PROYECTO-ECO-TURISMO/img/H-cantaros.jpg" alt="naturaleza" class="imgs">
+                        <div class="texto">
+                            <h1>CANTAROS GLAMPING</h1>
+                            <p class="text">Cántaros Glamping está en Santa Rosa de Cabal, a 47 km de Nevado de Santa Isabel y a 34 km de Ukumari Zoo, y ofrece alojamiento con wifi gratis, jardín con terraza y vistas al jardín.
+                            </p> 
+                        </div>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/divisa_don_juan.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="arrow left">&#10094;</button>
+            <button class="arrow right">&#10095;</button>
         </div>
-        
-        
+
+        </div>
     </main>
 
     <!--footer-->
