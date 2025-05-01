@@ -24,19 +24,11 @@ header{
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 20%;
+    gap: 17%;
     font-size: 20px;
     font-weight: bold;
-    position: relative;
-    right: 0px;
 }
-@media (max-width: 1500px){
-    .nav-links{
-        gap: 15%;
-        position: relative;
-        right: 0px;
-    }
-}
+
 .nav-links input{
     height: 20px;/*Tamaño de el input tipo texto*/
 
@@ -87,6 +79,7 @@ header{
         display: none;
         flex-direction: column;
         position: absolute;
+        top: 100px;
         width: 30%;
         height: 1250px;
         top: 64px;
@@ -106,10 +99,6 @@ header{
         left: 10px;
         top: 10px;
     }
-    .nav-links input{
-        position: relative;
-        top: 100px;
-    }
     .avatar{
         position: absolute;
         right: 60px;
@@ -118,13 +107,14 @@ header{
     .nav-links li{
         width: 100%;
         height: 50px;
-        position: relative;
-        bottom: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
         cursor: pointer;
+        position: relative;
+        bottom: 310px;
+        
     }
     .nav-links li:hover{
         background-color: rgba(0, 0 , 0 , 0.4);
@@ -159,9 +149,14 @@ header{
         color: #d6d6d6;
     }
     .buscador{
-        width: 170px;
-        position: absolute;
-        right: 100px;
+        max-width: 170px;
+        position: relative;
+        bottom: 300px;
+    }
+    .area-notificaciones{
+        position: relative;
+        bottom: 833px;
+        left: 120px;
     }
 }
 @media (max-width:985px){
@@ -175,6 +170,11 @@ header{
         font-size: 10px;
         position: relative;
         bottom: 10px;
+    }
+    .area-notificaciones{
+        position: relative;
+        bottom: 833px;
+        left: 80px;
     }
 }
 @media (max-width:630px){
@@ -193,15 +193,44 @@ header{
     .nav-links{
         font-size: 15px;
     }
-    
+    .area-notificaciones{
+        position: relative;
+        bottom: 833px;
+        left: 60px;
+    }
+    .area-notificaciones img{
+        width: 20px;
+        height: 20px;
+    }
 }
 @media (max-width:600px){
     .nav-links{
         width: 45%;
     }
 }
+@media (max-width:480px){
+    
+    .buscador input{
+        width: 120px;
+        position: relative;
+        right: 40px;
+    }
+    .buscador {
+        max-width: 120px;
+    }
+    .buscador img{
+        margin-right: 70px;
+        z-index: 99999;
+    }
+}
 .li-avatar{
     display: none;
+}
+
+.area-notificaciones img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 /*Estilos navbar*/
 nav{
@@ -211,8 +240,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+    gap: 200px;
 }
 nav img{
     border-radius: 50%;
@@ -221,12 +249,12 @@ nav .img{
     width: 40px;
     height: 40px;
     box-shadow: 0 0 15px black;
-    margin-left: 140px;
 }
 .logo{
     width: 60px;
     height: 60px;
     box-shadow: 0 0 15px black;
+    margin: 0;
 }
 nav a{
     color: white;
@@ -240,7 +268,7 @@ nav a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 155px;
+    max-width: 155px;
 }
 .buscador img{
     width: 20px;
@@ -249,7 +277,6 @@ nav a:hover{
     left: 170px;    
     cursor: pointer;
 }
-
 nav input{
     width: 170px;
     padding: 9px;
@@ -261,6 +288,66 @@ nav input{
     background-color: rgba(0, 0 , 0 , 0.5);
     height: auto;
 }
+/*BANDEJA DE ENTRADA*/
+.area-bandeja{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    background-color: rgba(0, 0 , 0 , 0.6);
+}
+.bandeja-entrada{
+    width: 300px;
+    height: 300px;
+    background-color: #F5F5F5;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    position: fixed;
+    top: 120px;
+}
+.bandeja-entrada h2{
+    color: #ADC178;
+    margin-left: 10px;
+}
+.container-notificacion{
+    width: 100%;
+    display: flex;
+    position: relative;
+    bottom: 20px;
+}
+.notificacion{
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.notificacion img{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.texto-noti{
+    width: 60%;
+}
+.texto-noti p{
+    font-size: 12px;
+    color: rgb(36, 36, 36);
+}
+.bandeja{
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    z-index: 99999;
+}
+.redireccion-noti{
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+}
+/*TERMINA EL HEADER*/
+
+
 /*Estilos slider*/
 .slider-container{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
     width: 100%;
@@ -270,7 +357,7 @@ nav input{
 .slider{
     width: 400%;
     display: flex;
-    animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
+    animation: slide 25s infinite ease-in;/*Animacion del slider*/
 }
 .sli {
     flex: 1 1 400px;
@@ -282,7 +369,7 @@ nav input{
 }
 /*Keyframes para que se ejecute la animaciòn*/
 @keyframes slide{
-    0%{transform: translateX(0) }
+    0%{transform: translateX(0)}
     20%{transform: translateX(0)}
 
     25%{transform: translateX(-25%)}
@@ -292,7 +379,8 @@ nav input{
     70%{transform: translateX(-50%)}
 
     75%{transform: translateX(-75%)}
-    100%{transform: translateX(-75%)}
+    100% {transform: translateX(-75%);}
+
 }
 /*Responsive del slider*/
 @media (max-width: 1023px) {
@@ -420,242 +508,294 @@ main{
 button:hover{
     background: #9daf6d;
 }
-/*SEGUNDA SECTION*/
-.container-sitios{
-    width: 80%;
-    height: 100%;
-    text-shadow:  0 10px 30px rgba(0, 0 , 0 , 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
+/*-----SEGUNDA SECCION-----*/
 .sitiosFavoritos{
     text-shadow:  0 5px 10px rgba(0, 0 , 0 , 0.1);
     color: #ADC178;
     font-size: 50px;
     font-weight: 800;
     text-align: center;
-    margin-bottom: 50px;
     margin-inline: 20px;
+    margin-bottom: 20px;
 }
-.cartas{
-    flex: 1 1 400px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.container-carta{
+    padding: 2px 50px;
 }
-.cartas img{
-    width: 350px;
-    height: 350px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0, 0 , 0 , 0.3);
+#carta-area{
+    padding: 50px 0;
 }
-.cartas img:hover {
-    transform: translateY(-5px); /*Cuando paso el mouse por encima de l objeto, este sobresale un poco*/
-}
-.cuadro-links{
-    width: 300px;
-    height: 150px;
-    background-color: #ADC178;
-    position: relative;
-    right: 10px;
-    bottom: 100px;
-    cursor: pointer;
-    padding: 15px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 3px 10px rgba(0, 0 , 0 , 0.2);
-}
-.cuadro-links:hover {
-    transform: translateY(-5px); /*Se agrega cuando quiero que el elemento sobresalga un poco*/
-}
-.cuadro-links h1{
-    font-size: 40px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    
-}
-.cuadro-links p{
-    font-size: 1.5rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-.cuadro-links a{
-    text-decoration: none;
-    color: white;
-}
-/*TERCERA SECTION*/
-.info-risaralda{
+.container{
     width: 100%;
-    height: auto;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: 40px;
+
+    
+}
+.carta{
+    max-width: 30%;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.carta img{
+    width: 100%;
+    height: 500px;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.info-carta{
+    height: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8) 58%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 14px;
+    transition:  height 0.5s;
+}
+.info-carta h3{
+    font-weight: 800;
+    margin-bottom: 5px;
+    margin-top: 80px;
+    font-size: 35px;
+    letter-spacing: 2px;
+    color: #ADC178;
+}
+.info-carta p{
+    text-align: center;
+    width: 80%;
+    color: white;
+}
+.info-carta a{
+    margin-top: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    background-color: #ADC178;
+    border-radius: 50px;
+    text-align: center;
+    padding: 8px 15px;
+    text-shadow: 0 0 2px black;
+}
+.info-carta a:hover{
+    background-color: #9daf6d;
+}
+.carta:hover img{
+    transform: scale(1.2);
+}
+.carta:hover .info-carta{
+    height: 55%;
+}
+/*RESPONSIVE TEXTOS*/
+@media (max-width:1600px){
+    .info-carta h3{
+        font-size: 20px;
+    }
+}
+@media (max-width:1300px){
+    .carta:hover .info-carta{
+        height: 75%;
+    }
+}
+@media (max-width:422px){
+    .info-carta h3{
+        font-size: 18px;
+    }
+    .info-carta p{
+        font-size: 12px;
+    }
+    .carta:hover .overlay{
+        height: 95%;
+    }
+}
+/*RESPONSIVE CARTAS*/
+@media (max-width:1450px){
+    .container-carta{
+        padding: 2px 10px;
+    }
+}
+@media (max-width:1300px){
+    .carta img{
+        height: 350px;
+    }
+    .container{
+        gap: 20px;
+    }
+}
+@media (max-width:1000px){
+    .carta{
+        max-width: 47%;
+    }
+}
+@media (max-width:700px){
+    .carta{
+        max-width: 85%;
+    }
+}
+@media (max-width:410px){
+    .carta img{
+        height: 250px;
+    }
 }
 @media (max-width:495px){
-    .cartas{
-        height: 400px;
-    }
-    .cuadro-links{
-        width: 230px;
-        height: 100px;
-        position: relative;
-        bottom: 80px;
-    }
-    .cuadro-links h1{
-        position: relative;
-        bottom: 45px;
-    }
-    .cuadro-links p{
-        position: relative;
-        bottom: 25px;
-    }
-    .cartas img{
-        width: 280px;
-        height: 280px;
-    }
     .sitiosFavoritos{
         font-size: 33px;
     }
 }
+/*TERCERA SECTION*/
+.info-risaralda{
+    margin-top: 30PX;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 /*Textos sgunda section*/
 .textos-info{
-    flex: 1 1 500px;
-    max-width: 760px;
-    height: 400px;
+    width: 40%;
+    height: 726px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #ADC178;
-    background-color: rgba(0, 0 , 0 , 0.6);
-    position: absolute;
-    right: 30px;
-    border-radius: 10px;
+    background-color: #ADC178;
 }
 .textos-info h1{
-    width: 92%;
+    width: 90%;
     font-size: 42px;
-    text-shadow: 0 0 2px black;
+    text-shadow: 0 0 1px black;
     font-weight: 800;
+    color: #405640;
+    text-align: center;
 }
 .textos-info p{
     width: 90%;
     font-size: 20px;
-    color: white;
+    color:#fff;
     font-weight: 600;
     position: relative;
     bottom: 40px;
+    text-align: center;
+    margin-top: 40px;
 }
 /*Boton tercera section*/
 .btn-info{
-    width: 310px;
+    width: 130px;
     padding: 10px;
     border: none;
-    background-color: #ADC178;
+    background-color: #405640;
     cursor: pointer;
     border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 .btn-info a{
     text-decoration: none;
-    color: white;
-    text-shadow:  0 0 2px black;
+    color: #ADC178;
     font-weight: bold;
     font-size: 15px;
+    color: #fff;
 
 }
 .btn-info a:hover{
-    background: #9daf6d;
-    
+    background: #445c44;
 }
 .btn-info:hover{
-    background: #9daf6d;   
+    background: #445c44;   
 }
 .slider-container2{/*Contenedor necesario para marcar el limite de el slider y no se sobre salga de la pantalla*/
-    width: 100%;
+    width: 60%;
+    height: 726px;
+    background-color: #f5f5f5;
+    background-size: cover;
+    background-position: center;
+    transition: all 1s ease-in-out;
+    background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider1.jpg);
     overflow: hidden;
-    margin: auto;
+    animation: slider1 35s infinite linear;
 }
-.slider2{
-    width: 400%;
-    display: flex;
-    animation: slide 25s infinite alternate ease-in-out;/*Animacion del slider*/
+@keyframes slider1{
+    0%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider1.jpg);}
+    20%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider1.jpg);}
+
+    22%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider2.jpg);}
+    40%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider2.jpg);}
+
+    42%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider3.jpg);}
+    60%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider3.jpg);}
+
+    62%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider4.jpg);}
+    80%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider4.jpg);}
+
+    82%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider5.jpg);}
+    100%{background-image: url(/PROYECTO-ECO-TURISMO/img/risaralda-slider5.jpg);}
 }
-.sli2 {
-    width: 100%;   
-}
-.sli2 img{
-    width: 100%;
-    height: 820px;
-    position: relative;
-    top: 10px;
-}
-/*Responsive del slider*/
-@media (max-width: 1023px) {
-    .sli2 img{
-        height: 620px;
-    }
+@media (max-width:1300px){
     .textos-info{
-        width: 450px;
-        height: 300px;
+        width: 50%;
+        height: 600px;
+
     }
-    .textos-info p{
-        font-size: 16px;
+    .slider-container2{
+        width: 50%;
+        height: 600px;
     }
+}
+@media (max-width:1035px){
+    .textos-info{
+        width: 100%;
+        height: 500px;
+    }
+    .slider-container2{
+        width: 100%;
+        height: 800px;
+    }
+}
+@media (max-width:800px){
     .textos-info h1{
         font-size: 30px;
-        text-align: center;
-        position: relative;
-        bottom: 10px;
-    }
-    .btn-info{
-        position: relative;
-        bottom: 30px;
-    }
-}
-@media (max-width:600px){
-    .sli2 img{
-        margin-top: 65px;
-        height: 400px;
-    }
-}
-@media (max-width:600px){
-    .sli2 img{
-        height: 350px;
-    }
-    .textos-info{
-        width: 250px;
-        height: 150px;
-        margin-top: 150px;
-        position: absolute;
-        right: 10px;
-        
     }
     .textos-info p{
-        font-size: 16px;
-        display: none;
+        font-size: 15px;
+    }
+    .slider-container2{
+        height: 600px;
+    }
+    .textos-info{
+        height: 350px;
+    }
+}
+@media (max-width:550px){
+    .textos-info{
+        height: 350px;
+        gap: 12px;
     }
     .textos-info h1{
         font-size: 20px;
-        text-align: center;
-        position: relative;
-        bottom: 10px;
+    }
+    .textos-info p{
+        font-size: 14px;
+    }
+    .slider-container2{
+        height: 350px;
     }
     .btn-info{
-        width: 180px;
         position: relative;
-        bottom: 0px;
+        bottom: 50px;
     }
 }
-
 /*FOOTER*/
 .pie-pagina{/*Contenedor del footer*/
     width: 100%;

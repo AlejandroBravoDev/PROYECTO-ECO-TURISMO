@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="/PROYECTO-ECO-TURISMO/css/inicio.css">
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -19,25 +21,30 @@
             <ul class="nav-links">
                 <!--botones del header-->
                 <li class="li-avatar"><a href="/PROYECTO-ECO-TURISMO/html/usuario.html">
-                    <div class="redireccionPerfil">
-                        <div class="ubiAvatar">
-                            <img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
-                                class="avatarResponsive" alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                    
+                        <div class="redireccionPerfil">
+                            <div class="ubiAvatar">
+                                <img src="/PROYECTO-ECO-TURISMO/img/avatar.png" class="avatarResponsive"
+                                    alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                            </div>
+                            <div class="datosUsuario">
+                                <h3>DAYANNA CIFUENTES</h3>
+                                <p>Dayana123</p>
+                            </div>
                         </div>
-                        <div class="datosUsuario">
-                            <h3>DAYANNA</h3>
-                            <p>Dayana123</p>
-                        </div>
-                    </div></a>
+                    </a>
                 </li>
                 <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
-                <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Destinos </a></li>
+                <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Sitios </a></li>
                 <li><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"> Hospedajes </a></li>
+                <div class="buscador">
+                    <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
+                    <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+                </div>
+                <div class="area-notificaciones">
+                    <img src="/PROYECTO-ECO-TURISMO/img/campana.png" class="notificaciones" alt="campana">
+                </div>
             </ul>
-            <div class="buscador">
-                <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
-                <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
-            </div>
             <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
                     class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
             <div class="burger active">
@@ -51,16 +58,31 @@
         <div class="slider-container">
             <div class="slider">
                 <div class="sli img">
-                    <img src="/PROYECTO-ECO-TURISMO/img/slider1.jpg" alt="" class="sli1">
+                    <img src="/PROYECTO-ECO-TURISMO/img/santa-rosa-slider1.jpg" alt="" class="sli1">
                 </div>
                 <div class="sli img">
-                    <img src="/PROYECTO-ECO-TURISMO/img/slider2.jpg" alt="" class="sli2">
+                    <img src="/PROYECTO-ECO-TURISMO/img/marsella-slider2.jpg" alt="" class="sli2">
                 </div>
                 <div class="sli img">
-                    <img src="/PROYECTO-ECO-TURISMO/img/slider3.jpg" class="sli3" alt="">
+                    <img src="/PROYECTO-ECO-TURISMO/img/santa-rosa-slider3.jpg" class="sli3" alt="">
                 </div>
                 <div class="sli img">
-                    <img src="/PROYECTO-ECO-TURISMO/img/slider4.jpg" class="sli4" alt="">
+                    <img src="/PROYECTO-ECO-TURISMO/img/marsella-slider4.jpg" class="sli4" alt="">
+                </div>
+            </div>
+            <div class="area-bandeja">
+                <div class="bandeja-entrada">
+                    <h2>Notificaciones</h2>
+                    <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html" class="redireccion-noti">
+                        <div class="container-notificacion">
+                            <div class="notificacion">
+                                <img src="/PROYECTO-ECO-TURISMO/img/ukumari.jpeg">
+                            </div>
+                            <div class="texto-noti">
+                                <p class="notificacion-texto">Se ha agregado un nuevo evento al Bioparque Ukumari, haz click aqui para verlo.</p>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <div class="recuadro">
@@ -68,62 +90,59 @@
                     <h1>¡Bienvenido a tu próxima aventura ecológica!</h1>
                     <p>Encuentra la paz entre montañas y cafetales.<br>
                         Arma tu plan con Ecoturismo.</p>
-                    <button class="btn-inicio"><a href="#container-sitios">VER</a></button>
+                    <button class="btn-inicio"><a href="#sitiosFavoritos">VER</a></button>
                 </div>
             </div>
         </div>
-        <h1 class="sitiosFavoritos">LOS SITIOS MAS VISITADOS</h1>
-        <div class="container-sitios" id="container-sitios">
-            <!--contenido del slide-->
-            <div class="cartas">
-                <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html"><img src="/PROYECTO-ECO-TURISMO/img/Ukumari.jpg"></a>
-                <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html">
-                    <p>BIOPARQUE UKUMARI</p>
-                    <h1>VER SITIO</h1></a>
-                </div>
-            </div>
-            <div class="cartas">
-                <a href="/PROYECTO-ECO-TURISMO/html/Pereira/jardinBotanicoUTP.html"><img src="/PROYECTO-ECO-TURISMO/img/JardinBotanico3.jpg"></a>
-                <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/Pereira/jardinBotanicoUTP.html">
-                    <p>JARDIN BOTANICO UTP</p>
-                    <h1>VER SITIO</h1></a>
-                </div>
-            </div>
-            <div class="cartas">
-                <a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html"><img src="/PROYECTO-ECO-TURISMO/img/naturaleza.jpg"></a>
-                <div class="cuadro-links"><a href="/PROYECTO-ECO-TURISMO/html/destinospueblos.html">
-                    <p>TERMALES SANTA ROSA</p>
-                    <h1>VER SITIO</h1></a>
+        <h1 class="sitiosFavoritos" id="sitiosFavoritos">LOS SITIOS MAS VISITADOS</h1>
+        <div id="carta-area">
+            <div class="container-carta">
+                <div class="container">
+                    <div class="carta">
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html"><img
+                                src="/PROYECTO-ECO-TURISMO/img/zoo-2203314.jpg" alt="img"></a>
+                        <div class="info-carta">
+                            <h3>Bioparque Ukumari</h3>
+                            <p>Este es uno de los sitios mas visitados, si deseas obtener mas informacion haz click
+                                aqui.</p>
+                            <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html">Ver mas</a>
+                        </div>
+                    </div>
+                    <div class="carta">
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/jardinBotanicoUTP.html"><img
+                                src="/PROYECTO-ECO-TURISMO/img/JardinBotanico3.jpg" alt="img"></a>
+                        <div class="info-carta">
+                            <h3>Jardin Botanico UTP</h3>
+                            <p>Este es uno de los sitios mas visitados, si deseas obtener mas informacion haz click
+                                aqui.</p>
+                            <a href="/PROYECTO-ECO-TURISMO/html/Pereira/jardinBotanicoUTP.html">Ver mas</a>
+                        </div>
+                    </div>
+                    <div class="carta">
+                        <a href="/PROYECTO-ECO-TURISMO/html/Santa-rosa/Termales-santaRosa.html"><img
+                                src="/PROYECTO-ECO-TURISMO/img/naturaleza.jpg" alt="img"></a>
+                        <div class="info-carta">
+                            <h3>Termales Santa Rosa</h3>
+                            <p>Este es uno de los sitios mas visitados, si deseas obtener mas informacion haz click
+                                aqui.</p>
+                            <a href="/PROYECTO-ECO-TURISMO/html/Santa-rosa/Termales-santaRosa.html">Ver mas</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <section id="section1" class="info-risaralda">
             <div class="slider-container2">
-                <div class="slider2">
-                    <div class="sli2 img">
-                        <img src="/PROYECTO-ECO-TURISMO/img/naturaleza.jpg" alt="" class="sli1">
-                    </div>
-                    <div class="sli2 img">
-                        <img src="/PROYECTO-ECO-TURISMO/img/imagen-risaralda.jpg" alt="" class="sli2">
-                    </div>
-                    <div class="sli2 img">
-                        <img src="/PROYECTO-ECO-TURISMO/img/lagunaotun.jpg" class="sli3" alt="">
-                    </div>
-                    <div class="sli2 img">
-                        <img src="/PROYECTO-ECO-TURISMO/img/naturaleza2.jpg" class="sli4" alt="">
-                    </div>
-                </div>
+
             </div>
-                <div class="textos-info">
-                    <h1>¡Risaralda tierra eco turistica!</h1>
-                    <p>El ecoturismo en Risaralda, Colombia, es una de las principales actividades turísticas debido
-                            a su
-                            biodiversidad, paisajes montañosos y riqueza hídrica. Este departamento se encuentra en el
-                            Eje Cafetero
-                            y forma parte del Paisaje Cultural Cafetero, declarado Patrimonio de la Humanidad por la
-                            UNESCO.</p>
-                    <button class="btn-info"><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html">CONOCE LOS SITIOS</a></button>
-                </div>
+            <div class="textos-info">
+                <h1>LA IMPORTANCIA DE EL ECOTURISMO EN RISARALDA</h1>
+                <p>El ecoturismo en Risaralda es fundamental para la conservación del medio ambiente y el desarrollo
+                    sostenible de la región. Gracias a su rica biodiversidad, paisajes montañosos y parques naturales
+                    como el Santuario de Fauna y Flora Otún Quimbaya, el ecoturismo permite proteger los ecosistemas
+                    mientras genera ingresos para las comunidades locales.</p>
+                <button class="btn-info"><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html">VER SITIOS</a></button>
+            </div>
         </section>
     </main>
     <footer class="pie-pagina">
@@ -139,14 +158,19 @@
             <div class="caja">
                 <h2>SIGUENOS </h2>
                 <div class="imagenes-footer">
-                    <a href="#"><img src="/PROYECTO-ECO-TURISMO/img/instagramlogo.png" class="logos" alt="logo de Instagram"></a>
-                    <a href="#"><img src="/PROYECTO-ECO-TURISMO/img/facebooklogo.png"  class="logos" alt="logo de Facebook"></a>
+                    <a href="#"><img src="/PROYECTO-ECO-TURISMO/img/instagramlogo.png" class="logos"
+                            alt="logo de Instagram"></a>
+                    <a href="#"><img src="/PROYECTO-ECO-TURISMO/img/facebooklogo.png" class="logos"
+                            alt="logo de Facebook"></a>
                     <a href="#"><img src="/PROYECTO-ECO-TURISMO/img/twitterlogo.png" class="logos" alt="logo de X"></a>
                 </div>
             </div>
         </div>
-        <div class="parte-2"><p>&copy; 2024-2025 <b>Ecoturismo Risaralda</b> Todos los derechos reservados</p></div>
+        <div class="parte-2">
+            <p>&copy; 2024-2025 <b>Ecoturismo Risaralda</b> Todos los derechos reservados</p>
+        </div>
     </footer>
     <script src="/PROYECTO-ECO-TURISMO/js/inicio.js"></script>
 </body>
+
 </html>

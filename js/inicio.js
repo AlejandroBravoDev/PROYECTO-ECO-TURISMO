@@ -105,3 +105,10 @@ function cambiaEstrella(){
     let star = document.getElementsByClassName('star');
     star.style.color = "yellow";
 }
+
+const openModal = document.querySelector('.notificaciones');
+const modal = document.querySelector('.bandeja-entrada');
+
+openModal.addEventListener("click", () => {
+    modal.classList.toggle('bandeja');
+});
