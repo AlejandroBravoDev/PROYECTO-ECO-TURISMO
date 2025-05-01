@@ -20,25 +20,30 @@
                 <ul class="nav-links">
                     <!--botones del header-->
                     <li class="li-avatar"><a href="/PROYECTO-ECO-TURISMO/html/usuario.html">
-                        <div class="redireccionPerfil">
-                            <div class="ubiAvatar">
-                                <img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
-                                    class="avatarResponsive" alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                        
+                            <div class="redireccionPerfil">
+                                <div class="ubiAvatar">
+                                    <img src="/PROYECTO-ECO-TURISMO/img/avatar.png" class="avatarResponsive"
+                                        alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                                </div>
+                                <div class="datosUsuario">
+                                    <h3>DAYANNA CIFUENTES</h3>
+                                    <p>Dayana123</p>
+                                </div>
                             </div>
-                            <div class="datosUsuario">
-                                <h3>DAYANNA</h3>
-                                <p>Dayana123</p>
-                            </div>
-                        </div></a>
+                        </a>
                     </li>
                     <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
-                    <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Destinos </a></li>
+                    <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Sitios </a></li>
                     <li><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"> Hospedajes </a></li>
+                    <div class="buscador">
+                        <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
+                        <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+                    </div>
+                    <div class="area-notificaciones">
+                        <img src="/PROYECTO-ECO-TURISMO/img/campana.png" class="notificaciones" alt="campana">
+                    </div>
                 </ul>
-                <div class="buscador">
-                    <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
-                    <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
-                </div>
                 <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
                         class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
                 <div class="burger active">
@@ -50,7 +55,21 @@
         </header>
 
         <main>
-
+            <div class="area-bandeja">
+                <div class="bandeja-entrada">
+                    <h2>Notificaciones</h2>
+                    <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html" class="redireccion-noti">
+                        <div class="container-notificacion">
+                            <div class="notificacion">
+                                <img src="/PROYECTO-ECO-TURISMO/img/ukumari.jpeg">
+                            </div>
+                            <div class="texto-noti">
+                                <p class="notificacion-texto">Se ha agregado un nuevo evento al Bioparque Ukumari, haz click aqui para verlo.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <section id="section1">
                 <!--div que va a contener el titulo y la calificación del lugar-->
                 <div class="title"> 
@@ -90,7 +109,55 @@
                 </div>
             </section>
 
-            
+            <section id="section2">
+                <div class="container">
+                    <h1>HOTELES CERCANOS A ESTE SITIO</h1>
+                    <div class="cards-container">
+                            <div class="card">
+                                <img class="img-card" src="/PROYECTO-ECO-TURISMO/img/h-dorado.jpg" alt="img de hotel">
+
+                                <div class="text-card-container">
+                                    <h1 class="title-card">FINCA HOTEL EL ENCUENTRO</h1>
+                                    <p class="info-card">Finca el Encuentro Eje Cafetero tiene piscina, jardín, terraza y vistas a la montaña. Está en Marsella y ofrece alojamiento con dispone de. La casa o chalet ofrece wifi y parking privado, ambos gratis.
+                                    </p>
+
+                                    <p>📍 En Marsella, Risaralda</p>
+                                    
+                                    <a href="#"><button class="btn card-btn">MÁS INFORMACIÓN</button></a>
+                                </div>
+                            </div>
+    
+                            <div class="card">
+                                <img class="img-card" src="/PROYECTO-ECO-TURISMO/img/h-quinchia.jpg" alt="img de hotel">
+
+                                <div class="text-card-container">
+                                    <h1 class="title-card">CASA FINCA LUCIANA</h1>
+                                    <p class="info-card">La casa o chalet dispone de terraza, 2 dormitorios, sala de estar y cocina bien equipada. Se ofrece TV de pantalla plana.
+                                    </p>
+                                    <p>📍 En marsella Risaralda</p>
+                                    
+                                    <a href="#"><button class="btn card-btn">MÁS INFORMACIÓN</button></a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="container-recommendations">
+                    <h1>RECOMENDACIONES PARA VISITAR ESTE SITIO</h1>
+
+                    <div class="text-recommendations">
+                        <ul>
+                            <li>Lleva ropa cómoda y de secado rápido, así como una chaqueta impermeable para protegerte de las lluvias.</li>
+                            <li>Usa zapatos antideslizantes o botas de senderismo, ya que los senderos pueden estar húmedos.</li>
+                            <li> No olvides un sombrero o gorra, protector solar, repelente de insectos y una mochila ligera con agua y snacks.</li>
+                            <li>El jardín ofrece múltiples oportunidades para capturar la belleza natural y arquitectónica del lugar.</li>
+                        </ul>
+
+                        <h1>CLIMA</h1>
+                        <P class="text-re">Marsella se encuentra a una altitud de aproximadamente 1.575 metros sobre el nivel del mar, lo que le confiere un clima templado y húmedo. La temperatura media anual es de alrededor de 18 °C, con lluvias frecuentes durante todo el año. </P>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!--footer-->

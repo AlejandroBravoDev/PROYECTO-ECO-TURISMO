@@ -22,19 +22,11 @@ header{
     justify-content: center;
     align-items: center;
     list-style: none;
-    gap: 20%;
+    gap: 17%;
     font-size: 20px;
     font-weight: bold;
-    position: relative;
-    right: 0px;
 }
-@media (max-width: 1500px){
-    .nav-links{
-        gap: 15%;
-        position: relative;
-        right: 0px;
-    }
-}
+
 .nav-links input{
     height: 20px;/*Tamaño de el input tipo texto*/
 
@@ -85,6 +77,7 @@ header{
         display: none;
         flex-direction: column;
         position: absolute;
+        top: 100px;
         width: 30%;
         height: 1250px;
         top: 64px;
@@ -104,10 +97,6 @@ header{
         left: 10px;
         top: 10px;
     }
-    .nav-links input{
-        position: relative;
-        top: 100px;
-    }
     .avatar{
         position: absolute;
         right: 60px;
@@ -116,13 +105,14 @@ header{
     .nav-links li{
         width: 100%;
         height: 50px;
-        position: relative;
-        bottom: 440px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0;
         cursor: pointer;
+        position: relative;
+        bottom: 310px;
+        
     }
     .nav-links li:hover{
         background-color: rgba(0, 0 , 0 , 0.4);
@@ -137,7 +127,7 @@ header{
     .redireccionPerfil{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: left;
         align-items: center;
         cursor: pointer;
     }
@@ -157,9 +147,14 @@ header{
         color: #d6d6d6;
     }
     .buscador{
-        width: 170px;
-        position: absolute;
-        right: 100px;
+        max-width: 170px;
+        position: relative;
+        bottom: 300px;
+    }
+    .area-notificaciones{
+        position: relative;
+        bottom: 833px;
+        left: 120px;
     }
 }
 @media (max-width:985px){
@@ -173,6 +168,11 @@ header{
         font-size: 10px;
         position: relative;
         bottom: 10px;
+    }
+    .area-notificaciones{
+        position: relative;
+        bottom: 833px;
+        left: 80px;
     }
 }
 @media (max-width:630px){
@@ -191,15 +191,44 @@ header{
     .nav-links{
         font-size: 15px;
     }
-    
+    .area-notificaciones{
+        position: relative;
+        bottom: 833px;
+        left: 60px;
+    }
+    .area-notificaciones img{
+        width: 20px;
+        height: 20px;
+    }
 }
 @media (max-width:600px){
     .nav-links{
         width: 45%;
     }
 }
+@media (max-width:480px){
+    
+    .buscador input{
+        width: 120px;
+        position: relative;
+        right: 40px;
+    }
+    .buscador {
+        max-width: 120px;
+    }
+    .buscador img{
+        margin-right: 70px;
+        z-index: 99999;
+    }
+}
 .li-avatar{
     display: none;
+}
+
+.area-notificaciones img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
 }
 /*Estilos navbar*/
 nav{
@@ -209,8 +238,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
+    gap: 200px;
 }
 nav img{
     border-radius: 50%;
@@ -219,12 +247,12 @@ nav .img{
     width: 40px;
     height: 40px;
     box-shadow: 0 0 15px black;
-    margin-left: 140px;
 }
 .logo{
     width: 60px;
     height: 60px;
     box-shadow: 0 0 15px black;
+    margin: 0;
 }
 nav a{
     color: white;
@@ -238,7 +266,7 @@ nav a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 155px;
+    max-width: 155px;
 }
 .buscador img{
     width: 20px;
@@ -247,7 +275,6 @@ nav a:hover{
     left: 170px;    
     cursor: pointer;
 }
-
 nav input{
     width: 170px;
     padding: 9px;
@@ -259,6 +286,64 @@ nav input{
     background-color: rgba(0, 0 , 0 , 0.5);
     height: auto;
 }
+/*BANDEJA DE ENTRADA*/
+.area-bandeja{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    background-color: rgba(0, 0 , 0 , 0.6);
+}
+.bandeja-entrada{
+    width: 300px;
+    height: 300px;
+    background-color: #F5F5F5;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    border-radius: 10px;
+    transition: all .5s ease-in-out;
+    position: fixed;
+    top: 120px;
+}
+.bandeja-entrada h2{
+    color: #ADC178;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.container-notificacion{
+    width: 100%;
+    display: flex;
+}
+.notificacion{
+    width: 30%;
+    height: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.notificacion img{
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+.texto-noti{
+    width: 60%;
+}
+.texto-noti p{
+    font-size: 12px;
+    color: rgb(36, 36, 36);
+    margin-top: 15px;
+}
+.bandeja{
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    z-index: 99999;
+}
+.redireccion-noti{
+    text-decoration: none;
+    color: rgb(36, 36, 36);
+}
+/*TERMINA EL HEADER*/
 /*termina el header y empieza el contenido principal*/
 /*estilos para las etiquetas*/
 img{
@@ -273,7 +358,8 @@ a{
 }
 
 h1{
-    font-family: 'Rowdies';
+    font-family:Arial;
+    font-weight: 1000;
     color: #adc178;
     text-align: center;
 }
@@ -403,6 +489,7 @@ p{
 .texto{
     width: 90%;
     height: 100%;
+    margin: -5%x;
 }
 .card h1{
     font-size: 26px;
@@ -422,6 +509,11 @@ p{
     font-size: 1.2rem;
 }
 
+.text h1{
+    margin-top: -50px;
+    padding: 0;
+}
+
 .t-btn{
     color: white;
     margin: 0;
@@ -437,7 +529,7 @@ p{
     position: relative;
     top: -2%;
     width: 90%;
-    height: 40%;
+    height: 38%;
     border-radius: 10px;
 }
 /*estilos para las flechas*/
@@ -647,6 +739,10 @@ p{
         left: 88%;
     }
 
+    .text{
+        font-size: .8rem;
+    }
+
     .titulo{
         text-align: center;
         width: 100%;
@@ -665,9 +761,6 @@ p{
         width: 12rem;
     }
 
-    .text{
-        display: none;
-    }
     .slide{
         height: 150vh;
         display: flex;
@@ -681,7 +774,7 @@ p{
     .arrow{
         width: 30px;
         height: 30px;
-        top: 35em;
+        top: 55em;
     }
 
     .left{
@@ -693,13 +786,13 @@ p{
     }
 
     .card{
-        height: 25%;
-        width: 40%;
+        height: 40%;
+        width: 45%;
         margin-top: -200px;
     }
 
     .card:last-child{
-        margin-top: -600px;
+        margin-top: -60%;
     }
 
     .left{
@@ -783,7 +876,124 @@ p{
     }
 
     .text{
-        display: none;
+        font-size: 1rem;
+    }
+    .slide{
+        height: 150vh;
+        display: flex;
+        align-items: center;
+        gap: 0;
+    }
+    .imgs{
+        height: 45%;
+    }
+
+    .arrow{
+        width: 30px;
+        height: 30px;
+        top: 35em;
+    }
+
+    .left{
+        left:-5px
+    }
+
+    .right{
+        right: -5px;
+    }
+
+    .card{
+        height: 35%;
+        width: 40%;
+        margin-top: -200px;
+    }
+
+    .card:last-child{
+        margin-top: -500px;
+    }
+
+    .left{
+        left: 10px;
+    }
+    
+    .right{
+        right: 10px;
+    }
+
+    .filtros{
+        width: 90%;
+        height: 8rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 3em;
+    }
+}
+
+
+@media (min-width:1024px) and (max-width:1250px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        height: auto;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 11px;
+    }
+
+    select{
+        height: 3rem;
+        width: 90%;
+    }
+
+    #slider-container{
+        margin-top: 20em;
+        height: 100vh;
+        overflow-y: visible;
+    }
+
+    #flecha{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 80px;
+        right: 5.5%;
+    }
+
+   #flecha2{
+        position: absolute;
+        height:30px;
+        width: 6.5%;
+        top: 20px;
+        left: 88%;
+    }
+
+    .titulo{
+        text-align: center;
+        width: 100%;
+        left: 0;
+        top: 5rem;
+    }
+
+    .card .t-btn{
+        font-size: 1.1rem;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    .btn{
+        width: 12rem;
+    }
+
+    .text{
+        font-size: 1rem;
     }
     .slide{
         height: 150vh;
@@ -816,7 +1026,7 @@ p{
     }
 
     .card:last-child{
-        margin-top: -600px;
+        margin-top: -900px;
     }
 
     .left{
@@ -835,32 +1045,6 @@ p{
         align-items: center;
         gap: 10px;
         margin-top: 3em;
-    }
-}
-
-
-@media (min-width:1024px) and (max-width:1250px){
-    body{
-        height: 185vh;
-        width: 100%;
-    }
-
-    .titulo{
-        margin-left: 80px;
-    }
-    .content{
-        width:80%;
-        height: 50%;
-        align-items: center;
-        padding: 10px;
-    }
-
-    .imgs{
-        margin: 0;
-        padding: 0;
-    }
-    .content img{
-        height: 100%;
     }
 }
 /*FOOTER*/

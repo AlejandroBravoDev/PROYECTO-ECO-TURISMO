@@ -20,25 +20,30 @@
                 <ul class="nav-links">
                     <!--botones del header-->
                     <li class="li-avatar"><a href="/PROYECTO-ECO-TURISMO/html/usuario.html">
-                        <div class="redireccionPerfil">
-                            <div class="ubiAvatar">
-                                <img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
-                                    class="avatarResponsive" alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                        
+                            <div class="redireccionPerfil">
+                                <div class="ubiAvatar">
+                                    <img src="/PROYECTO-ECO-TURISMO/img/avatar.png" class="avatarResponsive"
+                                        alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                                </div>
+                                <div class="datosUsuario">
+                                    <h3>DAYANNA CIFUENTES</h3>
+                                    <p>Dayana123</p>
+                                </div>
                             </div>
-                            <div class="datosUsuario">
-                                <h3>DAYANNA</h3>
-                                <p>Dayana123</p>
-                            </div>
-                        </div></a>
+                        </a>
                     </li>
                     <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
-                    <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Destinos </a></li>
+                    <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Sitios </a></li>
                     <li><a href="/PROYECTO-ECO-TURISMO/html/hospedajes.html"> Hospedajes </a></li>
+                    <div class="buscador">
+                        <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
+                        <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+                    </div>
+                    <div class="area-notificaciones">
+                        <img src="/PROYECTO-ECO-TURISMO/img/campana.png" class="notificaciones" alt="campana">
+                    </div>
                 </ul>
-                <div class="buscador">
-                    <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
-                    <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
-                </div>
                 <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
                         class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
                 <div class="burger active">
@@ -48,9 +53,22 @@
                 </div>
             </nav>
         </header>
-
         <main>
-
+            <div class="area-bandeja">
+                <div class="bandeja-entrada">
+                    <h2>Notificaciones</h2>
+                    <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html" class="redireccion-noti">
+                        <div class="container-notificacion">
+                            <div class="notificacion">
+                                <img src="/PROYECTO-ECO-TURISMO/img/ukumari.jpeg">
+                            </div>
+                            <div class="texto-noti">
+                                <p class="notificacion-texto">Se ha agregado un nuevo evento al Bioparque Ukumari, haz click aqui para verlo.</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
             <section id="section1">
                 <!--div que va a contener el titulo y la calificación del lugar-->
                 <div class="title"> 
@@ -88,9 +106,55 @@
                         <a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"><button class="btn"><h1 class="t-btn">EXPLORA MÁS SITIOS</h1></button></a>
                     </div>
                 </div>
-        
-
             </section>
+            <section id="section2">
+                <div class="container">
+                    <h1>HOTELES CERCANOS A ESTE SITIO</h1>
+                    <div class="cards-container">
+                            <div class="card">
+                                <img class="img-card" src="/PROYECTO-ECO-TURISMO/img/h-paraiso2.webp" alt="img de hotel">
+
+                                <div class="text-card-container">
+                                    <h1 class="title-card">HOTEL CAMPRESTRE EL PARAISO</h1>
+                                    <p class="info-card">Las habitaciones del Paraíso Hotel Campestre disponen de TV y televisión con múltiples canales, además de minibar para tu comodidad. Bañera y ducha están incluidos en cada habitación.</p>
+                                    <p>📍 En La Virginia, a 8,2km de Balboa, Risaralda</p>
+                                    
+                                    <a href="#"><button class="btn card-btn">MÁS INFORMACIÓN</button></a>
+                                </div>
+                            </div>
+    
+                            <div class="card">
+                                <img class="img-card" src="/PROYECTO-ECO-TURISMO/img/h-sandunga.jpg" alt="img de hotel">
+
+                                <div class="text-card-container">
+                                    <h1 class="title-card">HOTEL SANDUNGA</h1>
+                                    <p class="info-card">Sandunga es una excelente opción para tu estadía en La Celia (cerca a Balboa). Los huéspedes pueden mantenerse en movimiento con diversas actividades en los alrededores, como senderos para caminar o andar en bicicleta y ciclismo de montaña. Además, los servicios gratuitos incluyen wifi, valet parking y desayuno con opciones de la cocina local todos los días, de 08:00 a 13:00. También hay 3 piscinas al aire libre, una piscina infantil y un jardín.</p>
+                                    <p>📍 En La Celia, a 11km de Balboa, Risaralda</p>
+                                    
+                                    <a href="#"><button class="btn card-btn">MÁS INFORMACIÓN</button></a>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="container-recommendations">
+                    <h1>ACTIVIDADES DESTACADAS</h1>
+
+                    <div class="text-recommendations">
+                        <ul>
+                            <li>Mariposario interactivo</li>
+                            <li>Liberación de mariposas</li>
+                            <li>Safari nocturno</li>
+                            <li>Observación de aves (birding)</li>
+                            <li>Fotografía de naturaleza</li>
+                        </ul>
+
+                        <h1>CLIMA</h1>
+                        <P class="text-re">El clima en Dosquebradas es templado y húmedo, con temperaturas promedio entre 16 °C y 22 °C. Las lluvias son frecuentes, especialmente en las tardes. La mejor época para visitar Bonita Farm es durante la temporada seca, de diciembre a marzo, cuando el clima es más favorable para la observación de mariposas. </P>
+                    </div>
+                </div>
+            </section>
+        </section>
 
         </main>
 

@@ -78,6 +78,13 @@ function irAPagina() {
       window.location.href = seleccion;
     }
 }
+//cambio de pagina en el select
+function irAPaginaHoteles() {
+    const seleccion = document.getElementById("filtro-h").value;
+    if (seleccion) {
+      window.location.href = seleccion;
+    }
+}
 //función para que la flecha de los filtros gire
 function flechaMunicipiosIn(){
     let flecha = document.getElementById('flechis');
@@ -105,3 +112,10 @@ function cambiaEstrella(){
     let star = document.getElementsByClassName('star');
     star.style.color = "yellow";
 }
+
+const openModal = document.querySelector('.notificaciones');
+const modal = document.querySelector('.bandeja-entrada');
+
+openModal.addEventListener("click", () => {
+    modal.classList.toggle('bandeja');
+});

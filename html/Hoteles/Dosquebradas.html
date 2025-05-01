@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/PROYECTO-ECO-TURISMO/css/destinospueblos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <title>Hospedajes</title>
+</head>
+<body>
+    <!--header-->
+    <header>
+        <nav class="navbar">
+            <!--que la imagen lleve al inicio de la pagina-->
+            <a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> <img src="/PROYECTO-ECO-TURISMO/img/logo.jpg" class="logo"
+                    alt=""></a>
+            <ul class="nav-links">
+                <!--botones del header-->
+                <li class="li-avatar"><a href="/PROYECTO-ECO-TURISMO/html/usuario.html">
+                    <div class="redireccionPerfil">
+                        <div class="ubiAvatar">
+                            <img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
+                                class="avatarResponsive" alt="avatar"><!--que la imagen del avatar lleve al perfil-->
+                        </div>
+                        <div class="datosUsuario">
+                            <h3>DAYANNA</h3>
+                            <p>Dayana123</p>
+                        </div>
+                    </div></a>
+                </li>
+                <li><a href="/PROYECTO-ECO-TURISMO/html/inicio.html"> Inicio </a></li>
+                <li><a href="/PROYECTO-ECO-TURISMO/html/Destinos_municipios/Pereira.html"> Destinos </a></li>
+                <li><a href="/PROYECTO-ECO-TURISMO/html/Hoteles/Pereira.html"> Hospedajes </a></li>
+            </ul>
+            <div class="buscador">
+                <img src="/PROYECTO-ECO-TURISMO/img/Lupa.png" alt="Lupa">
+                <input type="text" placeholder="Buscar" class="search"><!--barra de busqueda-->
+            </div>
+            <a href="/PROYECTO-ECO-TURISMO/html/usuario.html"><img src="/PROYECTO-ECO-TURISMO/img/avatar.png"
+                    class="img avatar" alt="avatar"></a><!--que la imagen del avatar lleve al perfil-->
+            <div class="burger active">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+    
+    <!--contenido principal-->
+    <main>
+        <h1 class="titulo">Dosquebradas</h1>
+
+        <div class="filtros">
+            
+            <div id="flecha">
+                <svg id="flechis" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#adc178" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 18l6-6l-6-6"/></svg>
+            </div>
+            <select name="municipios" class="filtro municipios" id="filtro-h" onchange="irAPaginaHoteles()" onclick="flechaMunicipiosIn()" onblur="flechaMunicipiosOut()" style="font-size: 18px;">
+                <option value="">Municipios</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Pereira.html">Pereira</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Dosquebradas.html">Dosquebradas</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/SantaRosa.html">Santa Rosa</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Quinchia.html">Quinchia</option>
+                    <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Marsella.html">Marsella</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Balboa.html">Balboa</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/Guatica.html">Guatica</option>
+                <option value="/PROYECTO-ECO-TURISMO/html/Hoteles/BelenUmbria.html">Belen de Umbria</option>
+            </select>
+        </div>
+        <div id="slider-container">
+            <div class="slider">
+                <!--el div que se va a mover-->
+                <div class="slide">
+                    <!--contenido del slide-->
+                    <div class="card">
+                        <div class="star" onclick="cambiarEstrella()">
+                            <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
+                        </div>
+                        <img src="/PROYECTO-ECO-TURISMO/img/H-milagrosa.jpg" alt="naturaleza" class="imgs">
+
+                        <div class="texto">
+                            <h1>ECOHOTEL LA MILAGROSA</h1>
+                            <p class="text">ecohotel la milagrosa ofrece habitaciones familiares con baño privado, balcón y terraza. Cuenta con piscina, jardín, restaurante, bar y Wi-Fi gratuito.</p>
+                            
+                        </div>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/ukumari.html" class="a-btn"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                    </div>
+
+                    <div class="card">
+                        <div class="star" onclick="cambiarEstrella()">
+                            <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
+                        </div>
+                        <img src="/PROYECTO-ECO-TURISMO/img/H-green.jpg" alt="naturaleza" class="imgs">
+
+                        <div class="texto">
+                            <h1>ECOHOTEL SKY GREEN PEREIRA</h1>
+                            <p class="text">Este ecohotel ofrece alojamiento con jardín, aparcamiento privado gratuito, salón compartido y terraza. Dispone de restaurante, servicio de habitaciones y recepción 24 horas.
+                            </p>
+                            
+                        </div>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/laguna_otun.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                    </div>
+                    <div class="card">
+                        <div class="star" onclick="cambiarEstrella()">
+                            <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
+                        </div>
+                        <img src="/PROYECTO-ECO-TURISMO/img/H-real.jpg" alt="naturaleza" class="imgs">
+
+                        <div class="texto">
+                            <h1>ECOHOTEL PARAISO REAL</h1>
+                            <p class="text">Este eco hotel cuenta con planes románticos, zonas verdes, zona de juegos, piscina térmica, restaurante bar,cabañas y un sendero ecológico listos para que vivas la mejor experiencia.
+                            </p>
+                        </div>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/alto_el_toro.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                    </div>
+                </div>
+
+                <!--2pag del slider-->
+                <div class="slide">
+                    <div class="card">
+                        <div class="star" onclick="cambiarEstrella()">
+                            <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
+                        </div>
+                        <img src="/PROYECTO-ECO-TURISMO/img/M-betania.jpg" alt="naturaleza" class="imgs">
+                        <div class="texto">
+                            <h1>MIRADOR BETANIA</h1>
+                            <p class="text">Aunque es conocido principalmente como un restaurante mirador, ofrece una experiencia en contacto con la naturaleza y vistas panorámicas.
+                            </p>
+                        </div>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/jardinBotanicoUTP.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                    </div>
+                    <div class="card">
+                        <div class="star" onclick="cambiarEstrella()">
+                            <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
+                        </div>
+                        <img src="/PROYECTO-ECO-TURISMO/img/h-pachamma.jpg" alt="naturaleza" class="imgs">
+                        <div class="texto">
+                            <h1>HOTEL LA PACHAMAMA CAMPESTRE</h1>
+                            <p class="text">Este hotel de 4 estrellas tiene wifi gratis, servicio de habitaciones y recepción 24 horas. Este alojamiento libre de humo está a 16 min a pie de Viaducto entre Pereira y Dosquebradas.
+                            </p>
+                        </div>
+                        <a href="/PROYECTO-ECO-TURISMO/html/secciondestinos.html" class="a-btn"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                    </div>
+                    <div class="card">
+                        <div class="star" onclick="cambiarEstrella()">
+                            <img src="/PROYECTO-ECO-TURISMO/img/star.png" alt="estrella" >
+                        </div>
+                        <img src="/PROYECTO-ECO-TURISMO/img/H-renuevo.jpg" alt="naturaleza" class="imgs">
+                        <div class="texto">
+                            <h1>CABAÑA EL RENUEVO</h1>
+                            <p class="text">a 14 km de Viaducto entre Pereira y Dosquebradas, a 16 km de Plaza Bolívar de Pereira y a 16 km de Monumento a los Fundadores
+                            </p> 
+                        </div>
+                        <a href="/PROYECTO-ECO-TURISMO/html/Pereira/divisa_don_juan.html"><button class="btn"><h1 class="t-btn">MÁS INFORMACIÓN</h1></button></a>
+                    </div>
+                </div>
+                
+            </div>
+            <button class="arrow left">&#10094;</button>
+            <button class="arrow right">&#10095;</button>
+        </div>
+    </main>
+
+    <!--footer-->
+    <footer class="pie-pagina">
+        <div class="parte-1">
+            <div class="caja">
+                <img src="/PROYECTO-ECO-TURISMO/img/logo.jpg" class="logo-footer" alt="logo de la pagina">
+            </div>
+            <div class="caja">
+                <h2>ECOTURISMO RISARALDA</h2>
+                <p>Buscamos mostrarle al mundo la belleza de nuestro departamento.</p>
+                <p>Enfatizamos en el area de el Eco turismo. Si te interesa contactanos...</p>
+            </div>
+            <div class="caja">
+                <h2>SIGUENOS </h2>
+                <div class="imagenes-footer">
+                    <a href="#"><img src="/PROYECTO-ECO-TURISMO/img/instagramlogo.png" class="logos" alt="logo de Instagram"></a>
+                    <a href="#"><img src="/PROYECTO-ECO-TURISMO/img/facebooklogo.png"  class="logos" alt="logo de Facebook"></a>
+                    <a href="#"><img src="/PROYECTO-ECO-TURISMO/img/twitterlogo.png" class="logos" alt="logo de X"></a>
+                </div>
+            </div>
+        </div>
+        <div class="parte-2"><p>&copy; 2024-2025 <b>Ecoturismo Risaralda</b> Todos los derechos reservados</p></div>
+    </footer>
+
+    <script type="text/javascript" src="/PROYECTO-ECO-TURISMO/js/inicio.js"></script>
+</body>
+</html>
